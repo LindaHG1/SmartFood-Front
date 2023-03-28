@@ -1,0 +1,56 @@
+.contactForm {
+    background:url(../../images/bolsa_de_fondo.jpg);
+    margin-left: 20%;
+    margin-right: 20%;
+    
+    
+   h1 {
+      color:white;
+    }
+    
+    form {
+      margin-top: 20px;
+      background-image: url('../../images/bolsa_de_fondo.jpg');
+      max-width:100%;
+    }
+    
+    .formRow {
+      margin: 10px 0 40px 0;
+    }
+    
+    .formInput {
+      padding: 20px 100px;
+      background-color:white;
+      border: none;
+      color:black;
+      border-radius:5px;
+      margin-top: 15px;
+      text-align: left;
+      width:48%;
+     
+     
+      
+      
+    }
+    .errorMessage {
+        color: #f45532;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+      }
+      
+        .submit-btn {
+        background-color:#2D607C;
+        color: white !important;
+        padding: 20px 100px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+      }
+      
+      @media (max-width: 768px) {
+        .submit-message {
+          width: 125px;
+          margin-left: 200px;
+        }
+      }
+  }

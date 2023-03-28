@@ -1,0 +1,77 @@
+import React, { useState } from "react";
+import "../assets/sass/components/_productdetails.scss";
+import prueba from "../assets/images/prueba.png";
+
+const FruitDetail = ({ name, origin, type, price, image }) => {
+    const [quantity, setQuantity] = useState(1);
+
+    const handleQuantityChange = (event) => {
+        setQuantity(event.target.value);
+    };
+
+    const handleAddToCart = () => {
+        // Aquí podrías enviar la información del producto y la cantidad al carrito de compras.
+        console.log(`Agregado al carrito: ${quantity} kg de ${name}`);
+    };
+
+    return (
+        <div className="fruit-detail">
+            <h2 className="fruit-detail__title">Nombre del producto</h2>
+            
+            <div className="fruit-card">
+            <img src={prueba} alt={name} className="fruit-detail__image" />
+                <div className="p-fruits">
+                    <p className="fruit-detail__origin">Origen: algun texto {origin}</p>
+                    <p className="fruit-detail__type">Tipo: mas texto {type}</p>
+                    <p className="fruit-detail__price">Precio por kilo: 10€ {price}</p>
+
+                    <div className="quantity-container">
+                        <label className="kg">
+                            <input
+                                type="radio"
+                                name="quantity"
+                                value="0.5"
+                                checked={quantity === "0.5"}
+                                onChange={handleQuantityChange}
+                            />
+                            0.5 kg
+                        </label>
+                        <label className="kg">
+                            <input
+                                type="radio"
+                                name="quantity"
+                                value="1"
+                                checked={quantity === "1"}
+                                onChange={handleQuantityChange}
+                            />
+                            1 kg
+                        </label>
+                        <label className="kg">
+                            <input
+                                type="radio"
+                                name="quantity"
+                                value="2"
+                                checked={quantity === "2"}
+                                onChange={handleQuantityChange}
+                            />
+                            2 kg
+                        </label>
+                        <div className="add-trolley">
+                        <label>
+                            <input
+                                type="number"
+                                value={quantity}
+                                onChange={handleQuantityChange}
+                            />
+                            <button onClick={handleAddToCart}>Agregar al carrito</button>
+                        </label>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default FruitDetail;

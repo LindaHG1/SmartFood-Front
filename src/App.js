@@ -1,5 +1,6 @@
 import './App.css';
 import Footer from './Components/Footer'
+import HomePage from './Components/Header';
 import Navbar from './Components/Navbar';
 import FruitDetail from './Components/ProductDetails';
 
@@ -8,8 +9,9 @@ function App() {
     <div className="App">
 
       <Navbar/>
+      <HomePage/>
       <FruitDetail/>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

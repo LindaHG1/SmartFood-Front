@@ -19,10 +19,9 @@ export const Navbar = () => {
                 {toggle ? <Icon icon={x} size={28} /> : <Icon icon={menu} size={28} />}
             </div>
             <ul className="links">
-                <li>Home</li>
-                <li>Nuestras Plantas</li>
-                <li>El tiempo</li>
-                <li>Contacto</li>
+                <li className="float-shadow">Inicio</li>
+                <li className="float-shadow">Productos</li>
+                <li className="float-shadow">Contacto</li>
             </ul>
         </nav>
     );

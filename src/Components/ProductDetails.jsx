@@ -19,13 +19,18 @@ const FruitDetail = ({ name, origin, type, price, image }) => {
             <h2 className="fruit-detail__title">Nombre del producto</h2>
             
             <div className="fruit-card">
-            <img src={prueba} alt={name} className="fruit-detail__image" />
-                <div className="p-fruits">
-                    <p className="fruit-detail__origin">Origen: algun texto {origin}</p>
-                    <p className="fruit-detail__type">Tipo: mas texto {type}</p>
-                    <p className="fruit-detail__price">Precio por kilo: 10€ {price}</p>
 
+            
+                <img src={prueba} alt={name} className="fruit-detail__image zoom-image" />
+            
+                <div className="p-fruits">
+                    <div className="text">
+                    <p className="fruit-detail__origin"><strong>Origen:</strong> algun texto{origin}</p>
+                    <p className="fruit-detail__type"><strong>Tipo:</strong> mas texto {type}</p>
+                    <p className="fruit-detail__price"><strong>Precio por kilo:</strong> 10€ {price}</p>
+                    </div>
                     <div className="quantity-container">
+                        
                         <label className="kg">
                             <input
                                 type="radio"
@@ -65,8 +70,10 @@ const FruitDetail = ({ name, origin, type, price, image }) => {
                             />
                             <button onClick={handleAddToCart}>Agregar al carrito</button>
                         </label>
-                    </div>
-                    </div>
+                    
+                        </div>
+                        </div>
+                        
                     
                 </div>
             </div>

@@ -1,0 +1,73 @@
+.title{
+        h1{
+    margin-bottom:0;
+    color:#587608;
+    }
+}
+
+.rounded-3 {
+    background-image:url(../../images/fondobolsa.jpg);
+    border: none;
+    margin: 5%;
+    margin-left:30%;
+    font-family: 'Poppins', sans-serif;
+    padding: 80px;
+    width: 30%;
+    align-items: center;
+    box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+    @media(max-width:900px){
+        padding:0;
+        width: auto;
+        height: 350px;
+        margin-left:5%;
+    }
+  }
+  
+  .btn-primary {
+    background: #2D607C !important;
+    border: none;
+    width: 30%;
+    padding:10px;
+    border-radius: 7px;
+    color:white;
+  
+    &:hover {
+      background-color: #57813e !important;
+      border: none;
+    }
+  }
+  
+  .mx-auto {
+    padding-top: 20px;
+  }
+  
+  .mb-3 {
+    .error {
+      color: #e92b2d;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  
+    .exito {
+      text-align: center;
+      font-size: 14px;
+      padding-top: 20px;
+      color: #235c02;
+      font: bold;
+    }
+    .form-control{
+        padding:10px;
+        width: 60%;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        border:none;
+        @media(max-width:900px){
+            margin-top:40px;
+            margin-bottom:0;
+        }
+    }
+  
+    
+  }
+
+  

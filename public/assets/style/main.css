@@ -1,3 +1,71 @@
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
+}
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #57813e !important;
+  border: none;
+}
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
+}
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
 footer {
   padding: 30px;
   background-color: #587608;
@@ -48,7 +116,7 @@ footer .top-info .bloq-top ul li a {
   color: inherit;
 }
 footer .top-info .bloq-top ul li:hover {
-  color: #f09d06;
+  color: #968B84;
 }
 footer .top-info .bloq-top .rrss {
   display: flex;
@@ -90,6 +158,153 @@ footer .copy p {
   min-width: none;
 }
 
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(68, 67, 67);
+  box-sizing: border-box;
+  z-index: 1;
+  width: 70%;
+  margin-top: 15%;
+  text-align: right;
+  padding-right: 0;
+  margin-left: 20%;
+  font-size: larger;
+}
+@media (max-width: 745px) {
+  .slogan {
+    padding: 0;
+    text-align: center;
+    width: 90%;
+    margin-left: 4%;
+    margin-top: 65%;
+    font-size: 1em;
+  }
+}
+@media (min-width: 745px) {
+  .slogan {
+    padding-left: 20%;
+    margin-top: 15%;
+    text-align: right;
+    padding-right: 0;
+  }
+}
+
+.banner {
+  text-align: center;
+}
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.banner p {
+  font-size: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+}
+.card img {
+  margin-bottom: 10px;
+}
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 1.5rem;
+}
+
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
+}
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 30px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #57813e !important;
+  border: none;
+}
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
+}
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
 .wrapper {
   width: 100%;
   max-width: 1440px;
@@ -126,9 +341,13 @@ footer .copy p {
   align-items: center;
   text-align: center;
 }
+.navbar .links a {
+  text-decoration: none;
+  color: #FFF3F4;
+}
 .navbar .links .float-shadow {
-  margin: 15px;
-  font-size: 15px;
+  margin: 17px;
+  font-size: 1.2rem;
   font-weight: 600;
   display: inline-block;
   position: relative;
@@ -149,7 +368,6 @@ footer .copy p {
   width: 90%;
   opacity: 0;
   background: radial-gradient(ellipse at center, rgba(51, 0, 127, 0.457) 0%, rgba(19, 17, 145, 0) 80%);
-  /* W3C */
   transition-duration: 0.3s;
   transition-property: transform opacity;
 }
@@ -250,18 +468,22 @@ footer .copy p {
 }
 .fruit-detail h2 {
   margin-top: 0;
+  color: #587608;
 }
 .fruit-detail img {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .fruit-detail .fruit-card {
-  border: 2px solid rgb(134, 57, 57);
+  background-color: rgba(253, 185, 26, 0.1960784314);
+  border: 1px solid #ccc;
   border-radius: 7px;
   display: flex;
+  padding: 5px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 700px) {
   .fruit-detail .fruit-card {
@@ -276,14 +498,17 @@ footer .copy p {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    text-align: left;
   }
-  .fruit-detail .fruit-card .p-fruits .fruit-detail__origin,
-  .fruit-detail .fruit-card .p-fruits .fruit-detail__type,
-  .fruit-detail .fruit-card .p-fruits .fruit-detail__price {
-    margin-top: 1rem;
+  .fruit-detail .fruit-card .p-fruits .text {
+    margin-left: 30px;
   }
-  .fruit-detail .fruit-card .quantity-container {
-    flex-direction: row;
+  .fruit-detail .fruit-card .p-fruits .quantity-container {
+    margin-left: 6%;
+    margin-bottom: 5%;
+  }
+  .fruit-detail .fruit-card .p-fruits .add-trolley {
+    margin-left: 6%;
   }
 }
 .fruit-detail .fruit-detail__origin,
@@ -298,18 +523,22 @@ footer .copy p {
   align-content: flex-end;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5%;
+  margin-top: 10%;
 }
 .fruit-detail .quantity-container label {
   display: flex;
   align-items: center;
-  margin: 0.5rem;
+  margin-right: 10px;
   padding: 0.5rem;
-  border: 1px solid #FDBA1A;
   border-radius: 5px;
   background-color: #FDBA1A;
   cursor: pointer;
   color: #fff;
   font-weight: 600;
+}
+.fruit-detail .quantity-container label:hover {
+  background-color: #587608;
 }
 .fruit-detail .quantity-container label input[type=radio] {
   margin-right: 0.5rem;
@@ -319,7 +548,7 @@ footer .copy p {
           appearance: none;
 }
 .fruit-detail .quantity-container .add-trolley label {
-  background-color: #fff;
+  background-color: rgba(253, 185, 26, 0);
   border: none;
 }
 .fruit-detail .fruit-detail__quantity-input {
@@ -336,12 +565,22 @@ footer .copy p {
   font-size: 1rem;
   width: 4rem;
 }
+.fruit-detail .fruit-detail__quantity-input .fruit-detail__add-to-cart {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(253, 185, 26, 0.3058823529);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
 .fruit-detail input[type=number] {
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
   max-width: 40px;
-  border: 2px solid #FDBA1A;
+  border: 1px solid #FDBA1A;
 }
 .fruit-detail button {
   background-color: #2D607C;
@@ -352,4 +591,157 @@ footer .copy p {
   font-weight: 600;
   font-style: bold;
   border: none;
+}
+.fruit-detail button:hover {
+  background-color: #587608;
+}
+
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
+}
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #57813e !important;
+  border: none;
+}
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
+}
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.Section {
+  margin-left: 20%;
+  margin-right: 20%;
+  scroll-snap-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .Section {
+    margin-bottom: 30px;
+  }
+}
+.Section .Container {
+  background: url(../../images/fondobolsa.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+  width: 120%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .Section .Container {
+    margin-top: 2040px;
+    margin-bottom: 30px;
+  }
+}
+.Section .Container .Left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  border-radius: 20px;
+  margin: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .Section .Container .Left {
+    justify-content: center;
+    margin-top: 1150px;
+    margin-bottom: 50px;
+    flex-wrap: nowrap;
+  }
+}
+.Section .Container .Left .Title {
+  font-weight: 500;
+}
+.Section .Container .Left .Form {
+  width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.Section .Container .Left .Form .prueba {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.Section .Container .Left .Form .Input {
+  padding: 20px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  margin-right: 40px;
+}
+.Section .Container .Left .Form .TextArea {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: lightgray;
+  width: 100%;
+}
+.Section .Container .Left .Form .Button {
+  background-color: #2D607C;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */

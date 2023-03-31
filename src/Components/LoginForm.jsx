@@ -24,27 +24,23 @@ function LoginForm() {
       >
         {({ values, handleChange, handleSubmit, errors, touched }) => (
           <Form className='mb-3' onSubmit={handleSubmit}>
-            <label>
-              Email:
-              <Field
-                className='form-control'
-                type="email"
-                name="email"
-                value={values.email}
-                onChange={handleChange}
-              />
-            </label>
+            <Field
+              className='form-control' placeholder="Email"
+              type="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+            />
+
             <br />
-            <label>
-              Contraseña:
-              <Field
-                className='form-control'
-                type="password"
-                name="password"
-                value={values.password}
-                onChange={handleChange}
-              />
-            </label>
+            <Field
+              className='form-control' placeholder="Contraseña"
+              type="password"
+              name="password"
+              value={values.password}
+              onChange={handleChange}
+            />
+
             <ErrorMessage name="password" component="div" className="error" />
             <br />
             <button className='btn-primary mx-auto' type="submit">Enviar</button>

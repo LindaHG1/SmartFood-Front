@@ -2,6 +2,7 @@ import './App.css';
 import Footer from './Components/Footer';
 import ContactForm from './Components/ContactForm';
 import LoginForm from './Components/LoginForm';
+import SingIn from './Components/SingIn';
 
 
 
@@ -12,6 +13,7 @@ import LoginForm from './Components/LoginForm';
 function App() {
   return (
     <div className="App">
+      <SingIn />
      
       <LoginForm />
 

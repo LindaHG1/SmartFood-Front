@@ -1,5 +1,4 @@
-
-
+@import '../utilities/variable';
 
 .fruit-detail {
     margin-top: 100px;
@@ -17,36 +16,32 @@
         object-fit: cover;
         border-radius: 5px;
         position: relative;
-        transition: filter 0.3s ease-in-out;
-        transform: scale(1);
-        transition: transform 0.3s ease-in-out;
         overflow: hidden;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease-in-out;
+        box-shadow: $color-boxshadow;
         overflow: hidden;  
         
     }
 
     h2 {
         margin-top: 0;
-        color:#587608;
+        color: $color-verde;
     }
 
     img {
         border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        box-shadow: $color-boxshadow;
     }
 
     .fruit-card{
-        background-color: #fdb91a32;
-        border: 1px solid #ccc;
+        background-color: $color-background-card;
+        border: 1px solid $color-border;
         border-radius: 7px;
         display: flex;
         padding: 5px;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: $color-boxshadow;
         
         
         
@@ -102,12 +97,12 @@
             margin-right: 10px;
             padding: 0.5rem;       
             border-radius: 5px;
-            background-color: #FDBA1A;
+            background-color: $color-naranja;
             cursor: pointer;
-            color:#fff;
+            color: $color-blanco;
             font-weight: 600;
             &:hover{
-                background-color: #587608;
+                background-color: $color-azul;
             }
 
             
@@ -141,7 +136,7 @@
 
         .fruit-detail__quantity-input--input {
             margin-left: 0.5rem;
-            border: 2px solid #ccc;
+            border: 2px solid $color-border;
             border-radius: 5px;
             padding: 0.5rem;
             font-size: 1rem;
@@ -154,8 +149,8 @@
         .fruit-detail__add-to-cart {
             margin-top: 0.5rem;
             padding: 0.5rem;
-            background-color: #fdb91a4e;
-            color: #fff;
+            background-color: $color-background-card;
+            color: $color-blanco;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -165,18 +160,18 @@
     }
 
     input[type="number"] {
-        background-color: #fff;
+        background-color: $color-blanco;
         border-radius: 5px;
         padding: 10px;
         max-width: 40px;
-        border: 1px solid #FDBA1A;
+        border: 1px solid $color-naranja;
         
 
     }
 
     button{
-        background-color: #2D607C;
-        color:#fff;
+        background-color: $color-azul;
+        color:$color-blanco;
         padding: 10px;
         border-radius: 5px;
         margin-left: 5px;
@@ -184,7 +179,7 @@
         font-style: bold;
         border: none;
         &:hover{
-            background-color: #587608;
+            background-color: $color-verde;
         }
     }
     

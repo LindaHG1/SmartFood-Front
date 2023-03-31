@@ -39,7 +39,7 @@ function HomePage() {
                 <div className="card">
                     <img src="https://via.placeholder.com/150" alt="Imagen de la tarjeta" />
 
-                    <p>Tropilaces</p>
+                    <p>Tropicales</p>
                 </div>
                 <div className="card">
                     <img src="https://via.placeholder.com/150" alt="Imagen de la tarjeta" />

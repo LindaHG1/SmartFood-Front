@@ -1,144 +1,130 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { ToastContainer, toast } from 'react-toastify';
-import emailjs from 'emailjs-com';
 import '../assets/sass/components/_contactform.scss';
+import React, { useState, useRef } from 'react';
+import { ErrorMessage, Form, Field, Formik } from 'formik';
 
-const ContactForm = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors }
-  } = useForm();
-  const [disabled, setDisabled] = useState(false);
 
-  // Function that displays a success toast on bottom right of the page when form submission is successful
-  const toastifySuccess = () => {
-    toast('Form sent!', {
-      position: 'bottom-right',
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      className: 'submit-feedback success',
-      toastId: 'notifyToast'
-    });
-  };
+const Formulario = () => {
+    const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
-  // Function called on submit that uses emailjs to send email of valid contact form
-  const onSubmit = async (data) => {
-    // Destrcture data object
-    const { name, email, message } = data;
-    try {
-      // Disable form while processing submission
-      setDisabled(true);
+    // funciones para el captcha
+    // const [captchaValido, cambiarCaptchaValido] = useState(null);
+    // const [usuarioValido, cambiarUsuariValido] = useState(false);
 
-      // Define template params
-      const templateParams = {
-        name,
-        email,
-        message
-      };
 
-      // Use emailjs to email contact form data
-      await emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        templateParams,
-        process.env.REACT_APP_USER_ID
-      );
 
-      // Reset contact form fields after submission
-      reset();
-      // Display success toast
-      toastifySuccess();
-      // Re-enable form submission
-      setDisabled(false);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+    return (
+        <>
 
-  return (
-    <div className='contactForm'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12 text-center'>
-            <div className='contactForm'>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-                {/* Row 1 of form */}
-                <div className='row formRow'>
-                  <div className='d-flex justify-content-between'>
-                    <input
-                      type='text'
-                      name='name'
-                      {...register('name', {
-                        required: {
-                          value: true,
-                          message: 'Please enter your name'
-                        },
-                        maxLength: {
-                          value: 30,
-                          message: 'Please use 30 characters or less'
-                        }
-                      })}
-                      className='form-control formInput '
-                      placeholder='Name'
-                    ></input>
-                    {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
-                    <input
-                      type='email'
-                      name='email'
-                      {...register('email', {
-                        required: true,
-                        pattern:
-                          /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-                      })}
-                      className='form-control formInput'
-                      placeholder='Email address'
-                    ></input>
-                    {errors.email && (
-                      <span className='errorMessage'>Please enter a valid email address</span>
-                    )}
-                  </div>
-                </div>
-                { /*Row 2 of form*/ }
-                <div className='row formRow'>
-                  <div className='col'>
-                    {errors.subject && (
-                      <span className='errorMessage'>{errors.subject.message}</span>
-                    )}
-                  </div>
-                </div>
-                { /*Row 3 of form */}
-                <div className='row formRow'>
-                  <div className='col'>
-                    <textarea
-                      rows={3}
-                      name='message'
-                      {...register('message', {
-                        required: true
-                      })}
-                      className='form-control formInput'
-                      placeholder='Message'
-                    ></textarea>
-                    {errors.message && <span className='errorMessage'>Please enter a message</span>}
-                  </div>
-                </div>
+            <Formik
+                initialValues={{
+                    nombre: '',
+                    correo: '',
+                    mensaje: ''
+                }}
+                validate={(valores) => {
+                    let errores = {};
 
-                <button className='submit-btn' disabled={disabled} type='submit'>
-                  Submit
-                </button>
-              </form>
-            </div>
-            <ToastContainer />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+                    //validación nombre
+                    if (!valores.nombre) {
+                        errores.nombre = 'Por favor ingresa un nombre'
+                    } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
+                        errores.nombre = 'El nombre sólo puede contener letras y espacios'
+                    }
 
-export default ContactForm;
+                    //validacion correo
+                    if (!valores.correo) {
+                        errores.correo = 'Por favor ingresa un correo electrónico'
+                    } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.correo)) {
+                        errores.correo = 'El correo sólo puede contener letras y espacios y debe mantener el formato correo@correo.com'
+                    }
+
+                    //validacion mensaje
+                    if (!valores.mensaje) {
+                        errores.mensaje = 'Por favor escriba un mensaje'
+                    } else if (!/[a-zA-Z0-9]/.test(valores.mensaje)) {
+                        errores.mensaje = 'El mensaje sólo puede contener letras y espacios'
+                    }
+
+
+
+                    return errores;
+
+                }}
+                //al darle al boton enviar
+                onSubmit={(valores, { resetForm }) => {
+
+                    resetForm();
+                    // console.log('Formulario enviado');
+                    cambiarFormularioEnviado(true);
+                    setTimeout(() => cambiarFormularioEnviado(false), 5000);
+                }}
+            >
+                {({ errors }) => (
+                    <div className='title'>
+                    <h1>CONTACTO</h1>
+                    
+                    <div className="h-100 p-5 text-bg-dark rounded-3">
+                        
+                        <Form className="mb-3">
+                            <div>
+
+                                <Field
+                                    className="form-control"
+                                    id="nombre"
+                                    type="text"
+                                    name="nombre"
+                                    placeholder="Nombre"
+                                />
+                                <ErrorMessage name="nombre" component={() => (
+                                    <div className='error'>{errors.nombre}</div>
+                                )} />
+                            </div>
+
+                            <div>
+
+                                <Field
+                                    type="email"
+                                    className="form-control"
+                                    id="correo"
+                                    name="correo"
+                                    placeholder="Correo electrónico"
+                                />
+                                <ErrorMessage name="correo" component={() => (
+                                    <div className='error'>{errors.correo}</div>
+                                )} />
+                            </div>
+
+                            <div>
+
+                                <Field
+                                    className="form-control"
+                                    id="mensaje"
+                                    rows="3"
+                                    name="mensaje"
+                                    as="textarea"
+                                    placeholder="Hola! Quisiera ponerme en contacto para/por..."
+                                />
+                                <ErrorMessage name="mensaje" component={() => (
+                                    <div className='error'>{errors.mensaje}</div>
+                                )} />
+                            </div>
+
+
+
+                            <div className="d-grid gap-2 col-6 mx-auto">
+                                <button className="btn btn-primary" type="submit">Enviar</button>
+                                {formularioEnviado && <p className='exito'>Mensaje enviado correctamente, gracias!</p>}
+                            </div>
+                        
+                        </Form>
+                        </div>
+                    </div>
+                )}
+
+
+            </Formik>
+        </>
+    );
+}
+
+export default Formulario;

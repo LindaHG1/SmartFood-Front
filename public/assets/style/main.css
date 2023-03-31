@@ -1,46 +1,68 @@
-.contactForm {
-  background: url(../../images/bolsa_de_fondo.jpg);
-  margin-left: 20%;
-  margin-right: 20%;
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
 }
-.contactForm h1 {
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 30px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
   color: white;
 }
-.contactForm form {
-  margin-top: 20px;
-  background-image: url("../../images/bolsa_de_fondo.jpg");
-  max-width: 100%;
-}
-.contactForm .formRow {
-  margin: 10px 0 40px 0;
-}
-.contactForm .formInput {
-  padding: 20px 100px;
-  background-color: white;
+.btn-primary:hover {
+  background-color: #57813e !important;
   border: none;
-  color: black;
-  border-radius: 5px;
-  margin-top: 15px;
-  text-align: left;
-  width: 48%;
 }
-.contactForm .errorMessage {
-  color: #f45532;
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
   font-size: 14px;
-  margin: 0;
-  padding: 0;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
 }
-.contactForm .submit-btn {
-  background-color: #2D607C;
-  color: white !important;
-  padding: 20px 100px;
-  border-radius: 10px;
-  margin-bottom: 25px;
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
 }
-@media (max-width: 768px) {
-  .contactForm .submit-message {
-    width: 125px;
-    margin-left: 200px;
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
   }
 }
 
@@ -134,4 +156,154 @@ footer .copy p {
   color: #fff;
   opacity: 0.7;
   min-width: none;
+}
+
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
+}
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 30px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #57813e !important;
+  border: none;
+}
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
+}
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.Section {
+  margin-left: 20%;
+  margin-right: 20%;
+  scroll-snap-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .Section {
+    margin-bottom: 30px;
+  }
+}
+.Section .Container {
+  background: url(../../images/fondobolsa.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+  width: 120%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .Section .Container {
+    margin-top: 2040px;
+    margin-bottom: 30px;
+  }
+}
+.Section .Container .Left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  border-radius: 20px;
+  margin: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .Section .Container .Left {
+    justify-content: center;
+    margin-top: 1150px;
+    margin-bottom: 50px;
+    flex-wrap: nowrap;
+  }
+}
+.Section .Container .Left .Title {
+  font-weight: 500;
+}
+.Section .Container .Left .Form {
+  width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.Section .Container .Left .Form .prueba {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.Section .Container .Left .Form .Input {
+  padding: 20px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  margin-right: 40px;
+}
+.Section .Container .Left .Form .TextArea {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: lightgray;
+  width: 100%;
+}
+.Section .Container .Left .Form .Button {
+  background-color: #2D607C;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */

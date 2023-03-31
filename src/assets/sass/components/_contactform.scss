@@ -1,56 +1,73 @@
-.contactForm {
-    background:url(../../images/bolsa_de_fondo.jpg);
-    margin-left: 20%;
-    margin-right: 20%;
-    
-    
-   h1 {
-      color:white;
+.title{
+        h1{
+    margin-bottom:0;
+    color:#587608;
     }
-    
-    form {
-      margin-top: 20px;
-      background-image: url('../../images/bolsa_de_fondo.jpg');
-      max-width:100%;
+}
+
+.rounded-3 {
+    background-image:url(../../images/fondobolsa.jpg);
+    border: none;
+    margin: 5%;
+    margin-left:30%;
+    font-family: 'Poppins', sans-serif;
+    padding: 80px;
+    width: 30%;
+    align-items: center;
+    box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 30px rgb(154, 155, 155);
+    @media(max-width:900px){
+        padding:0;
+        width: auto;
+        height: 350px;
+        margin-left:5%;
     }
-    
-    .formRow {
-      margin: 10px 0 40px 0;
-    }
-    
-    .formInput {
-      padding: 20px 100px;
-      background-color:white;
-      border: none;
-      color:black;
-      border-radius:5px;
-      margin-top: 15px;
-      text-align: left;
-      width:48%;
-     
-     
-      
-      
-    }
-    .errorMessage {
-        color: #f45532;
-        font-size: 14px;
-        margin: 0;
-        padding: 0;
-      }
-      
-        .submit-btn {
-        background-color:#2D607C;
-        color: white !important;
-        padding: 20px 100px;
-        border-radius: 10px;
-        margin-bottom: 25px;
-      }
-      
-      @media (max-width: 768px) {
-        .submit-message {
-          width: 125px;
-          margin-left: 200px;
-        }
-      }
   }
+  
+  .btn-primary {
+    background: #2D607C !important;
+    border: none;
+    width: 30%;
+    padding:10px;
+    border-radius: 7px;
+    color:white;
+  
+    &:hover {
+      background-color: #57813e !important;
+      border: none;
+    }
+  }
+  
+  .mx-auto {
+    padding-top: 20px;
+  }
+  
+  .mb-3 {
+    .error {
+      color: #e92b2d;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  
+    .exito {
+      text-align: center;
+      font-size: 14px;
+      padding-top: 20px;
+      color: #235c02;
+      font: bold;
+    }
+    .form-control{
+        padding:10px;
+        width: 60%;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        border:none;
+        @media(max-width:900px){
+            margin-top:40px;
+            margin-bottom:0;
+        }
+    }
+  
+    
+  }
+
+  

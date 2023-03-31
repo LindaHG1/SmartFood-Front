@@ -1,14 +1,45 @@
-$background-color_1: #f2f2f2;
-$background-color_2: #fff;
+@import '../utilities/variable';
 
 .homepage {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
     overflow: hidden;
+	
+}
+.slogan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $color-slogan;
+    box-sizing: border-box;
+    z-index: 1;
+	width: 70%;
+	margin-top: 15%;
+	text-align: right;
+	padding-right: 0;
+	margin-left: 20%;
+	font-size: larger;
+	@media (max-width:745px){
+		padding:0;
+		text-align: center;
+		width: 90%;
+		margin-left: 4%;
+		margin-top:65%;
+		font-size: 1em;
+	}
+	@media(min-width:745px){
+		
+		padding-left: 20%;
+		margin-top: 15%;
+		text-align: right;
+		padding-right: 0;
+	}
+	
+	
 }
 .banner {
-	background-color: $background-color_1;
+	
 	text-align: center;
 	h1 {
 		font-size: 3rem;
@@ -25,7 +56,7 @@ $background-color_2: #fff;
 	margin-top: 50px;
 }
 .card {
-	background-color: $background-color_2;
+	background-color: #ccc;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);

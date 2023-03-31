@@ -1,0 +1,92 @@
+// Estilos página de preguntas frecuentes
+// @import "../utilities/variables";
+
+.section-faqs {
+    .faqs {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 80px;
+        @media screen and (min-width: 1181px) {            
+            width: 80%;       
+        }
+        .title-section {
+            position: relative;
+            text-align: center;
+            text-align: center;
+            padding-bottom: 0;
+            margin-bottom: 30px;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+        .faqs-grid {
+            margin: 65px auto;
+            .faqs-item {
+                width: 100%;
+                margin: 0 0 20px 0;
+                padding: 0;
+                display: block;
+                .faqs-title {
+                    display: flex;
+                    position: relative;
+                    background-color: #ECECEC;
+                    border: 1px solid #ddd;
+                    //background-color: $color-gris-claro;
+                    color:#444343;
+                    //color: $color-slogan;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 20px;
+                    width: 100%;
+                    outline: none;
+                    transition: 0.4s;
+                    &:hover {
+                        // background-color: $color-amarillo;
+                        background-color: #FDBA1A;
+                        color: #ECECEC;
+                    }
+                    &.active {
+                        // background-color: $color-amarillo;
+                        background-color: #FDBA1A;
+                        color: #ECECEC;
+                        &:after {
+                            content: "\2212";
+                        }
+                    }
+                    &:after {
+                        content: '\002B';
+                        color: #968B84;
+                        font-weight: normal;
+                        float: right;
+                        margin-left: auto;
+                        font-size: 24px;
+                        line-height: 1;
+                        padding-left: 20px;
+                    }
+                }
+                .faqs-content {
+                    padding: 0;
+                    max-height: 100px;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    .faqs-content-inside {
+                        text-align: justify;
+                        padding: 20px;
+                        // color:$color-slogan;
+                        color: #444343;
+                    }
+                    &.no-height {max-height: 0;}
+                }
+            }
+        }  
+    }
+}

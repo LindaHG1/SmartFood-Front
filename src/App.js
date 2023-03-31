@@ -6,6 +6,7 @@ import SingIn from './Components/SingIn';
 import HomePage from './Components/Header';
 import Navbar from './Components/Navbar';
 import FruitDetail from './Components/ProductDetails';
+import Faqs from './Components/FrequentlyAskedQuestions';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <SingIn />
       <LoginForm />
     <ContactForm />
+      <Faqs />
       <Footer />
     </div>
   );

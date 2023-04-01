@@ -243,13 +243,15 @@ footer .copy p {
 }
 @media (max-width: 745px) {
   .section-faqs .faqs .faqs-grid .faqs-item .faqs-title {
+    font-size: 1rem;
     padding: 10px;
     outline: none;
   }
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-content {
   padding: 0;
-  max-height: 100px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
@@ -261,7 +263,8 @@ footer .copy p {
 @media (max-width: 745px) {
   .section-faqs .faqs .faqs-grid .faqs-item .faqs-content .faqs-content-inside {
     padding-top: 0.2rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    padding: 0 5px;
   }
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-content.no-height {

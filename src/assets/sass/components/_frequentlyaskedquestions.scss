@@ -1,5 +1,5 @@
 // Estilos página de preguntas frecuentes
-// @import "../utilities/variables";
+@import "../utilities/variable";
 
 .section-faqs {
 
@@ -49,11 +49,9 @@
                 .faqs-title {
                     display: flex;
                     position: relative;
-                    background-color: #ECECEC;
+                    background-color: $color-gris-claro;
                     border: 1px solid #ddd;
-                    //background-color: $color-gris-claro;
-                    color:#444343;
-                    //color: $color-slogan;
+                    color: $color-slogan;
                     font-size: 18px;
                     font-weight: 600;
                     text-decoration: none;
@@ -85,13 +83,14 @@
                     }
 
                     @media (max-width:745px) {
+                        font-size: 1rem;
                         padding: 10px;
                         outline: none;
                     }
                 }
                 .faqs-content {
                     padding: 0;
-                    max-height: 100px;
+                    max-height: fit-content;
                     overflow: hidden;
                     transition: max-height 0.2s ease-out;
                     .faqs-content-inside {
@@ -102,7 +101,8 @@
 
                         @media (max-width:745px) {
                             padding-top: 0.2rem;
-                            font-size: 0.8rem;
+                            font-size: 0.9rem;
+                            padding: 0 5px;
                         }
                     }
                     &.no-height {

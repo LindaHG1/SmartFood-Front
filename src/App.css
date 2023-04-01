@@ -2,3 +2,8 @@ h1,h2{
     /* color: $color-verde; */
     color: #587608;
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+*{
+  font-family: 'Open Sans';
+}

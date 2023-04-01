@@ -1,3 +1,4 @@
+@use 'utilities/variable';
 @use 'components/buttons';
 @use 'components/cards';
 @use 'components/contactform';
@@ -11,6 +12,7 @@
 @use 'components/productdetails';
 @use 'components/singinform';
 @use 'components/trolley';
+@use 'components/prueba';
 @use 'views/contact';
 @use 'views/home';
 @use 'views/login';

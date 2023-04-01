@@ -1,6 +1,9 @@
+@import '../utilities/variable';
+
+
 footer {
     padding: 30px;
-    background-color:#587608;
+    background-color: $color-verde;
     .top-info {
         display: flex;
         align-items: flex-start;
@@ -28,7 +31,7 @@ footer {
                 margin: 0;
                 list-style: none;
                 line-height: 35px;
-                color:#fff;
+                color:$color-blanco;
                 text-align: center;
                 li {
                     i {
@@ -37,10 +40,10 @@ footer {
                     a {
                         text-decoration: none;
                         color: inherit;
-                       
+                    
                     }
                     &:hover {
-                        color:#f09d06;
+                        color: $color-gris;
                     }
                 }
             }
@@ -50,7 +53,7 @@ footer {
                 align-content: center;
                 justify-content: center;
                 flex-direction: column;
-                color:#f09d06;
+                color: $color-naranja;
                 ul {
                     display: flex;
                     align-items: center;
@@ -60,14 +63,14 @@ footer {
                     li {
                         a {
                             display: block;
-                            background:#fff;
+                            background:$color-blanco;
                             border-radius: 100%;
                             text-align: center;
                             line-height: 40px;
                             margin-right: 10px;
                             width: 40px;
                             height: 40px;
-                            color:#587608;
+                            color: $color-verde;
                             
                             i {
                                 margin: 0;
@@ -83,7 +86,7 @@ footer {
         p {
             text-align: center;
             margin: 0;
-            color: #fff;
+            color: $color-blanco;
             opacity: 0.7;
             min-width: none;
         }

@@ -77,3 +77,4 @@ function Faqs() {
 }
 
 export default Faqs;
+

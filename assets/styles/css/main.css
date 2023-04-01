@@ -1,3 +1,72 @@
+@charset "UTF-8";
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
+}
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #57813e !important;
+  border: none;
+}
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
+}
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
 footer {
   padding: 30px;
   background-color: #587608;
@@ -37,7 +106,7 @@ footer .top-info .bloq-top ul {
   margin: 0;
   list-style: none;
   line-height: 35px;
-  color: #fff;
+  color: #FFFFFF;
   text-align: center;
 }
 footer .top-info .bloq-top ul li i {
@@ -48,7 +117,7 @@ footer .top-info .bloq-top ul li a {
   color: inherit;
 }
 footer .top-info .bloq-top ul li:hover {
-  color: #f09d06;
+  color: #968B84;
 }
 footer .top-info .bloq-top .rrss {
   display: flex;
@@ -56,7 +125,7 @@ footer .top-info .bloq-top .rrss {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  color: #f09d06;
+  color: #F09D06;
 }
 footer .top-info .bloq-top .rrss ul {
   display: flex;
@@ -67,7 +136,7 @@ footer .top-info .bloq-top .rrss ul {
 }
 footer .top-info .bloq-top .rrss ul li a {
   display: block;
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 100%;
   text-align: center;
   line-height: 40px;
@@ -85,7 +154,664 @@ footer .copy {
 footer .copy p {
   text-align: center;
   margin: 0;
-  color: #fff;
+  color: #FFFFFF;
   opacity: 0.7;
   min-width: none;
+}
+
+.section-faqs .faqs {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+@media screen and (min-width: 1181px) {
+  .section-faqs .faqs {
+    width: 80%;
+  }
+}
+.section-faqs .faqs .title-section {
+  position: relative;
+  text-align: center;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 30px;
+}
+.section-faqs .faqs .title-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section-faqs .faqs .faqs-grid {
+  margin: 65px auto;
+}
+.section-faqs .faqs .faqs-grid .faqs-item {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: block;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title {
+  display: flex;
+  position: relative;
+  background-color: #ECECEC;
+  border: 1px solid #ddd;
+  color: #444343;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 20px;
+  width: 100%;
+  outline: none;
+  transition: 0.4s;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title:hover {
+  background-color: #FDBA1A;
+  color: #ECECEC;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active {
+  background-color: #FDBA1A;
+  color: #ECECEC;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active:after {
+  content: "−";
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title:after {
+  content: "+";
+  color: #968B84;
+  font-weight: normal;
+  float: right;
+  margin-left: auto;
+  font-size: 24px;
+  line-height: 1;
+  padding-left: 20px;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-content {
+  padding: 0;
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-content .faqs-content-inside {
+  text-align: justify;
+  padding: 20px;
+  color: #444343;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-content.no-height {
+  max-height: 0;
+}
+
+.homepage {
+  overflow: hidden;
+  position: relative;
+}
+.homepage .banner {
+  position: relative;
+}
+.homepage .banner img {
+  width: 100%;
+}
+.homepage .banner .slogan {
+  position: absolute;
+  right: 5%;
+  top: 35%;
+  color: rgb(68, 67, 67);
+  box-sizing: border-box;
+  z-index: 1;
+  width: 50%;
+  text-align: right;
+  padding-right: 0;
+  font-size: 1em;
+}
+@media (max-width: 745px) {
+  .homepage .banner .slogan {
+    padding: 0;
+    top: 70px;
+    text-align: right;
+    width: 90%;
+    font-size: 0.7em;
+    text-shadow: 0 0 10px white;
+  }
+}
+.homepage .card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.homepage .card {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+  transition: 0.3s;
+}
+.homepage .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.homepage .card img {
+  margin-bottom: 10px;
+}
+.homepage .card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.homepage .card p {
+  font-size: 1.5rem;
+}
+
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
+}
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 30px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #57813e !important;
+  border: none;
+}
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
+}
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #F09D06;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  overflow: hidden;
+  padding: 10px 15px;
+  left: 0;
+  box-sizing: border-box;
+}
+.navbar .logo {
+  height: 70px;
+}
+.navbar .links {
+  list-style: none;
+  display: flex;
+  color: #FFF3F4;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+.navbar .links a {
+  text-decoration: none;
+  color: #FFF3F4;
+}
+.navbar .links .float-shadow {
+  margin: 17px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.navbar .links .float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(51, 0, 127, 0.457) 0%, rgba(19, 17, 145, 0) 80%);
+  transition-duration: 0.3s;
+  transition-property: transform opacity;
+}
+.navbar .links .float-shadow:hover {
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.navbar .links .float-shadow:hover:before {
+  opacity: 1;
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+.navbar .toggle-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    transition: 0.5s all ease-in-out;
+    padding: 0;
+  }
+  .navbar .logo {
+    margin-top: -2%;
+    padding: 0;
+    text-align: center;
+    height: 60px;
+  }
+  .navbar.expanded {
+    height: 100vh;
+  }
+  .navbar.expanded .links {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+  .navbar.expanded .links li {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+  .navbar .logo {
+    position: absolute;
+    left: 20px;
+  }
+  .navbar .toggle-icon {
+    display: block;
+    color: #FFF3F4;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+  }
+  .navbar .links {
+    position: absolute;
+    top: -300px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar .links li {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+}
+
+.fruit-detail {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin-bottom: 100px;
+  padding: 25px;
+}
+.fruit-detail .fruit-detail__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.fruit-detail h2 {
+  margin-top: 0;
+  color: #587608;
+}
+.fruit-detail img {
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.fruit-detail .fruit-card {
+  background-color: rgba(253, 185, 26, 0.3058823529);
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 700px) {
+  .fruit-detail .fruit-card {
+    flex-direction: row;
+  }
+  .fruit-detail .fruit-card img {
+    max-width: 50%;
+    height: 100%;
+  }
+  .fruit-detail .fruit-card .p-fruits {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .fruit-detail .fruit-card .p-fruits .text {
+    margin-left: 30px;
+  }
+  .fruit-detail .fruit-card .p-fruits .quantity-container {
+    margin-left: 6%;
+    margin-bottom: 5%;
+  }
+  .fruit-detail .fruit-card .p-fruits .add-trolley {
+    margin-left: 6%;
+  }
+}
+.fruit-detail .fruit-detail__origin,
+.fruit-detail .fruit-detail__type,
+.fruit-detail .fruit-detail__price {
+  margin-top: 1rem;
+}
+.fruit-detail .quantity-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-top: 10%;
+}
+.fruit-detail .quantity-container label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #F09D06;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.fruit-detail .quantity-container label:hover {
+  background-color: #2D607C;
+}
+.fruit-detail .quantity-container label input[type=radio] {
+  margin-right: 0.5rem;
+  list-style: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.fruit-detail .quantity-container .add-trolley label {
+  background-color: rgba(253, 185, 26, 0);
+  border: none;
+}
+.fruit-detail .fruit-detail__quantity-input {
+  margin-top: 2rem;
+}
+.fruit-detail .fruit-detail__quantity-input label {
+  display: block;
+}
+.fruit-detail .fruit-detail__quantity-input .fruit-detail__quantity-input--input {
+  margin-left: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 4rem;
+}
+.fruit-detail .fruit-detail__quantity-input .fruit-detail__add-to-cart {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(253, 185, 26, 0.3058823529);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.fruit-detail input[type=number] {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 40px;
+  border: 1px solid #F09D06;
+}
+.fruit-detail button {
+  background-color: #2D607C;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  font-weight: 600;
+  font-style: bold;
+  border: none;
+}
+.fruit-detail button:hover {
+  background-color: #587608;
+}
+
+.title h1 {
+  margin-bottom: 0;
+  color: #587608;
+}
+
+.rounded-3 {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 5%;
+  margin-left: 30%;
+  font-family: "Poppins", sans-serif;
+  padding: 80px;
+  width: 30%;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+}
+@media (max-width: 900px) {
+  .rounded-3 {
+    padding: 0;
+    width: auto;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
+
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #57813e !important;
+  border: none;
+}
+
+.mx-auto {
+  padding-top: 20px;
+}
+
+.mb-3 .error {
+  color: #e92b2d;
+  font-weight: 600;
+  font-size: 12px;
+}
+.mb-3 .exito {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #235c02;
+  font: bold;
+}
+.mb-3 .form-control {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .mb-3 .form-control {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.Section {
+  margin-left: 20%;
+  margin-right: 20%;
+  scroll-snap-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .Section {
+    margin-bottom: 30px;
+  }
+}
+.Section .Container {
+  background: url(../../images/fondobolsa.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+  width: 120%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .Section .Container {
+    margin-top: 2040px;
+    margin-bottom: 30px;
+  }
+}
+.Section .Container .Left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  border-radius: 20px;
+  margin: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .Section .Container .Left {
+    justify-content: center;
+    margin-top: 1150px;
+    margin-bottom: 50px;
+    flex-wrap: nowrap;
+  }
+}
+.Section .Container .Left .Title {
+  font-weight: 500;
+}
+.Section .Container .Left .Form {
+  width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.Section .Container .Left .Form .prueba {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.Section .Container .Left .Form .Input {
+  padding: 20px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  margin-right: 40px;
+}
+.Section .Container .Left .Form .TextArea {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: lightgray;
+  width: 100%;
+}
+.Section .Container .Left .Form .Button {
+  background-color: #2D607C;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */

@@ -159,15 +159,16 @@ footer .copy p {
   min-width: none;
 }
 
+@media (max-width: 745px) {
+  .section-faqs {
+    margin-bottom: auto;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+}
 .section-faqs .faqs {
   width: 90%;
   margin: 0 auto;
-  margin-top: 80px;
-}
-@media screen and (min-width: 1181px) {
-  .section-faqs .faqs {
-    width: 80%;
-  }
 }
 .section-faqs .faqs .title-section {
   position: relative;
@@ -175,6 +176,11 @@ footer .copy p {
   text-align: center;
   padding-bottom: 0;
   margin-bottom: 30px;
+}
+@media (max-width: 745px) {
+  .section-faqs .faqs .title-section {
+    margin-bottom: 0.5rem;
+  }
 }
 .section-faqs .faqs .title-section::after {
   content: "";
@@ -189,6 +195,11 @@ footer .copy p {
 }
 .section-faqs .faqs .faqs-grid {
   margin: 65px auto;
+}
+@media (max-width: 745px) {
+  .section-faqs .faqs .faqs-grid {
+    margin: 0 auto;
+  }
 }
 .section-faqs .faqs .faqs-grid .faqs-item {
   width: 100%;
@@ -206,7 +217,6 @@ footer .copy p {
   font-weight: 600;
   text-decoration: none;
   padding: 20px;
-  width: 100%;
   outline: none;
   transition: 0.4s;
 }
@@ -231,6 +241,12 @@ footer .copy p {
   line-height: 1;
   padding-left: 20px;
 }
+@media (max-width: 745px) {
+  .section-faqs .faqs .faqs-grid .faqs-item .faqs-title {
+    padding: 10px;
+    outline: none;
+  }
+}
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-content {
   padding: 0;
   max-height: 100px;
@@ -241,6 +257,12 @@ footer .copy p {
   text-align: justify;
   padding: 20px;
   color: #444343;
+}
+@media (max-width: 745px) {
+  .section-faqs .faqs .faqs-grid .faqs-item .faqs-content .faqs-content-inside {
+    padding-top: 0.2rem;
+    font-size: 0.8rem;
+  }
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-content.no-height {
   max-height: 0;

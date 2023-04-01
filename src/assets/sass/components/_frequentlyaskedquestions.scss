@@ -2,19 +2,26 @@
 // @import "../utilities/variables";
 
 .section-faqs {
+
+    @media (max-width:745px) {
+        margin-bottom: auto;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
     .faqs {
         width: 90%;
         margin: 0 auto;
-        margin-top: 80px;
-        @media screen and (min-width: 1181px) {            
-            width: 80%;       
-        }
         .title-section {
             position: relative;
             text-align: center;
             text-align: center;
             padding-bottom: 0;
             margin-bottom: 30px;
+
+            @media (max-width:745px) {
+                margin-bottom: 0.5rem;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -29,6 +36,11 @@
         }
         .faqs-grid {
             margin: 65px auto;
+
+            @media (max-width:745px) {
+                margin: 0 auto;
+            }
+
             .faqs-item {
                 width: 100%;
                 margin: 0 0 20px 0;
@@ -46,7 +58,6 @@
                     font-weight: 600;
                     text-decoration: none;
                     padding: 20px;
-                    width: 100%;
                     outline: none;
                     transition: 0.4s;
                     &:hover {
@@ -72,6 +83,11 @@
                         line-height: 1;
                         padding-left: 20px;
                     }
+
+                    @media (max-width:745px) {
+                        padding: 10px;
+                        outline: none;
+                    }
                 }
                 .faqs-content {
                     padding: 0;
@@ -83,8 +99,15 @@
                         padding: 20px;
                         // color:$color-slogan;
                         color: #444343;
+
+                        @media (max-width:745px) {
+                            padding-top: 0.2rem;
+                            font-size: 0.8rem;
+                        }
                     }
-                    &.no-height {max-height: 0;}
+                    &.no-height {
+                        max-height: 0;
+                    }
                 }
             }
         }  

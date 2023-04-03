@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 import FruitDetail from './Components/ProductDetails';
 import Faqs from './Components/FrequentlyAskedQuestions';
 
+
 function App() {
   return (
     <div className="App">
@@ -16,8 +17,8 @@ function App() {
       <FruitDetail/>
       <SingIn />
       <LoginForm />
-    <ContactForm />
-      <Faqs />
+      <ContactForm />
+      {/* <Faqs /> */}
       <Footer />
     </div>
   );

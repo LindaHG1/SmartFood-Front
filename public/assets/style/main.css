@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .title h1 {
   margin-bottom: 0;
   color: #587608;
@@ -105,7 +106,7 @@ footer .top-info .bloq-top ul {
   margin: 0;
   list-style: none;
   line-height: 35px;
-  color: #fff;
+  color: #FFFFFF;
   text-align: center;
 }
 footer .top-info .bloq-top ul li i {
@@ -124,7 +125,7 @@ footer .top-info .bloq-top .rrss {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  color: #f09d06;
+  color: #F09D06;
 }
 footer .top-info .bloq-top .rrss ul {
   display: flex;
@@ -135,7 +136,7 @@ footer .top-info .bloq-top .rrss ul {
 }
 footer .top-info .bloq-top .rrss ul li a {
   display: block;
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 100%;
   text-align: center;
   line-height: 40px;
@@ -153,70 +154,137 @@ footer .copy {
 footer .copy p {
   text-align: center;
   margin: 0;
-  color: #fff;
+  color: #FFFFFF;
   opacity: 0.7;
   min-width: none;
 }
 
-.homepage {
+.section-faqs .faqs {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+@media screen and (min-width: 1181px) {
+  .section-faqs .faqs {
+    width: 80%;
+  }
+}
+.section-faqs .faqs .title-section {
+  position: relative;
+  text-align: center;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 30px;
+}
+.section-faqs .faqs .title-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section-faqs .faqs .faqs-grid {
+  margin: 65px auto;
+}
+.section-faqs .faqs .faqs-grid .faqs-item {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: block;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  background-color: #ECECEC;
+  border: 1px solid #ddd;
+  color: #444343;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 20px;
+  width: 100%;
+  outline: none;
+  transition: 0.4s;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title:hover {
+  background-color: #FDBA1A;
+  color: #ECECEC;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active {
+  background-color: #FDBA1A;
+  color: #ECECEC;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active:after {
+  content: "−";
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-title:after {
+  content: "+";
+  color: #968B84;
+  font-weight: normal;
+  float: right;
+  margin-left: auto;
+  font-size: 24px;
+  line-height: 1;
+  padding-left: 20px;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-content {
+  padding: 0;
+  max-height: 100px;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-content .faqs-content-inside {
+  text-align: justify;
+  padding: 20px;
+  color: #444343;
+}
+.section-faqs .faqs .faqs-grid .faqs-item .faqs-content.no-height {
+  max-height: 0;
 }
 
-.slogan {
+.homepage {
+  overflow: hidden;
+  position: relative;
+}
+.homepage .banner {
+  position: relative;
+}
+.homepage .banner img {
+  width: 100%;
+}
+.homepage .banner .slogan {
   position: absolute;
-  top: 0;
-  left: 0;
+  right: 5%;
+  top: 35%;
   color: rgb(68, 67, 67);
   box-sizing: border-box;
   z-index: 1;
-  width: 70%;
-  margin-top: 15%;
+  width: 50%;
   text-align: right;
   padding-right: 0;
-  margin-left: 20%;
-  font-size: larger;
+  font-size: 1rem;
 }
 @media (max-width: 745px) {
-  .slogan {
+  .homepage .banner .slogan {
     padding: 0;
-    text-align: center;
-    width: 90%;
-    margin-left: 4%;
-    margin-top: 65%;
-    font-size: 1em;
-  }
-}
-@media (min-width: 745px) {
-  .slogan {
-    padding-left: 20%;
-    margin-top: 15%;
+    top: 70px;
     text-align: right;
-    padding-right: 0;
+    width: 90%;
+    font-size: 0.7em;
+    text-shadow: 0 0 10px white;
   }
 }
-
-.banner {
-  text-align: center;
-}
-.banner h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-.banner p {
-  font-size: 1.5rem;
-}
-
-.card-container {
+.homepage .card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
 }
-
-.card {
+.homepage .card {
   background-color: #ccc;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -225,15 +293,21 @@ footer .copy p {
   padding: 10px;
   text-align: center;
   width: 250px;
+  transition: transform 0.3s ease-in-out;
+  transition: 0.3s;
 }
-.card img {
+.homepage .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.homepage .card img {
   margin-bottom: 10px;
 }
-.card h2 {
+.homepage .card h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
-.card p {
+.homepage .card p {
   font-size: 1.5rem;
 }
 
@@ -345,6 +419,11 @@ footer .copy p {
   text-decoration: none;
   color: #FFF3F4;
 }
+@media (max-width: 600px) {
+  .navbar .links a {
+    font-size: 1.2rem;
+  }
+}
 .navbar .links .float-shadow {
   margin: 17px;
   font-size: 1.2rem;
@@ -380,6 +459,27 @@ footer .copy p {
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
+.navbar .icons-nav {
+  list-style: none;
+  color: #FFF3F4;
+  display: flex;
+  width: 86%;
+  margin: 0 auto;
+}
+.navbar .icons-nav svg.iconify.iconify--ic {
+  color: #FFFFFF;
+}
+.navbar .icons-nav svg.iconify.iconify--teenyicons {
+  color: white;
+}
+@media (max-width: 750px) {
+  .navbar .icons-nav {
+    justify-content: right;
+  }
+}
+.navbar .icons-nav li {
+  margin-left: 10px;
+}
 .navbar .toggle-icon {
   display: none;
 }
@@ -396,7 +496,21 @@ footer .copy p {
     height: 60px;
   }
   .navbar.expanded {
-    height: 100vh;
+    height: 70vh;
+  }
+  .navbar.expanded .logo {
+    position: absolute;
+    top: 4%;
+    padding: 0;
+    text-align: center;
+    height: 60px;
+  }
+  .navbar.expanded .icons-nav {
+    display: flex;
+    margin-right: 5%;
+    position: absolute;
+    top: 2%;
+    right: 8%;
   }
   .navbar.expanded .links {
     position: absolute;
@@ -423,6 +537,9 @@ footer .copy p {
     position: absolute;
     top: 28px;
     right: 20px;
+  }
+  .navbar .toggle-icon .menu {
+    margin-right: 70%;
   }
   .navbar .links {
     position: absolute;
@@ -458,12 +575,8 @@ footer .copy p {
      object-fit: cover;
   border-radius: 5px;
   position: relative;
-  transition: filter 0.3s ease-in-out;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 .fruit-detail h2 {
@@ -472,10 +585,10 @@ footer .copy p {
 }
 .fruit-detail img {
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 .fruit-detail .fruit-card {
-  background-color: rgba(253, 185, 26, 0.1960784314);
+  background-color: rgba(253, 185, 26, 0.3058823529);
   border: 1px solid #ccc;
   border-radius: 7px;
   display: flex;
@@ -532,13 +645,13 @@ footer .copy p {
   margin-right: 10px;
   padding: 0.5rem;
   border-radius: 5px;
-  background-color: #FDBA1A;
+  background-color: #F09D06;
   cursor: pointer;
-  color: #fff;
+  color: #FFFFFF;
   font-weight: 600;
 }
 .fruit-detail .quantity-container label:hover {
-  background-color: #587608;
+  background-color: #2D607C;
 }
 .fruit-detail .quantity-container label input[type=radio] {
   margin-right: 0.5rem;
@@ -569,22 +682,22 @@ footer .copy p {
   margin-top: 0.5rem;
   padding: 0.5rem;
   background-color: rgba(253, 185, 26, 0.3058823529);
-  color: #fff;
+  color: #FFFFFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
 }
 .fruit-detail input[type=number] {
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 5px;
   padding: 10px;
   max-width: 40px;
-  border: 1px solid #FDBA1A;
+  border: 1px solid #F09D06;
 }
 .fruit-detail button {
   background-color: #2D607C;
-  color: #fff;
+  color: #FFFFFF;
   padding: 10px;
   border-radius: 5px;
   margin-left: 5px;

@@ -12,7 +12,7 @@
 
 @mixin improveAntiAlias() {
     //Improve aliasing on mobile/tablet devices
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0); 
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
 .wrapper {
@@ -39,7 +39,7 @@
     padding: 10px 15px;
     left: 0;
     box-sizing: border-box;
-    
+
 
     .logo {
         height: 70px;
@@ -53,15 +53,15 @@
         align-items: center;
         text-align: center;
 
-        a{
+
+        a {
             text-decoration: none;
-            color:#FFF3F4;
+            color: #FFF3F4;
+
+            @media(max-width:600px) {
+                font-size: 1.2rem;
+            }
         }
-
-
-
-
-
 
         .float-shadow {
             margin: 17px;
@@ -71,6 +71,8 @@
             position: relative;
             transition-duration: .3s;
             transition-property: transform;
+
+
 
             @include hideTapHighlightColor();
             @include hardwareAccel();
@@ -88,7 +90,7 @@
                 opacity: 0;
                 background: radial-gradient(ellipse at center, rgba(51, 0, 127, 0.457) 0%, rgba(19, 17, 145, 0) 80%);
                 transition-duration: .3s;
-                transition-property: transform opacity; 
+                transition-property: transform opacity;
             }
 
             &:hover {
@@ -107,8 +109,38 @@
         }
     }
 
+
+    .icons-nav {
+        list-style: none;
+        color: #FFF3F4;
+        display: flex;
+        width: 86%;
+        margin: 0 auto;
+
+        
+
+        svg.iconify.iconify--ic {
+            color: $color-blanco;
+
+            
+        }
+        svg.iconify.iconify--teenyicons{
+            color: white;
+        }
+
+        @media(max-width:750px) {
+            justify-content: right;
+        }
+
+        li {
+            margin-left: 10px;
+        }
+
+    }
+
     .toggle-icon {
-        display: none
+        display: none;
+
     }
 
     @media(max-width: 768px) {
@@ -124,7 +156,25 @@
         }
 
         &.expanded {
-            height: 100vh;
+            .logo {
+                position: absolute;
+                top: 4%;
+                padding: 0;
+                text-align: center;
+                height: 60px;
+            }
+
+            .icons-nav {
+                display: flex;
+                margin-right: 5%;
+                position: absolute;
+                top: 2%;
+                right: 8%;
+
+            }
+
+            height: 70vh;
+            
 
             .links {
                 position: absolute;
@@ -155,6 +205,10 @@
             position: absolute;
             top: 28px;
             right: 20px;
+
+            .menu {
+                margin-right: 70%;
+            }
         }
 
         .links {
@@ -172,7 +226,9 @@
             li {
                 margin: 15px 0;
                 font-size: 24px;
+
             }
+
         }
     }
 }

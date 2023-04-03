@@ -107,7 +107,7 @@ const Formulario = () => {
 
 
                             <div className="d-grid gap-2 col-6 mx-auto">
-                                <button className="btn btn-primary" type="submit">Enviar</button>
+                                <button className="btn btn-form" type="submit">Enviar</button>
                                 {formularioEnviado && <p className='exito'>Mensaje enviado correctamente, gracias!</p>}
                             </div>
                         

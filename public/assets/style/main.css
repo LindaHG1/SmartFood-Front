@@ -15,6 +15,11 @@
     width: 50%;
   }
 }
+@media (max-width: 300px) {
+  .h-100 {
+    margin: 0 auto;
+  }
+}
 
 .p-5 {
   padding: 2rem;
@@ -29,6 +34,9 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
 }
+.rounded-3 h1 {
+  text-align: center;
+}
 
 .form-control {
   margin-bottom: 1rem;
@@ -41,6 +49,7 @@
 .error {
   color: #dc3545;
   font-weight: bold;
+  margin-top: -15px;
 }
 
 .exito {
@@ -52,18 +61,19 @@
   font-size: 1rem;
   font-weight: 500;
   border-radius: 0.5rem;
+  align-self: center;
 }
 
-.btn-primary {
-  background: #2D607C !important;
+.btn-form {
+  background: #2D607C;
   border: none;
   width: 30%;
   padding: 10px;
   border-radius: 7px;
   color: white;
 }
-.btn-primary:hover {
-  background-color: #57813e !important;
+.btn-form:hover {
+  background-color: #57813e;
   border: none;
 }
 

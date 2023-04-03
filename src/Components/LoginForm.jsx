@@ -6,44 +6,55 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 function LoginForm() {
   const [passwordError, setPasswordError] = useState('');
 
-  // maneja el envío del formulario
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // aquí puedes enviar los datos del formulario al servidor
-  };
-
   return (
-    <div className="rounded-3">
-      <h1 className="title">Inicia sesión</h1>
+    <div className="form">
+      <h1 className="title_sesion">Inicia sesión</h1>
       <Formik
         initialValues={{ email: '', password: '' }}
+        validate={(values) => {
+          const errors = {};
+          if (!values.email) {
+            errors.email = 'Debes ingresar un correo electrónico';
+          } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(values.email)) {
+            errors.email = 'El correo electrónico es inválido';
+          }
+          if (!values.password) {
+            errors.password = 'Debes ingresar una contraseña';
+          } else if (values.password.length < 8) {
+            errors.password = 'La contraseña debe tener al menos 8 caracteres';
+          }
+          return errors;
+        }}
         onSubmit={(values) => {
           // aquí puedes enviar los datos del formulario al servidor
           console.log(values);
         }}
       >
         {({ values, handleChange, handleSubmit, errors, touched }) => (
-          <Form className='mb-3' onSubmit={handleSubmit}>
+          <Form className='container' onSubmit={handleSubmit}>
             <Field
-              className='form-control' placeholder="Email"
+              className='input_descripcion' placeholder="Email"
               type="email"
               name="email"
               value={values.email}
               onChange={handleChange}
             />
+            {errors.email && touched.email && (
+              <ErrorMessage name="email" component="div" className="error" />
+            )}
 
-            <br />
             <Field
-              className='form-control' placeholder="Contraseña"
+              className='input_descripcion' placeholder="Contraseña"
               type="password"
               name="password"
               value={values.password}
               onChange={handleChange}
             />
-
-            <ErrorMessage name="password" component="div" className="error" />
-            <br />
-            <button className='btn-primary mx-auto' type="submit">Enviar</button>
+            {errors.password && touched.password && (
+              <ErrorMessage name="password" component="div" className="error" />
+            )}
+         
+            <button className='btn auto' type="submit">Enviar</button>
           </Form>
         )}
       </Formik>
@@ -51,4 +62,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm
+export default LoginForm;

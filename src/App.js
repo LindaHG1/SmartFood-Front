@@ -18,7 +18,7 @@ function App() {
       <SingIn />
       <LoginForm />
       <ContactForm />
-      {/* <Faqs /> */}
+      <Faqs />
       <Footer />
     </div>
   );

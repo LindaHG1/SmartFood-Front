@@ -6,11 +6,6 @@ import { ErrorMessage, Form, Field, Formik } from 'formik';
 const Formulario = () => {
     const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
-    // funciones para el captcha
-    // const [captchaValido, cambiarCaptchaValido] = useState(null);
-    // const [usuarioValido, cambiarUsuariValido] = useState(false);
-
-
 
     return (
         <>
@@ -60,11 +55,11 @@ const Formulario = () => {
                 }}
             >
                 {({ errors }) => (
-                    <div className='title'>
-                    <h1>CONTACTO</h1>
+                    
+                    
                     
                     <div className="h-100 p-5 text-bg-dark rounded-3">
-                        
+                        <h1>CONTACTO</h1>
                         <Form className="mb-3">
                             <div>
 
@@ -118,7 +113,7 @@ const Formulario = () => {
                         
                         </Form>
                         </div>
-                    </div>
+                
                 )}
 
 

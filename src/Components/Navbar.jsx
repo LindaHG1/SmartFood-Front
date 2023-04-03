@@ -25,6 +25,7 @@ export const Navbar = () => {
 
 
     return (
+        
         <nav className={toggle ? "navbar expanded" : "navbar"}>
             <img className="logo" src={logo} alt="SmartFood" />
 
@@ -49,7 +50,6 @@ export const Navbar = () => {
                 </ul>
             </div>
 
-
             <ul className="links">
                 <li className="float-shadow">
                     <a href="/">Inicio</a>
@@ -60,10 +60,25 @@ export const Navbar = () => {
                 <li className="float-shadow">
                     <a href="/contacto">Contacto</a>
                 </li>
-
             </ul>
 
+            <ul className='icons-desk'>
+                    <li className="float-shadow icon-desk">
+                    {windowWidth > 768 ? (
+                        <a href="#">
+                            <Icon icon="ic:round-shopping-cart" width="28" height="28" />
+                        </a>
+                        ) : null}
+                    </li>
 
+                    <li className="float-shadow icon-desk">
+                    {windowWidth > 768 ? (
+                        <a href="#" >
+                            <Icon icon="teenyicons:user-circle-solid" width="28" height="28" />
+                        </a>
+                        ) : null}
+                    </li>
+                </ul>
         </nav>
     );
 };

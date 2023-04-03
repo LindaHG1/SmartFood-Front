@@ -30,19 +30,21 @@
     height: 80px;
     background-color: $color-naranja;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: fixed;
     top: 0;
     z-index: 9999;
     overflow: hidden;
-    padding: 10px 15px;
+    padding: 15px 25px;
     left: 0;
     box-sizing: border-box;
 
 
     .logo {
         height: 70px;
+        position: absolute;
+        left: 2%;
     }
 
     .links {
@@ -95,12 +97,12 @@
 
             &:hover {
                 transform: translateY(-5px);
-                /* move the element up by 5px */
+                
 
                 &:before {
                     opacity: 1;
                     transform: translateY(5px);
-                    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+        
                 }
             }
 
@@ -128,19 +130,37 @@
             color: white;
         }
 
-        @media(max-width:750px) {
+        @media(max-width:768px) {
             justify-content: right;
         }
 
         li {
             margin-left: 10px;
         }
-
     }
 
     .toggle-icon {
         display: none;
+    }
 
+    .icons-desk{
+        list-style: none;
+        display: flex;
+        
+        .icon-desk{
+            padding:0;
+            margin-left: 20px;
+            svg.iconify.iconify--ic {
+                color: $color-blanco;
+                
+    
+                
+            }
+            svg.iconify.iconify--teenyicons{
+                color: white;
+            }
+    
+        }
     }
 
     @media(max-width: 768px) {
@@ -174,7 +194,6 @@
             }
 
             height: 70vh;
-            
 
             .links {
                 position: absolute;

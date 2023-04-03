@@ -1,73 +1,64 @@
-.title{
-        h1{
-    margin-bottom:0;
-    color:#587608;
-    }
+@import '../utilities/variable';
+.h-100 {
+  height: 100%;
+  width: 70%;
+  margin: 25px;
+  @media(min-width:600px){
+    margin: 80px;
+  }
+  @media(min-width:1100px){
+    margin-left: 300px;
+    width: 50%;
+  }
+}
+
+.p-5 {
+  padding: 2rem;
+}
+
+.text-bg-dark {
+  color: #222;
 }
 
 .rounded-3 {
-    background-image:url(../../images/fondobolsa.jpg);
-    border: none;
-    margin: 5%;
-    margin-left:30%;
-    font-family: 'Poppins', sans-serif;
-    padding: 80px;
-    width: 30%;
-    align-items: center;
-    box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
-    @media(max-width:900px){
-        padding:0;
-        width: auto;
-        height: 350px;
-        margin-left:5%;
-    }
-  }
-  
-  .btn-primary {
-    background: #2D607C !important;
-    border: none;
-    width: 30%;
-    padding:10px;
-    border-radius: 7px;
-    color:white;
-  
-    &:hover {
-      background-color: #57813e !important;
-      border: none;
-    }
-  }
-  
-  .mx-auto {
-    padding-top: 20px;
-  }
-  
-  .mb-3 {
-    .error {
-      color: #e92b2d;
-      font-weight: 600;
-      font-size: 12px;
-    }
-  
-    .exito {
-      text-align: center;
-      font-size: 14px;
-      padding-top: 20px;
-      color: #235c02;
-      font: bold;
-    }
-    .form-control{
-        padding:10px;
-        width: 60%;
-        margin-bottom: 20px;
-        border-radius: 7px;
-        border:none;
-        @media(max-width:900px){
-            margin-top:40px;
-            margin-bottom:0;
-        }
-    }
-  
-    
-  }
+  background-image:url(../../images/fondobolsa.jpg);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+}
 
-  
+.form-control {
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 90%;
+}
+
+.error {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.exito {
+  color: $color-verde;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+.btn-primary {
+  background: #2D607C !important;
+  border: none;
+  width: 30%;
+  padding:10px;
+  border-radius: 7px;
+  color:white;
+
+  &:hover {
+    background-color: #57813e !important;
+    border: none;
+  }
+}

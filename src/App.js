@@ -12,14 +12,14 @@ import Faqs from './Components/FrequentlyAskedQuestions';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/>
       <HomePage/>
-      <FruitDetail/>
-      <SingIn />
-      <LoginForm />
+      <FruitDetail/> */}
+      {/* <SingIn />
+      <LoginForm /> */}
       <ContactForm />
-      <Faqs />
-      <Footer />
+      {/* <Faqs /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

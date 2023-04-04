@@ -24,7 +24,7 @@ function Faqs() {
     });
 }, []);
 
-  return (
+return (
     <section className="section-faqs" data-aos="fade-down">
         <div className="faqs">
         <h1 className="title-section">Preguntas frecuentes</h1>
@@ -69,11 +69,10 @@ function Faqs() {
                         illo consequuntur dolores, ipsum, recusandae ad?
                     </p>
                 </Accordion>
-
+            </div>
         </div>
-      </div>
     </section>
-  );
+);
 }
 
 export default Faqs;

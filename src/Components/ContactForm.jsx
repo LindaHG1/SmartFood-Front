@@ -1,16 +1,17 @@
 import '../assets/sass/components/_contactform.scss';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ErrorMessage, Form, Field, Formik } from 'formik';
+import AOS from "aos";
+import 'aos/dist/aos.css'; 
+
 
 
 const Formulario = () => {
     const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
-    // funciones para el captcha
-    // const [captchaValido, cambiarCaptchaValido] = useState(null);
-    // const [usuarioValido, cambiarUsuariValido] = useState(false);
-
-
+    useEffect(() => {
+        AOS.init({duration:1000}); // inicializa AOS
+    }, []);
 
     return (
         <>
@@ -60,11 +61,11 @@ const Formulario = () => {
                 }}
             >
                 {({ errors }) => (
-                    <div className='title'>
-                    <h1>CONTACTO</h1>
                     
+                    
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <div className="h-100 p-5 text-bg-dark rounded-3">
-                        
+                        <h1>CONTACTO</h1>
                         <Form className="mb-3">
                             <div>
 
@@ -111,14 +112,15 @@ const Formulario = () => {
 
 
 
-                            <div className="d-grid gap-2 col-6 mx-auto">
-                                <button className="btn btn-primary" type="submit">Enviar</button>
+                            <div className="col-12">
+                                <button className="btn btn-form" type="submit">Enviar</button>
                                 {formularioEnviado && <p className='exito'>Mensaje enviado correctamente, gracias!</p>}
                             </div>
                         
                         </Form>
                         </div>
-                    </div>
+                        </div>
+                
                 )}
 
 

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../assets/sass/components/_productdetails.scss";
 import prueba from "../assets/images/prueba.png";
+import AOS from "aos";
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
 
-const FruitDetail = ({ name, origin, type, price, image }) => {
+const DetailsProduct = ({ name, origin, type, price, image }) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleQuantityChange = (event) => {
@@ -14,7 +17,12 @@ const FruitDetail = ({ name, origin, type, price, image }) => {
         console.log(`Agregado al carrito: ${quantity} kg de ${name}`);
     };
 
+    useEffect(() => {
+        AOS.init({duration:1000}); // inicializa AOS
+    }, []);
+
     return (
+        <div data-aos="fade-down">
         <div className="fruit-detail">
             <h2 className="fruit-detail__title">Nombre del producto</h2>
             
@@ -78,7 +86,8 @@ const FruitDetail = ({ name, origin, type, price, image }) => {
                 </div>
             </div>
         </div>
+        </div>
     );
 };
 
-export default FruitDetail;
+export default DetailsProduct;

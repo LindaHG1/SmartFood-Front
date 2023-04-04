@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/sass/components/_header.scss';
 import banner from '../assets/images/banner.png'
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // importa los estilos de AOS
+import 'aos/dist/aos.css'; 
 import { useEffect } from 'react';
 import banner2 from '../assets/images/banner2.png'
 
@@ -22,7 +22,7 @@ function HomePage() {
                         
                         <div className="slogan">
                             <div data-aos="fade-left">
-                                <h1>"En Smarfood encontrarás la frescura de la huerta a solo unos pasos de tu hogar".</h1>
+                                <h1>"En Smarfood encontrarás la frescura de la huerta a solo unos pasos de tu hogar"</h1>
                                 <p>Explora lo que ofrecemos</p>
                             </div>
                         </div>

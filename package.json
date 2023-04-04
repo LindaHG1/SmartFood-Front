@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@iconify/react": "^4.1.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,9 +17,10 @@
     "react-hook-form": "^7.43.8",
     "react-icons": "^4.8.0",
     "react-icons-kit": "^2.0.0",
+    "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
-    "sass": "^1.60.0",
     "react-toastify": "^9.1.2",
+    "sass": "^1.60.0",
     "simple-react-footer": "^1.0.2",
     "web-vitals": "^2.1.4",
     "yup": "^1.0.2"

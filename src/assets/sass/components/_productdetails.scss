@@ -1,14 +1,17 @@
 @import '../utilities/variable';
 
 .fruit-detail {
-    margin-top: 100px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: sans-serif;
-    margin-bottom: 100px;
+    font-family: 'Open sans';
+    margin-bottom: 50px;
     padding: 25px;
-    
+    justify-content: center;
+    @media(max-width:770px){
+        margin: 0 auto;
+    }
 
     .fruit-detail__image{
         width: 100%;

@@ -22,7 +22,7 @@ function HomePage() {
                         
                         <div className="slogan">
                             <div data-aos="fade-left">
-                                <h1>"En Smarfood encontrarás la frescura de la huerta a solo unos pasos de tu hogar".</h1>
+                                <h1>"En Smarfood encontrarás la frescura de la huerta a solo unos pasos de tu hogar"</h1>
                                 <p>Explora lo que ofrecemos</p>
                             </div>
                         </div>

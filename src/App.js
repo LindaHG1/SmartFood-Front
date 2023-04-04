@@ -1,25 +1,47 @@
 import './App.css';
 import Footer from './Components/Footer';
-import ContactForm from './Components/ContactForm';
 import LoginForm from './Components/LoginForm';
-import SingIn from './Components/SingIn';
-import HomePage from './Components/Header';
+import HomePage from './Components/HomePage';
 import Navbar from './Components/Navbar';
-import FruitDetail from './Components/ProductDetails';
-import Faqs from './Components/FrequentlyAskedQuestions';
+import FruitDetail from './Components/DetailsProduct';
+import ContactForm from './Components/ContactForm';
+import TermsConditions from './Components/TermsConditions';
+import Terms from './Views/Terms';
+import Home from './Views/Home';
+import Contact from './Views/Contact';
+import ProductsDetails from './Views/ProductsDetails';
+import Faqs from './Views/PreFre';
+import PreFre from './Views/PreFre';
+import Login from './Views/Login';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+
+      {/* <Login/> */}
+
+     {/* <PreFre/>  */}
+
+      {/* <Contact/> */}
+
+      {/* <ProductsDetails/> */}
+
+      {/* <Terms/> */}
+
+      {/* <Home/> */}
+
+
+      {/* <Navbar/>
       <HomePage/>
       <FruitDetail/>
-      {/* <SingIn />
-      <LoginForm /> */}
+      <TermsConditions/>
+      <SingIn />
+      <LoginForm />
       <ContactForm />
       <Faqs />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

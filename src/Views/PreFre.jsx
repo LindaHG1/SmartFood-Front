@@ -1,16 +1,18 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import LoginForm from '../Components/LoginForm'
+import Faqs from '../Components/FrequentlyAskedQuestions'
 
-function Login() {
+
+function PreFre() {
     return (
         <div>
             <Navbar/>
-            <LoginForm/> 
+            <Faqs/>
             <Footer/>
+
         </div>
     )
 }
 
-export default Login
+export default PreFre

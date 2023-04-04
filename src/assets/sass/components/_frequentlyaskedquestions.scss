@@ -2,9 +2,10 @@
 @import "../utilities/variable";
 
 .section-faqs {
+    margin-top: 100px;
 
     @media (max-width:745px) {
-        margin-bottom: auto;
+        margin: auto;
         padding-top: 0.2rem;
         padding-bottom: 0.2rem;
     }

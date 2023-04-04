@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/sass/components/_footer.scss";
+import { Icon } from '@iconify/react';
 
 
 
@@ -33,22 +34,23 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-facebook-f"></i>
+                <Icon icon="mdi:instagram" width="32" height="38" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-twitter"></i>
+                {/* <Icon icon="typcn:social-youtube-circular" width="42" height="42" /> */}
+                <Icon icon="tabler:brand-youtube" width="32" height="38" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-instagram"></i>
+                <Icon icon="basil:facebook-outline" width="32" height="38"/>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-youtube"></i>
+                <Icon icon="icon-park-outline:twitter" width="30" height="34" />
                 </a>
               </li>
             </ul>

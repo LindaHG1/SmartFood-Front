@@ -369,6 +369,81 @@ footer .copy p {
   font-size: 1.5rem;
 }
 
+.form {
+  background-image: url(../../images/fondobolsa.jpg);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+}
+@media (min-width: 600px) {
+  .form {
+    margin-left: 150px;
+    padding: 0;
+    width: 60%;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 980px) {
+  .form {
+    width: 50%;
+    margin-left: 260px;
+  }
+}
+
+.title_sesion {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #587608;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_descripcion {
+  width: 90%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+@media (min-width: 600px) {
+  .input_descripcion {
+    width: 140%;
+  }
+}
+
+.error {
+  color: red;
+  margin-top: -15px;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
+}
+
+.btn.auto {
+  background: #2D607C !important;
+  border: none;
+  width: 70%;
+  padding: 10px;
+  border-radius: 7px;
+  color: #FFFFFF;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1440px;

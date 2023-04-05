@@ -17,7 +17,7 @@ function Accordion({ title, children }) {
     );
 }
 
-function Faqs() {
+function Faqs(){
     useEffect(() => {
         AOS.init({
             duration: 1500,

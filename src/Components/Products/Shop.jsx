@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Trolley } from '../Trolley';
 import { Cards } from '../Cards';
-import './FakeShopStyles.css';
-import './Trolley.css';
 
 function Shop() {
   const [allProducts, setAllProducts] = useState([]);

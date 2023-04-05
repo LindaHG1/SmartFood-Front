@@ -1,7 +1,9 @@
 import './App.css';
-import Footer from './Components/Footer';
-import HomePage from './Components/Header';
 import Navbar from './Components/Navbar';
+import Cards from './Components/Cards';
+// import Shop from './Components/Products/Shop';
+import Footer from './Components/Footer';
+
 
 function App() {
   return (

@@ -1,5 +1,6 @@
 import React from 'react'
 import {data} from './Products/ApiProducts';
+import './Products/FakeShopStyles.css';
 
 export const Cards = ({
 	allProducts,

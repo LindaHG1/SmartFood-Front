@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Products/Trolley.css';
 
 export const Trolley = ({
 	allProducts,

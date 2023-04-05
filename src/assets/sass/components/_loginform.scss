@@ -9,6 +9,9 @@
   justify-content: center;
   padding: 20px;
   margin: 120px;
+  
+  
+
 
   @media(max-width:600px){
     margin: 30px;
@@ -21,7 +24,10 @@
   }
   @media(min-width:980px){
     width:50%;
-    margin-left:260px;
+    margin-bottom: 120px;
+    margin-left:360px;
+    margin-top: 220px;
+    
   }
 }
 

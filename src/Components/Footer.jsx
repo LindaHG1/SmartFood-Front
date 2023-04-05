@@ -14,16 +14,21 @@ const Footer = () => {
         <div className="bloq-top">
           <ul>
             <li>
-              <a href="./contacto/index.html">Contacto</a>
+              <a href="/contact">Contacto</a>
             </li>
             <li>
-              <a href="./preguntas-frecuentes/index.html">
+              <a href="/faqs">
                 Preguntas Frecuentes
               </a>
             </li>
             <li>
-              <a href="./terminos-y-condiciones/index.html">
+              <a href="/terms">
                 Términos y Condiciones
+              </a>
+            </li>
+            <li>
+              <a href="/privacy">
+                Politica de privacidad
               </a>
             </li>
           </ul>

@@ -55,17 +55,17 @@ export const Navbar = () => {
                     <a href="/">Inicio</a>
                 </li>
                 <li className="float-shadow">
-                    <a href="/productos">Productos</a>
+                    <a href="/products">Productos</a>
                 </li>
                 <li className="float-shadow">
-                    <a href="/contacto">Contacto</a>
+                    <a href="/contact">Contacto</a>
                 </li>
             </ul>
 
             <ul className='icons-desk'>
                     <li className="float-shadow icon-desk">
                     {windowWidth > 768 ? (
-                        <a href="#">
+                        <a href="/trolley">
                             <Icon icon="ic:round-shopping-cart" width="28" height="28" />
                         </a>
                         ) : null}
@@ -73,7 +73,7 @@ export const Navbar = () => {
 
                     <li className="float-shadow icon-desk">
                     {windowWidth > 768 ? (
-                        <a href="#" >
+                        <a href="/login" >
                             <Icon icon="teenyicons:user-circle-solid" width="28" height="28" />
                         </a>
                         ) : null}

@@ -43,14 +43,14 @@ export const data = [
 	},
 	{
 		id: 7,
-		img: '.jpg',
+		img: ' https://cdn.pixabay.com/photo/2017/08/24/06/29/coconut-2675546_1280.jpg',
 		nameProduct: 'Lorem ipsum',
 		price: 3,
 		quantity: 1,
 	},
 	{
 		id: 8,
-		img: '.jpg',
+		img: 'https://cdn.pixabay.com/photo/2016/03/05/19/03/appetite-1238256_1280.jpg',
 		nameProduct: 'Lorem ipsum',
 		price: 13,
 		quantity: 1,

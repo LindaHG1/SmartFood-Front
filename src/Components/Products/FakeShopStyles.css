@@ -7,6 +7,8 @@
 	box-sizing: border-box;
 }
 
+
+/* Main */
 .container-items {
 	display: grid;
 	grid-template-columns: repeat(4, 0.4fr);
@@ -14,6 +16,8 @@
 	line-height: 5%;
 	margin: 0 auto;
 	max-width: 1200px;
+	margin-top: 160px;
+	margin-bottom: 100px;
 }
 
 	@media screen and (max-width: 700px) {

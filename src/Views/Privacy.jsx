@@ -1,18 +1,16 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import HomePage from '../Components/HomePage'
+import Policy from '../Components/Policy'
 import Footer from '../Components/Footer'
-import Cards from '../Components/Cards'
 
-function Home() {
+function Privacy() {
     return (
         <div>
             <Navbar/>
-            <HomePage/>
-            <Cards/>
+            <Policy/>
             <Footer/>
         </div>
     )
 }
 
-export default Home
+export default Privacy

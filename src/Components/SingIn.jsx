@@ -72,10 +72,25 @@ const RegisterForm = () => {
               
               <Field type="text" name="address" className="form-control-input" placeholder="Dirección Opcional"/>
             </div>
+            <div className='checkbox'>
+            <label>
+            <input type="checkbox" />
+              <strong>Acepto los</strong> <a href="#" id="terminos"><strong>Términos y condiciones</strong></a>
+              <p>
+                Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión.
+                Puede consultar nuestra <a href=''>Politica de cookies </a> para más detalles. 
+
+              </p>
+            </label>
+            </div>
+
+
 
             <button type="submit" disabled={isSubmitting} className="btn">
               Registrarse
             </button>
+            
+
           </Form>
         )}
       </Formik>

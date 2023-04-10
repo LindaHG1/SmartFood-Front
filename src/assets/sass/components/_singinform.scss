@@ -1,3 +1,5 @@
+@import '../utilities/variable';
+
 .title{
     h1{
 margin-bottom:0;
@@ -30,19 +32,23 @@ box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
 .btn {
 background: #2D607C !important;
 border: none;
-width: 30%;
-padding:10px;
+width: 40%;
 border-radius: 7px;
 color:white;
+padding:20px;
+margin-top: 30px;
+
+
 
 &:hover {
   background-color: #57813e !important;
   border: none;
 }
-@media(max-width:768px){
+@media(max-width:1184px){
   width: auto;
   margin-top: 30px;
 }
+
 }
 .mb-3-input{
   width: 100% !important;
@@ -52,6 +58,7 @@ color:white;
   font-size: 12px;
 
 }
+
 
 .exito {
   text-align: center;
@@ -77,5 +84,27 @@ color:white;
 }
 
 
+}
+.checkbox{
+  margin-top:10%;
+  font-weight: bold;
+  a{
+    text-decoration: none;
+    color:$color-verde;
+    &:hover{
+      color:$color-azul;
+    }
+  }
+  p{
+    font-weight: bold;
+    margin-bottom: 30px;
+    a{
+      text-decoration: none;
+      color:$color-verde;
+      &:hover{
+        color:$color-azul;
+      }
+    }
+  }
 }
 

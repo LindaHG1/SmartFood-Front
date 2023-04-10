@@ -13,8 +13,8 @@ function App() {
      <Navbar/>
      <HomePage />
      <FruitDetail />
-     {/*<Contactform />
-     <LoginForm />*/}
+     <Contactform />
+     <LoginForm />
      <SingIn />
      <Footer />
     </div>

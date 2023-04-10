@@ -6,9 +6,15 @@ import { ErrorMessage, Form, Field, Formik } from 'formik';
 const Formulario = () => {
     const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
-    // funciones para el captcha
-    // const [captchaValido, cambiarCaptchaValido] = useState(null);
-    // const [usuarioValido, cambiarUsuariValido] = useState(false);
+
+    emailjs.sendForm('service_x726ada', 'template_jzdg4em', ref.current, 'w6oKIMhJ71y3VuOmb')
+      .then((result) => {
+          console.log(result.text);
+          setSuccess(true);
+      }, (error) => {
+          console.log(error.text);
+          setSuccess(false);
+      });
 
 
 

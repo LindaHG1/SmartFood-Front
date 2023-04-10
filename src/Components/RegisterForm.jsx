@@ -1,14 +1,14 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import '../assets/sass/components/_singinform.scss';
+import '../assets/sass/components/_signinform.scss';
 
 
 
 
 const RegisterForm = () => {
   return (
-    <div className="rounded-3">
+    <div className="container-form">
       <h1 className="title">Formulario de registro</h1>
 
       <Formik
@@ -37,45 +37,60 @@ const RegisterForm = () => {
         }}
       >
         {({ errors, touched, isSubmitting }) => (
-          <Form className="mx-auto">
-            <div className="mb-3">
+          <Form className="mx-autoform">
+            <div className="mb-3-input ">
               
-              <Field type="text" name="name" className="form-control" placeholder="Nombre" />
+              <Field type="text" name="name" className="form-control-input  " placeholder="Nombre" />
               <ErrorMessage name="name" component="div" className="error" />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-3-input">
               
-              <Field type="text" name="lastName" className="form-control" placeholder="Apellidos" />
+              <Field type="text" name="lastName" className="form-control-input" placeholder="Apellidos" />
               <ErrorMessage name="lastName" component="div" className="error" />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-3-input">
               
-              <Field type="email" name="email" className="form-control" placeholder="Email" />
+              <Field type="email" name="email" className="form-control-input form-control-lg" placeholder="Email" />
               <ErrorMessage name="email" component="div" className="error" />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-3-input">
               
-              <Field type="password" name="password" className="form-control" placeholder="Contraseña" />
+              <Field type="password" name="password" className="form-control-input form-control-lg" placeholder="Contraseña" />
               <ErrorMessage name="password" component="div" className="error" />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-3-input">
               
-              <Field type="password" name="confirmPassword" className="form-control" placeholder="Confirmar Contraseña" />
+              <Field type="password" name="confirmPassword" className="form-control-input" placeholder="Confirmar Contraseña" />
               <ErrorMessage name="confirmPassword" component="div" className="error" />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-3-input">
               
-              <Field type="text" name="address" className="form-control" placeholder="Dirección Opcional"/>
+              <Field type="text" name="address" className="form-control-input" placeholder="Dirección Opcional"/>
+            </div>
+            <div className='checkbox'>
+            <label>
+            <input type="checkbox" />
+              <strong>Acepto los</strong> <a href="#" id="terminos"><strong>Términos y condiciones</strong></a>
+              <p>
+                Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión.
+                Puede consultar nuestra <a href="/">Politica de cookies </a> para más detalles. 
+
+              </p>
+            </label>
             </div>
 
-            <button type="submit" disabled={isSubmitting} className="btn btn-primary">
+
+
+            <button type="submit" disabled={isSubmitting} className="btn">
               Registrarse
             </button>
+            
+
           </Form>
         )}
       </Formik>

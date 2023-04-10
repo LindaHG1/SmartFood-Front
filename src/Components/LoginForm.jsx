@@ -15,7 +15,7 @@ function LoginForm() {
 
   return (
     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-      <div className="form">
+      <div className="form-login">
         <h1 className="title_sesion">Inicia sesión</h1>
         <Formik
           initialValues={{ email: '', password: '' }}
@@ -64,7 +64,7 @@ function LoginForm() {
 
               <button className='btn auto' type="submit">Enviar</button>
               <div>
-                <p>¿Aún no tienes cuenta? <a href=""> Registrate Aquí</a></p>
+                <p>¿Aún no tienes cuenta? <a href="/register"> Registrate Aquí</a></p>
               </div>
 
             </Form>

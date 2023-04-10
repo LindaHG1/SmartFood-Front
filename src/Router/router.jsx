@@ -8,6 +8,7 @@ import PreFre from '../Views/PreFre';
 import Login from '../Views/Login';
 import Products from "../Views/Products";
 import Privacy from "../Views/Privacy";
+import SignIn from "../Views/SignIn";
 
 
 const Router = () => {
@@ -22,6 +23,7 @@ const Router = () => {
             <Route path="/faqs" element={<PreFre/>} />
             <Route path="/terms" element={<Terms/>} />
             <Route path="/privacy" element={<Privacy/>} />
+            <Route path="/register" element={<SignIn/>} />
             
             {/* <Route path="/register" element={<Register/>} />
             <Route path="/register" element={<Register/>} /> */}

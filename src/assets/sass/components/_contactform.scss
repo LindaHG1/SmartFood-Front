@@ -3,7 +3,6 @@
 
 .rounded-3 {
   background-image:url(../../images/fondobolsa.jpg);
-  border-radius: 0.5rem;
   box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
   margin: 100px auto;
   padding: 90px;
@@ -26,16 +25,13 @@
 }
 
 .form-control {
-  
   margin-bottom: 1rem;
   padding: 10px;
-  border-radius: 5px;
   border: none;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .error {

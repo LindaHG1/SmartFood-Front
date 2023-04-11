@@ -5,17 +5,20 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 
-function Policy() {
+
+function Cookies() {
 
     useEffect(() => {
         AOS.init({duration:1000}); // inicializa AOS
     }, []);
 
     return (
-        <div data-aos="fade-down">
+        <div>
+            <div data-aos="fade-down">
         <div className='terms'>
+            
                 <div className="content">
-                    <h1 className="title-section">Politica de privacidad</h1>
+                    <h1 className="title-section">Cookies</h1>
                     <p className='p-cookies'>
                         Lorem ipsum dolor sit amet consectetur. Faucibus elementum amet molestie mattis nunc at sed etiam in. Pharetra fringilla facilisi massa habitant et ac. Bibendum id tellus gravida gravida nibh sodales viverra nulla dictum. Bibendum amet odio in sed molestie lectus eu sit lorem. Pharetra diam enim id quis id at egestas urna in. Malesuada hendrerit maecenas eget enim lorem sed. Vitae pellentesque massa maecenas a egestas turpis diam.
                     </p>
@@ -29,7 +32,8 @@ function Policy() {
                 </div>
         </div>
         </div>
+        </div>
     )
 }
 
-export default Policy
+export default Cookies

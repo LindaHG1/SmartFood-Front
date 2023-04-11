@@ -9,12 +9,13 @@ import Login from '../Views/Login';
 import Products from "../Views/Products";
 import Privacy from "../Views/Privacy";
 import SignIn from "../Views/SignIn";
+import CookiesView from "../Views/CookiesView";
 
 
 const Router = () => {
    return (
       <BrowserRouter>
-         
+
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products/>} />
@@ -24,11 +25,12 @@ const Router = () => {
             <Route path="/terms" element={<Terms/>} />
             <Route path="/privacy" element={<Privacy/>} />
             <Route path="/register" element={<SignIn/>} />
+            <Route path="/cookies" element={<CookiesView/>} />
             
-            {/* <Route path="/register" element={<Register/>} />
-            <Route path="/register" element={<Register/>} /> */}
+            
             
          </Routes>
+
       </BrowserRouter>
    );
 };

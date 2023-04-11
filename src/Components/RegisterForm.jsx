@@ -2,12 +2,21 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import '../assets/sass/components/_signinform.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useState, useEffect } from 'react';
 
 
 
 
 const RegisterForm = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // inicializa AOS
+  }, []);
+
   return (
+    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <div className="container-form">
       <h1 className="title">Formulario de registro</h1>
 
@@ -75,10 +84,10 @@ const RegisterForm = () => {
             <div className='checkbox'>
             <label>
             <input type="checkbox" />
-              <strong>Acepto los</strong> <a href="#" id="terminos"><strong>Términos y condiciones</strong></a>
-              <p>
+              <strong>Acepto los</strong> <a href="/terms" id="terminos"><strong>Términos y condiciones</strong></a>
+              <p className="p-cookies">
                 Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión.
-                Puede consultar nuestra <a href="/">Politica de cookies </a> para más detalles. 
+                Puede consultar nuestra <a href="/cookies">Politica de cookies </a> para más detalles. 
 
               </p>
             </label>
@@ -94,6 +103,7 @@ const RegisterForm = () => {
           </Form>
         )}
       </Formik>
+    </div>
     </div>
   );
 };

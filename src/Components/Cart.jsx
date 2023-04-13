@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Icon } from '@iconify/react';
+import { Icon } from '@iconify/react'
 import './Products/Cart.css'
 
 export const Cart = ({
@@ -30,20 +30,21 @@ export const Cart = ({
 
 	return (
 			<div className='container-icon-cart'>
-				<div
-					// className='container-cart-icon' REVISAR
-					onClick={() => setActive(!active)}
-				>
+				<div onClick={() => setActive(!active)}>
 					<Icon className='icon-cart' icon="ic:round-shopping-cart" width="28" height="28" />
-					<div className='counter-products'>
+					<div className={countProducts === 0 ? 'hidden' : 'counter-products'}>
 						<span>{countProducts}</span>
-					</div>
+					</div>		
 				</div>
-				<div
-					className= {`cart-container ${
-						active ? 'cart-open' : 'hidden-cart'
-					}`}
-				>
+
+				{/* Revisar si dejo el onclick en el overlay */}
+				
+				{active && (
+					<div onClick={() => setActive(!active)} className="overlay overlay-show"></div>
+				)}
+
+				<div className={`cart-container ${ active ? 'cart-open' : 'hidden-cart' }`}>
+					
 					{allProducts.length ? (
 						<>
 							<div className='cart-header'>
@@ -53,6 +54,7 @@ export const Cart = ({
 								</div>
 								<button className='btn-clear-all' onClick={onCleanCart}>
 									Vaciar
+									<span className="material-symbols-rounded">delete</span>
 								</button>
 							</div>
 							<div className='row-products'>
@@ -80,7 +82,6 @@ export const Cart = ({
 									</div>
 								))}
 							</div>
-
 							<div className='cart-total'>
 								<h3>Total aproximado</h3>
 								<span className='total-payment'>{total} €</span>

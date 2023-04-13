@@ -9,6 +9,7 @@ import Login from '../Views/Login';
 import Products from "../Views/Products";
 import Privacy from "../Views/Privacy";
 import SignIn from "../Views/SignIn";
+import Basket from "../Views/Basket";
 
 
 const Router = () => {
@@ -19,6 +20,7 @@ const Router = () => {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products/>} />
             <Route path="/contact" element={<Contact/>} />
+            <Route path="/basket" element={<Basket/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/faqs" element={<PreFre/>} />
             <Route path="/terms" element={<Terms/>} />

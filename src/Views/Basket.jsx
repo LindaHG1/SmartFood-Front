@@ -1,16 +1,24 @@
-// import React from 'react'
-// import Navbar from '../Components/Navbar'
-// import Footer from '../Components/Footer'
-// import Shop from '../Components/Products/Shop'
+import { React, useState } from 'react'
+import Navbar from '../Components/Navbar'
 
-// function Basket() {
-//     return (
-//         <div>
-//             <Navbar/>
-//             <Shop/>
-//             <Footer/>
-//         </div>
-//     )
-// }
+function Basket() {
+    
+    const [allProducts, setAllProducts] = useState([]);
+    const [countProducts, setCountProducts] = useState(0);
+    const [total, setTotal] = useState(0);
 
-// export default Basket
+    return (
+        <div>
+            <Navbar
+            allProducts={allProducts}
+            setAllProducts={setAllProducts}
+            total={total}
+            setTotal={setTotal}
+            countProducts={countProducts}
+            setCountProducts={setCountProducts}
+            />
+        </div>
+    )
+}
+
+export default Basket

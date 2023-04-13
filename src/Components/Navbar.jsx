@@ -1,17 +1,24 @@
+import React, { useEffect, useState } from "react";
 import '../assets/sass/components/_navbar.scss';
 import logo from '../assets/images/logo.png';
 import { Icon } from '@iconify/react';
-import React, { useEffect, useState } from "react";
+import { Cart } from "./Cart";
 
 
+	
+export const Navbar = ({
+	allProducts,
+	setAllProducts,
+	total,
+	countProducts,
+	setCountProducts,
+	setTotal,
+}) => {
 
-
-export const Navbar = () => {
+    
     const [toggle, setToggle] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-
-
+    
     const handleToggle = () => {
         setToggle(!toggle);
     };
@@ -25,31 +32,30 @@ export const Navbar = () => {
 
 
     return (
-        
         <nav className={toggle ? "navbar expanded" : "navbar"}>
             <img className="logo" src={logo} alt="SmartFood" />
-
             <div className="toggle-icon" onClick={handleToggle}>
                 <ul className='icons-nav' style={{ display: "flex", alignItems: "center" }}>
                     <li className="float-shadow icon-nav">
-                        <a href="#">
-                            <Icon icon="ic:round-shopping-cart" width="28" height="28" />
-                        </a>
+                        <Cart
+                            allProducts={allProducts}
+                            setAllProducts={setAllProducts}
+                            total={total}
+                            setTotal={setTotal}
+                            countProducts={countProducts}
+                            setCountProducts={setCountProducts}
+                        />
                     </li>
-
                     <li className="float-shadow icon-nav">
                         <a href="#" >
                             <Icon icon="teenyicons:user-circle-solid" width="28" height="28" />
                         </a>
                     </li>
-
                     <li className="float-shadow icon-nav">
                         {toggle ? <Icon icon="material-symbols:close-rounded" className='menu' width="30" height="30" /> : <Icon icon="ic:round-menu" className='menu' width="32" height="32" />}
                     </li>
-
                 </ul>
             </div>
-
             <ul className="links">
                 <li className="float-shadow">
                     <a href="/">Inicio</a>
@@ -61,24 +67,27 @@ export const Navbar = () => {
                     <a href="/contact">Contacto</a>
                 </li>
             </ul>
-
             <ul className='icons-desk'>
-                    <li className="float-shadow icon-desk">
+                <li className="float-shadow icon-desk">
                     {windowWidth > 768 ? (
-                        <a href="/trolley">
-                            <Icon icon="ic:round-shopping-cart" width="28" height="28" />
-                        </a>
-                        ) : null}
-                    </li>
-
-                    <li className="float-shadow icon-desk">
+                        <Cart
+                            allProducts={allProducts}
+                            setAllProducts={setAllProducts}
+                            total={total}
+                            setTotal={setTotal}
+                            countProducts={countProducts}
+                            setCountProducts={setCountProducts}
+                        />
+                    ) : null}
+                </li>
+                <li className="float-shadow icon-desk">
                     {windowWidth > 768 ? (
                         <a href="/login" >
                             <Icon icon="teenyicons:user-circle-solid" width="28" height="28" />
                         </a>
-                        ) : null}
-                    </li>
-                </ul>
+                    ) : null}
+                </li>
+            </ul>
         </nav>
     );
 };

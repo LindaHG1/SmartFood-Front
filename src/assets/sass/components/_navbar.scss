@@ -1,3 +1,20 @@
+@import '../utilities/variable';
+
+@mixin hideTapHighlightColor() {
+    //Prevent highlight colour when element is tapped
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+    //Improve performance on mobile/tablet devices
+    transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+    //Improve aliasing on mobile/tablet devices
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
 .wrapper {
     width: 100%;
     max-width: 1440px;
@@ -10,24 +27,24 @@
 
 .navbar {
     width: 100%;
-    height: auto;
-    background-color: #F09D06;
+    height: 80px;
+    background-color: $color-naranja;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: fixed;
     top: 0;
     z-index: 9999;
     overflow: hidden;
-    padding: 10px 15px;
+    padding: 15px 25px;
     left: 0;
     box-sizing: border-box;
 
+
     .logo {
-        color: #FFF3F4;
-        padding: 0;
-        text-align: center;
-        height: 60px;
+        height: 70px;
+        position: absolute;
+        left: 2%;
     }
 
     .links {
@@ -40,15 +57,112 @@
         margin: 0;
         padding: 0;
 
-        li {
-            margin: 15px;
-            font-size: 15px;
+
+        a {
+            text-decoration: none;
+            color: #FFF3F4;
+
+            @media(max-width:600px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        .float-shadow {
+            margin: 17px;
+            font-size: 1.2rem;
             font-weight: 600;
+            display: inline-block;
+            position: relative;
+            transition-duration: .3s;
+            transition-property: transform;
+
+
+
+            @include hideTapHighlightColor();
+            @include hardwareAccel();
+            @include improveAntiAlias();
+
+            &:before {
+                pointer-events: none;
+                position: absolute;
+                z-index: -1;
+                content: '';
+                top: 100%;
+                left: 5%;
+                height: 10px;
+                width: 90%;
+                opacity: 0;
+                background: radial-gradient(ellipse at center, rgba(51, 0, 127, 0.457) 0%, rgba(19, 17, 145, 0) 80%);
+                transition-duration: .3s;
+                transition-property: transform opacity;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                
+
+                &:before {
+                    opacity: 1;
+                    transform: translateY(5px);
+        
+                }
+            }
+
+
+
+        }
+    }
+
+
+    .icons-nav {
+        list-style: none;
+        color: #FFF3F4;
+        display: flex;
+        width: 86%;
+        margin: 0 auto;
+
+        
+
+        svg.iconify.iconify--ic {
+            color: $color-blanco;
+
+            
+        }
+        svg.iconify.iconify--teenyicons{
+            color: white;
+        }
+
+        @media(max-width:768px) {
+            justify-content: right;
+        }
+
+        li {
+            margin-left: 10px;
         }
     }
 
     .toggle-icon {
-        display: none
+        display: none;
+    }
+
+    .icons-desk{
+        list-style: none;
+        display: flex;
+        
+        .icon-desk{
+            padding:0;
+            margin-left: 20px;
+            svg.iconify.iconify--ic {
+                color: $color-blanco;
+                
+    
+                
+            }
+            svg.iconify.iconify--teenyicons{
+                color: white;
+            }
+    
+        }
     }
 
     @media(max-width: 768px) {
@@ -64,7 +178,24 @@
         }
 
         &.expanded {
-            height: 100vh;
+            .logo {
+                position: absolute;
+                top: 4%;
+                padding: 0;
+                text-align: center;
+                height: 60px;
+            }
+
+            .icons-nav {
+                display: flex;
+                margin-right: 5%;
+                position: absolute;
+                top: 2%;
+                right: 8%;
+
+            }
+
+            height: 70vh;
 
             .links {
                 position: absolute;
@@ -97,6 +228,10 @@
             position: absolute;
             top: 28px;
             right: 20px;
+
+            .menu {
+                margin-right: 70%;
+            }
         }
 
         .links {
@@ -114,7 +249,9 @@
             li {
                 margin: 15px 0;
                 font-size: 24px;
+
             }
+
         }
     }
 }

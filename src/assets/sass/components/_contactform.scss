@@ -1,0 +1,72 @@
+@import '../utilities/variable';
+
+
+.rounded-3 {
+  background-image:url(../../images/fondobolsa.jpg);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+  margin: 100px auto;
+  padding: 90px;
+  width: 50%;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 170px;
+  @media(max-width:768px) {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+    h1{
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+}
+
+.form-control {
+  
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.error {
+  color: $color-error;
+  font-weight: bold;
+  margin-top: -15px;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.exito {
+  color: $color-correcto;
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  align-items: center;
+  
+}
+.btn-form {
+  background: $color-azul;
+  border: none;
+  width: 30%;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  color:$color-blanco;
+  
+  &:hover {
+    background-color: #57813e;
+    border: none;
+  }
+}

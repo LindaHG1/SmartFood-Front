@@ -1,16 +1,18 @@
 import React from 'react'
+import RegisterForm from '../Components/RegisterForm'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import LoginForm from '../Components/LoginForm'
 
-function Login() {
+
+
+function SingIn() {
     return (
         <div>
             <Navbar/>
-            <LoginForm/> 
+            <RegisterForm/>
             <Footer/>
         </div>
     )
 }
 
-export default Login
+export default SingIn

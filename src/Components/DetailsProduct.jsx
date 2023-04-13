@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../assets/sass/components/_productdetails.scss";
 import prueba from "../assets/images/prueba.png";
+import AOS from "aos";
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
 
-const FruitDetail = ({ name, origin, type, price, image }) => {
+const DetailsProduct = ({ name, origin, type, price, image }) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleQuantityChange = (event) => {
@@ -14,18 +17,28 @@ const FruitDetail = ({ name, origin, type, price, image }) => {
         console.log(`Agregado al carrito: ${quantity} kg de ${name}`);
     };
 
+    useEffect(() => {
+        AOS.init({duration:1000}); // inicializa AOS
+    }, []);
+
     return (
+        <div data-aos="fade-down">
         <div className="fruit-detail">
             <h2 className="fruit-detail__title">Nombre del producto</h2>
             
             <div className="fruit-card">
-            <img src={prueba} alt={name} className="fruit-detail__image" />
-                <div className="p-fruits">
-                    <p className="fruit-detail__origin">Origen: algun texto {origin}</p>
-                    <p className="fruit-detail__type">Tipo: mas texto {type}</p>
-                    <p className="fruit-detail__price">Precio por kilo: 10€ {price}</p>
 
+            
+                <img src={prueba} alt={name} className="fruit-detail__image zoom-image" />
+            
+                <div className="p-fruits">
+                    <div className="text">
+                    <p className="fruit-detail__origin"><strong>Origen:</strong> algun texto{origin}</p>
+                    <p className="fruit-detail__type"><strong>Tipo:</strong> mas texto {type}</p>
+                    <p className="fruit-detail__price"><strong>Precio por kilo:</strong> 10€ {price}</p>
+                    </div>
                     <div className="quantity-container">
+                        
                         <label className="kg">
                             <input
                                 type="radio"
@@ -65,13 +78,16 @@ const FruitDetail = ({ name, origin, type, price, image }) => {
                             />
                             <button onClick={handleAddToCart}>Agregar al carrito</button>
                         </label>
-                    </div>
-                    </div>
+                    
+                        </div>
+                        </div>
+                        
                     
                 </div>
             </div>
         </div>
+        </div>
     );
 };
 
-export default FruitDetail;
+export default DetailsProduct;

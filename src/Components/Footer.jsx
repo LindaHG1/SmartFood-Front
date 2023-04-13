@@ -1,5 +1,8 @@
 import React from "react";
 import "../assets/sass/components/_footer.scss";
+import { Icon } from '@iconify/react';
+
+
 
 const Footer = () => {
   return (
@@ -11,16 +14,21 @@ const Footer = () => {
         <div className="bloq-top">
           <ul>
             <li>
-              <a href="./contacto/index.html">Contacto</a>
+              <a href="/contact">Contacto</a>
             </li>
             <li>
-              <a href="./preguntas-frecuentes/index.html">
+              <a href="/faqs">
                 Preguntas Frecuentes
               </a>
             </li>
             <li>
-              <a href="./terminos-y-condiciones/index.html">
+              <a href="/terms">
                 Términos y Condiciones
+              </a>
+            </li>
+            <li>
+              <a href="/privacy">
+                Politica de privacidad
               </a>
             </li>
           </ul>
@@ -31,22 +39,23 @@ const Footer = () => {
             <ul>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-facebook-f"></i>
+                <Icon icon="mdi:instagram" width="32" height="38" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-twitter"></i>
+                {/* <Icon icon="typcn:social-youtube-circular" width="42" height="42" /> */}
+                <Icon icon="tabler:brand-youtube" width="32" height="38" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-instagram"></i>
+                <Icon icon="basil:facebook-outline" width="32" height="38"/>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-youtube"></i>
+                <Icon icon="icon-park-outline:twitter" width="30" height="34" />
                 </a>
               </li>
             </ul>

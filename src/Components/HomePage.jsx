@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import banner2 from '../assets/images/banner2.png'
 
 function HomePage() {
+
     useEffect(() => {
         AOS.init({ duration: 1000 }); // inicializa AOS
     }, []);
@@ -27,6 +28,7 @@ function HomePage() {
                             </div>
                         </div>
                     </div>
+
                     <div className="card-container">
                         <div className="card">
                             <img src="https://via.placeholder.com/150" alt="Imagen de la tarjeta" />

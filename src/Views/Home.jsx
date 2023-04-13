@@ -1,15 +1,37 @@
-import React from 'react'
+import { React, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import HomePage from '../Components/HomePage'
+import { ProductList } from '../Components/ProductList'
+import { Cart } from '../Components/Cart'
 import Footer from '../Components/Footer'
-import Cards from '../Components/Cards'
+
+
 
 function Home() {
+
+    const [allProducts, setAllProducts] = useState([]);
+    const [countProducts, setCountProducts] = useState(0);
+    const [total, setTotal] = useState(0);
+
     return (
         <div>
-            <Navbar/>
+            <Navbar
+            allProducts={allProducts}
+            setAllProducts={setAllProducts}
+            total={total}
+            setTotal={setTotal}
+            countProducts={countProducts}
+            setCountProducts={setCountProducts}
+            />
             <HomePage/>
-            <Cards/>
+            <ProductList
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
+            />
             <Footer/>
         </div>
     )

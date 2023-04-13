@@ -172,7 +172,7 @@ footer .copy {
 }
 footer .copy p {
   text-align: center;
-  margin: 0;
+  margin-bottom: 20px;
   color: #FFFFFF;
   opacity: 0.7;
   min-width: none;
@@ -408,7 +408,9 @@ footer .copy p {
 @media (min-width: 980px) {
   .form {
     width: 50%;
-    margin-left: 260px;
+    margin-bottom: 120px;
+    margin-left: 360px;
+    margin-top: 220px;
   }
 }
 

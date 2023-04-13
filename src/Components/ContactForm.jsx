@@ -13,6 +13,17 @@ const Formulario = () => {
         AOS.init({duration:1000}); // inicializa AOS
     }, []);
 
+    emailjs.sendForm('service_x726ada', 'template_jzdg4em', ref.current, 'w6oKIMhJ71y3VuOmb')
+      .then((result) => {
+          console.log(result.text);
+          setSuccess(true);
+      }, (error) => {
+          console.log(error.text);
+          setSuccess(false);
+      });
+
+
+
     return (
         <>
 

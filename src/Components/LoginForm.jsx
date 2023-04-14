@@ -16,7 +16,7 @@ function LoginForm() {
   return (
     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
       <div className="form-login">
-        <h1 className="title_sesion">Inicia sesión</h1>
+        <h1 className="title_sesion">INICIO DE SESIÓN</h1>
         <Formik
           initialValues={{ email: '', password: '' }}
           validate={(values) => {

@@ -11,7 +11,7 @@
 }
 
 .container-form {
-  background-image: url(../../images/fondobolsa.jpg);
+  background-image: url(../../images/bolsappel1.png);
   border: none;
   margin: 100px auto;
   margin-top: 170px;
@@ -79,6 +79,10 @@
     margin-top: 20px;
     border-radius: 7px;
     border: none;
+    &:focus{
+      border: 1px solid $color-amarillo;
+      outline: none;
+}
     
     
 

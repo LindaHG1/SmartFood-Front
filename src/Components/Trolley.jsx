@@ -1,115 +1,115 @@
-// import { useState } from 'react';
-// // import './Products/Trolley.css';
 
-// const Trolley = ({
-// 	allProducts,
-// 	setAllProducts,
-// 	total,
-// 	countProducts,
-// 	setCountProducts,
-// 	setTotal,
-// }) => {
-// 	const [active, setActive] = useState(false);
+import React, { useState, useEffect } from "react";
+import "../assets/sass/components/_trolley.scss";
 
-// 	const onDeleteProduct = product => {
-// 		const results = allProducts.filter(
-// 			item => item.id !== product.id
-// 		);
+function Frutas() {
+    const [carrito, setCarrito] = useState([]);
 
-// 		setTotal(total - product.price * product.quantity);
-// 		setCountProducts(countProducts - product.quantity);
-// 		setAllProducts(results);
-// 	};
+    useEffect(() => {
+        fetch('https://mi-api.com/frutas')
+            .then(response => response.json())
+            .then(data => setCarrito(data));
+    }, []);
 
-// 	const onCleanCart = () => {
-// 		setAllProducts([]);
-// 		setTotal(0);
-// 		setCountProducts(0);
-// 	};
+    function agregarAlCarrito(fruta) {
+        const nuevaFruta = { ...fruta, cantidad: 1 };
+        const carritoActualizado = [...carrito, nuevaFruta];
+        setCarrito(carritoActualizado);
+    }
 
-// 	return (
-// 		<header className='cart-shop'>	
-// 			<div className='container-icon'>
-// 				<div
-// 					className='container-cart-icon'
-// 					onClick={() => setActive(!active)}
-// 				>
-// 					<svg
-// 						xmlns='http://www.w3.org/2000/svg'
-// 						fill='none'
-// 						viewBox='0 0 24 24'
-// 						strokeWidth='1.5'
-// 						stroke='currentColor'
-// 						className='icon-cart'
-// 					>
-// 						<path
-// 							strokeLinecap='round'
-// 							strokeLinejoin='round'
-// 							d='M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z'
-// 						/>
-// 					</svg>
-// 					<div className='count-products'>
-// 						<span id='contador-productos'>{countProducts}</span>
-// 					</div>
-// 				</div>
+    function actualizarCantidad(id, cantidad) {
+        const carritoActualizado = [...carrito];
+        const fruta = carritoActualizado.find((f) => f.id === id);
+        fruta.cantidad = cantidad;
+        setCarrito(carritoActualizado);
+    }
 
-// 				<div
-// 					className={`container-cart-products ${
-// 						active ? '' : 'hidden-cart'
-// 					}`}
-// 				>
-// 					{allProducts.length ? (
-// 						<>
-// 							<div className='row-product'>
-// 								{allProducts.map(product => (
-// 									<div className='cart-product' key={product.id}>
-// 										<div className='info-cart-product'>
-// 											<span className='cantidad-producto-carrito'>
-// 												{product.quantity}
-// 											</span>
-// 											<p className='titulo-producto-carrito'>
-// 												{product.nameProduct}
-// 											</p>
-// 											<span className='precio-producto-carrito'>
-// 												{product.price} €
-// 											</span>
-// 										</div>
-// 										<svg
-// 											xmlns='http://www.w3.org/2000/svg'
-// 											fill='none'
-// 											viewBox='0 0 24 24'
-// 											strokeWidth='1.5'
-// 											stroke='currentColor'
-// 											className='icon-close'
-// 											onClick={() => onDeleteProduct(product)}
-// 										>
-// 											<path
-// 												strokeLinecap='round'
-// 												strokeLinejoin='round'
-// 												d='M6 18L18 6M6 6l12 12'
-// 											/>
-// 										</svg>
-// 									</div>
-// 								))}
-// 							</div>
+    function eliminarDelCarrito(id) {
+        const carritoActualizado = carrito.filter((f) => f.id !== id);
+        setCarrito(carritoActualizado);
+    }
 
-// 							<div className='cart-total'>
-// 								<h3>Total:</h3>
-// 								<span className='total-pagar'>{total} €</span>
-// 							</div>
+    function calcularSubtotal(fruta) {
+        return fruta.cantidad * fruta.precio;
+    }
 
-// 							<button className='btn-clear-all' onClick={onCleanCart}>
-// 								Vaciar Carrito
-// 							</button>
-// 						</>
-// 					) : (
-// 						<p className='cart-empty'>El carrito está vacío</p>
-// 					)}
-// 				</div>
-// 			</div>
-			
-// 		</header>
-// 	);
-// };
+    function calcularTotal() {
+        return carrito.reduce((total, f) => total + calcularSubtotal(f), 0);
+    }
 
-// export default Trolley
+    return (
+        <div className="cart-container">
+            <h1>Carrito</h1>
+            <hr></hr>
+            <ul className="fruit-list">
+                {frutas.map((fruta) => (
+                    <li key={fruta.id}>
+                        <h2>{fruta.nombre}</h2>
+                        <img className="fruit-img" src={fruta.imagen} alt={fruta.nombre} />
+                        <p>Precio: €{fruta.precio}</p>
+                        <button className="delete-btn" onClick={() => agregarAlCarrito(fruta)}>Agregar al carrito</button>
+                    </li>
+                ))}
+            </ul>
+
+            <h1 className="title-cart">Carrito de compras</h1>
+            <hr/>
+            <div className="table-cart">
+                <table>
+                    <tbody>
+                        {carrito.length === 0 ? (
+                            <div className="emty-cart">Tu carrito está vacío</div>
+                        ) : (
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>Subtotal</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {carrito.map((fruta) => (
+                                        <tr key={fruta.id}>
+                                            <td>{fruta.foto}</td>
+                                            <td>{fruta.precio}€</td>
+                                            <td>
+                                                <input type="number" value={fruta.cantidad} onChange={(e) => actualizarCantidad(fruta.id, e.target.value)} />
+                                            </td>
+                                            <td>€{calcularSubtotal(fruta)}</td>
+                                            <td>
+                                                <button className="delete-btn" onClick={() => eliminarDelCarrito(fruta.id)}>Eliminar</button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        )}
+                    </tbody>
+                </table>
+            </div>
+            <hr />
+            <h2 className="total">Total de tu compra:</h2>
+            <p className="p-cart">Subtotal: {calcularTotal()}€</p>
+            <p className="p-cart">Envío: 5.00€</p>
+            <p className="p-cart">Total: {calcularTotal() + 5}€</p>
+            <div className="btn-end">
+                <button className="btn-cart">Finalizar compra</button>
+            </div>
+        </div>
+    );
+}
+
+
+
+const frutas = [
+    { id: 1, nombre: "Manzana", imagen: "manzana.jpg", precio: 0.99 },
+    { id: 2, nombre: "Plátano", imagen: "platano.jpg", precio: 0.45 },
+    { id: 3, nombre: "Naranja", imagen: "naranja.jpg", precio: 1.50 },
+];
+
+export default Frutas;
+
+

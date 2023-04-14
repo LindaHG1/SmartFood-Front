@@ -12,6 +12,7 @@ import SignIn from "../Views/SignIn";
 import CookiesView from "../Views/CookiesView";
 
 
+
 const Router = () => {
    return (
       <BrowserRouter>
@@ -26,6 +27,7 @@ const Router = () => {
             <Route path="/privacy" element={<Privacy/>} />
             <Route path="/register" element={<SignIn/>} />
             <Route path="/cookies" element={<CookiesView/>} />
+            {/* <Route path="/carrito" element={<t/>} /> */}
             
             
             

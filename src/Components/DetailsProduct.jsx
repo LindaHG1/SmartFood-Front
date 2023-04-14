@@ -14,7 +14,7 @@ const DetailsProduct = ({ name, origin, type, price, image }) => {
 
     const handleAddToCart = () => {
         // Aquí podrías enviar la información del producto y la cantidad al carrito de compras.
-        console.log(`Agregado al carrito: ${quantity} kg de ${name}`);
+        console.log(`Agregado al carrito: €{quantity} kg de €{name}`);
     };
 
     useEffect(() => {

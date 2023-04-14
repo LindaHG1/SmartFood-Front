@@ -60,12 +60,11 @@
 		margin-top: 50px;
 	}
 	.card {
-		background-color: $color-border;
+		background-color: $color-background-card;
 		border: 1px solid $color-border;
 		border-radius: 5px;
 		box-shadow: $color-boxshadow;
 		margin: 10px;
-		padding: 10px;
 		text-align: center;
 		width: 250px;
 		transition: transform 0.3s ease-in-out;
@@ -74,8 +73,8 @@
 			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 		transform: scale(1.1);
 		}
-		img {
-			margin-bottom: 10px;
+		.img-category {
+			border-radius: 5px 5px 0 0;
 		}
 		h2 {
 			font-size: 2rem;
@@ -84,6 +83,7 @@
 		p {
 			font-size: 1.5rem;
 		}
+
 	}
 	
 }

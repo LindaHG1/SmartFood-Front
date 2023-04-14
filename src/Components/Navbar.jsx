@@ -32,13 +32,13 @@ export const Navbar = () => {
             <div className="toggle-icon" onClick={handleToggle}>
                 <ul className='icons-nav' style={{ display: "flex", alignItems: "center" }}>
                     <li className="float-shadow icon-nav">
-                        <a href="#">
+                        <a href="/carrito">
                             <Icon icon="ic:round-shopping-cart" width="28" height="28" />
                         </a>
                     </li>
 
                     <li className="float-shadow icon-nav">
-                        <a href="#" >
+                        <a href="/login" >
                             <Icon icon="teenyicons:user-circle-solid" width="28" height="28" />
                         </a>
                     </li>
@@ -65,7 +65,7 @@ export const Navbar = () => {
             <ul className='icons-desk'>
                     <li className="float-shadow icon-desk">
                     {windowWidth > 768 ? (
-                        <a href="/trolley">
+                        <a href="/carrito">
                             <Icon icon="ic:round-shopping-cart" width="28" height="28" />
                         </a>
                         ) : null}

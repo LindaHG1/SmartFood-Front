@@ -2,14 +2,13 @@
 
 
 .rounded-3 {
-  background-image:url(../../images/fondobolsa.jpg);
+  background-image:url(../../images/bolsappel1.png);
   box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
   margin: 100px auto;
   padding: 90px;
   width: 50%;
   align-items: center;
   padding-top: 20px;
-  margin-top: 170px;
   @media(max-width:768px) {
     width: 90%;
     margin: 40px auto;
@@ -32,6 +31,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &:focus{
+    border: 1px solid $color-amarillo;
+    outline: none;
+}
 }
 
 .error {

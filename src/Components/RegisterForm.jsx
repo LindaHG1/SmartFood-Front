@@ -18,7 +18,7 @@ const RegisterForm = () => {
   return (
     <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <div className="container-form">
-      <h1 className="title">Formulario de registro</h1>
+      <h1 className="title">FORMULARIO DE REGISTRO</h1>
 
       <Formik
         initialValues={{

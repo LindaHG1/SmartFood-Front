@@ -1,7 +1,7 @@
 @import '../utilities/variable';
 
 .form-login {
-  background-image:url(../../images/fondobolsa.jpg);
+  background-image:url(../../images/bolsappel1.png);
   box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
   display: flex;
   flex-direction: column;
@@ -42,6 +42,10 @@
   border: none;
   padding: 10px;
   margin-bottom: 20px;
+  &:focus{
+    border: 1px solid $color-amarillo;
+    outline: none;
+}
 
 }
 .error {
@@ -67,6 +71,7 @@
 p{
   font-weight: bold;
   margin-bottom: 30px;
+  
   a{
     text-decoration: none;
     color: $color-verde;

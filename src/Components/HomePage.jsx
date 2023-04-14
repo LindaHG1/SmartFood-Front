@@ -11,6 +11,7 @@ import tropicales from '../assets/images/tropicales.jpg'
 import secos from '../assets/images/secos.jpg'
 
 function HomePage() {
+
     useEffect(() => {
         AOS.init({ duration: 1000 }); // inicializa AOS
     }, []);
@@ -31,6 +32,7 @@ function HomePage() {
                             </div>
                         </div>
                     </div>
+
                     <div className="card-container">
                         <div className="card">
                             <img className='img-category' src={citricos} width={249} alt="Imagen de la tarjeta" />

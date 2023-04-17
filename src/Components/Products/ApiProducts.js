@@ -55,5 +55,5 @@ export const data = [
 		price: 13,
 		quantity: 1,
 	},
-	// Aquí pueden agregar más o modificar los productos existentes
+
 ];

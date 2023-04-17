@@ -5,6 +5,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from 'react';
 import banner2 from '../assets/images/banner2.png'
+import citricos from '../assets/images/citricos.jpg'
+import temporada from '../assets/images/temporada.jpg'
+import tropicales from '../assets/images/tropicales.jpg'
+import secos from '../assets/images/secos.jpg'
 
 function HomePage() {
 
@@ -31,22 +35,22 @@ function HomePage() {
 
                     <div className="card-container">
                         <div className="card">
-                            <img src="https://via.placeholder.com/150" alt="Imagen de la tarjeta" />
+                            <img className='img-category' src={citricos} width={249} alt="Imagen de la tarjeta" />
 
                             <p>Cítricos</p>
                         </div>
                         <div className="card">
-                            <img src="https://via.placeholder.com/150" alt="Imagen de la tarjeta" />
+                            <img className='img-category' src={temporada} width={249} alt="Imagen de la tarjeta" />
 
                             <p>Frutas de temporada</p>
                         </div>
                         <div className="card">
-                            <img src="https://via.placeholder.com/150" alt="Imagen de la tarjeta" />
+                            <img className='img-category' src={tropicales} width={249} alt="Imagen de la tarjeta" />
 
                             <p>Tropicales</p>
                         </div>
                         <div className="card">
-                            <img src="https://via.placeholder.com/150" alt="Imagen de la tarjeta" />
+                            <img className='img-category' src={secos} width={249} alt="Imagen de la tarjeta" />
 
                             <p>Frutos Secos</p>
                         </div>

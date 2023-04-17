@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 
 
 
+
 const Formulario = () => {
     const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 

@@ -1,14 +1,108 @@
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import React, { useState, useEffect} from "react";
+import axios from "axios";
+import InputsRegister from "./InputsRegister/InputsRegister";
 import '../assets/sass/components/_signinform.scss';
+<<<<<<< HEAD
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from 'react';
+=======
+import AOS from "aos";
+import 'aos/dist/aos.css'; 
+>>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
 
 
+const RegisterForm = (props) => {
+  useEffect(() => {
+    AOS.init({duration:1500}); // inicializa AOS
+  }, []);
 
+  const [name, setName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [address, setAddress] = useState("");
+  const [fields] = useState([
+    {
+      label: "Nombre",
+      type: "text",
+      id: "name",
+    },
+    {
+      label: "Apellido",
+      type: "text",
+      id: "lastname",
+    },
+    {
+      label: "Correo Electrónico",
+      type: "email",
+      id: "email",
+    },
+    {
+      label: "Contraseña",
+      type: "password",
+      id: "password",
+    },
+    {
+      label: "Dirección:",
+      type: "text",
+      id: "address",
+    },
+  ]);
+  const handleFields = (event) => {
+    if (event.target.id === "name") {
+      setName(event.target.value);
+    }else if(event.target.id === "lastname"){
+      setLastname(event.target.value);
+    }else if(event.target.id === "email"){
+      setEmail(event.target.value);
+    }else if(event.target.id === "password"){
+      setPassword(event.target.value);
+    }else{
+        setAddress(event.target.value);
+    }
+  };
 
+  const sendDataCreate = () => {
+    let isValid = true;
+    if (name === "" || lastname === "" || email === "" || password === "" || address === "") {
+      isValid = false;
+    }
+    if (isValid) {
+      axios.post('http://127.0.0.1:8000/api/clients', {
+        name: name,
+        lastname: lastname,
+        email: email,
+        password: password,
+        address: address
+      }, {
+        headers: {
+          "Content-Type": "multipart/form-data;"
+        }
+      })
+        .then((response) => {
+          document.getElementById(`name`).value = ""
+          document.getElementById(`lastname`).value = ""
+          document.getElementById(`email`).value = ""
+          document.getElementById(`password`).value = ""
+          document.getElementById(`address`).value = ""
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      alert("Por favor complete todos los campos.");
+    }   
+  };
+
+  // Enable/Disable button register on click checkbox terms
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+<<<<<<< HEAD
 const RegisterForm = () => {
 
   useEffect(() => {
@@ -51,38 +145,22 @@ const RegisterForm = () => {
               
               <Field type="text" name="name" className="form-control-input  " placeholder="Nombre" />
               <ErrorMessage name="name" component="div" className="error" />
+=======
+  return (
+    <section id="registerform" className="registerform">
+      <div className="container-form" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <h2 className="title">Regístrate</h2>
+        <form className="mx-autoform formRegister">
+          {fields.map((field) => (
+            <div key={field.id} className="mb-3-input form-control">
+              <label></label>
+              <InputsRegister key={field.id} {...field} handleOnChange={handleFields} />
+>>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
             </div>
-
-            <div className="mb-3-input">
-              
-              <Field type="text" name="lastName" className="form-control-input" placeholder="Apellidos" />
-              <ErrorMessage name="lastName" component="div" className="error" />
-            </div>
-
-            <div className="mb-3-input">
-              
-              <Field type="email" name="email" className="form-control-input form-control-lg" placeholder="Email" />
-              <ErrorMessage name="email" component="div" className="error" />
-            </div>
-
-            <div className="mb-3-input">
-              
-              <Field type="password" name="password" className="form-control-input form-control-lg" placeholder="Contraseña" />
-              <ErrorMessage name="password" component="div" className="error" />
-            </div>
-
-            <div className="mb-3-input">
-              
-              <Field type="password" name="confirmPassword" className="form-control-input" placeholder="Confirmar Contraseña" />
-              <ErrorMessage name="confirmPassword" component="div" className="error" />
-            </div>
-
-            <div className="mb-3-input">
-              
-              <Field type="text" name="address" className="form-control-input" placeholder="Dirección Opcional"/>
-            </div>
-            <div className='checkbox'>
+          ))}
+          <div className='checkbox'>
             <label>
+<<<<<<< HEAD
             <input type="checkbox" />
               <strong>Acepto los</strong> <a href="/terms" id="terminos"><strong>Términos y condiciones</strong></a>
               <p className="p-cookies">
@@ -105,7 +183,20 @@ const RegisterForm = () => {
       </Formik>
     </div>
     </div>
+=======
+              <input type="checkbox" id='termschkbx' onChange={handleCheckboxChange}/>
+              <p>Acepto los <a href="/terms" id="terminos"><strong>Términos y condiciones</strong></a></p>
+            </label>
+          </div>
+          <p className="cookies">Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión. Puede consultar nuestra <a href="/">Politica de cookies </a> para más detalles.</p>
+          <button id='btnRegister' type="submit" onClick={sendDataCreate} className='btn btnRegister' disabled={!isChecked}>Registrarme</button>
+        </form>        
+      </div>
+    </section>      
+>>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
   );
 };
 
-export default RegisterForm;
+RegisterForm.propTypes = {};
+
+export default RegisterForm

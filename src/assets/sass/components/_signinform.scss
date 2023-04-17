@@ -1,5 +1,6 @@
 @import '../utilities/variable';
 
+<<<<<<< HEAD
 .title {
     font-size: 36px;
     text-align: center;
@@ -114,20 +115,121 @@ textarea{
 
     &:hover {
       color: $color-azul;
+=======
+.registerform {
+  .container-form {
+    background-image: url(../../images/fondobolsa.jpg);
+    border: none;
+    margin: 100px auto;
+    margin-top: 170px;
+    padding: 45px;
+    width: 45%;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    @media(max-width:768px) {
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px;
+      box-sizing: border-box;
     }
-  }
-
-  p {
-    font-weight: bold;
-    margin-bottom: 30px;
-    margin-top: 10px;
-
-    a {
-      text-decoration: none;
-      color: $color-verde;
-
-      &:hover {
-        color: $color-azul;
+    .title {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+>>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
+    }
+    .formRegister {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      .form-control {
+        margin-top: 10px;
+        width: 100%;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          width: 49%;
+          @media(max-width:768px) {
+            width: 100%;
+          }
+        }
+        .form-control-input {
+          padding: 10px;
+          width: 100%;
+          margin-bottom: 5px;
+          border-radius: 7px;
+          border: none;      
+          @media(max-width:767px) {  
+            margin-bottom: 0;
+            width: 100%;
+          }
+        }
+        .errorForm {
+          color: red;
+          font-size: 11px;
+          font-weight: bold;
+          font-style: italic;
+          margin-bottom: 10px;
+        }
+      }
+      .checkbox {
+        margin: 15px 0;
+        label {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: flex-start;
+            #termschkbx {
+                margin-right: 10px;
+            }
+            a {
+              text-decoration: none;
+              color: $color-verde;
+          
+              &:hover {
+                color: $color-azul;
+              }
+            }
+        }
+      }
+      .cookies {
+        a {
+          text-decoration: none;
+          color: $color-verde;
+          font-weight: bold;
+      
+          &:hover {
+            color: $color-azul;
+          }
+        }
+      }
+      .btn {
+        background: $color-azul;
+        border: none;
+        width: 30%;
+        padding: 0.5rem 2rem;
+        color: $color-blanco;
+        margin-top: 30px;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        align-items: center;
+        &:hover {
+          background-color: $color-verde;
+          border: none;
+        }
+        &[disabled] {
+          background: grey;
+          cursor: no-drop;
+        }
+        @media(max-width:1184px) {
+          width: auto;
+          margin-top: 30px;
+        }
       }
     }
   }

@@ -1,80 +1,122 @@
 @charset "UTF-8";
-.h-100 {
-  height: 100%;
-  width: 70%;
-  margin: 25px;
-}
-@media (min-width: 600px) {
-  .h-100 {
-    margin: 80px;
-  }
-}
-@media (min-width: 1100px) {
-  .h-100 {
-    margin-left: 300px;
-    width: 50%;
-  }
-}
-@media (max-width: 300px) {
-  .h-100 {
-    margin: 0 auto;
-  }
-}
-
-.p-5 {
-  padding: 2rem;
-}
-
-.text-bg-dark {
-  color: #222;
-}
-
-.rounded-3 {
+.contactForm .container-form {
   background-image: url(../../images/fondobolsa.jpg);
-  border-radius: 0.5rem;
-  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
-}
-.rounded-3 h1 {
-  text-align: center;
-}
-
-.form-control {
-  margin-bottom: 1rem;
-  padding: 10px;
-  border-radius: 5px;
   border: none;
-  width: 90%;
+  margin: 100px auto;
+  margin-top: 170px;
+  padding: 45px;
+  width: 45%;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
 }
-
-.error {
-  color: #dc3545;
+@media (max-width: 768px) {
+  .contactForm .container-form {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+.contactForm .container-form .title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.contactForm .container-form .formContact {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contactForm .container-form .formContact textarea {
+  min-height: 150px;
+}
+.contactForm .container-form .formContact .form-control {
+  margin-top: 10px;
+  width: 100%;
+}
+.contactForm .container-form .formContact .form-control:nth-child(1), .contactForm .container-form .formContact .form-control:nth-child(2) {
+  width: 49%;
+}
+@media (max-width: 768px) {
+  .contactForm .container-form .formContact .form-control:nth-child(1), .contactForm .container-form .formContact .form-control:nth-child(2) {
+    width: 100%;
+  }
+}
+.contactForm .container-form .formContact .form-control .form-control-input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 767px) {
+  .contactForm .container-form .formContact .form-control .form-control-input {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+.contactForm .container-form .formContact .form-control .errorForm {
+  color: red;
+  font-size: 11px;
   font-weight: bold;
-  margin-top: -15px;
+  font-style: italic;
+  margin-bottom: 10px;
 }
-
-.exito {
+.contactForm .container-form .formContact .checkbox {
+  margin: 15px 0;
+}
+.contactForm .container-form .formContact .checkbox label {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+.contactForm .container-form .formContact .checkbox label #termschkbx {
+  margin-right: 10px;
+}
+.contactForm .container-form .formContact .checkbox label a {
+  text-decoration: none;
   color: #587608;
 }
-
-.btn {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  align-self: center;
+.contactForm .container-form .formContact .checkbox label a:hover {
+  color: #2D607C;
 }
-
-.btn-form {
+.contactForm .container-form .formContact .cookies a {
+  text-decoration: none;
+  color: #587608;
+  font-weight: bold;
+}
+.contactForm .container-form .formContact .cookies a:hover {
+  color: #2D607C;
+}
+.contactForm .container-form .formContact .btn {
   background: #2D607C;
   border: none;
   width: 30%;
-  padding: 10px;
-  border-radius: 7px;
-  color: white;
+  padding: 0.5rem 2rem;
+  color: #FFFFFF;
+  margin-top: 30px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  align-items: center;
 }
-.btn-form:hover {
-  background-color: #57813e;
+.contactForm .container-form .formContact .btn:hover {
+  background-color: #587608;
   border: none;
+}
+.contactForm .container-form .formContact .btn[disabled] {
+  background: grey;
+  cursor: no-drop;
+}
+@media (max-width: 1184px) {
+  .contactForm .container-form .formContact .btn {
+    width: auto;
+    margin-top: 30px;
+  }
 }
 
 footer {
@@ -127,7 +169,7 @@ footer .top-info .bloq-top ul li a {
   color: inherit;
 }
 footer .top-info .bloq-top ul li:hover {
-  color: #968B84;
+  color: bisque;
 }
 footer .top-info .bloq-top .rrss {
   display: flex;
@@ -135,7 +177,10 @@ footer .top-info .bloq-top .rrss {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  color: #F09D06;
+  color: #FFFFFF;
+}
+footer .top-info .bloq-top .rrss p {
+  margin-bottom: 10px;
 }
 footer .top-info .bloq-top .rrss ul {
   display: flex;
@@ -163,15 +208,18 @@ footer .copy {
 }
 footer .copy p {
   text-align: center;
-  margin: 0;
+  margin-bottom: 20px;
   color: #FFFFFF;
   opacity: 0.7;
   min-width: none;
 }
 
+.section-faqs {
+  margin-top: 100px;
+}
 @media (max-width: 745px) {
   .section-faqs {
-    margin-bottom: auto;
+    margin: auto;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
   }
@@ -369,79 +417,73 @@ footer .copy p {
   font-size: 1.5rem;
 }
 
-.form {
+.form-login {
   background-image: url(../../images/fondobolsa.jpg);
   border-radius: 0.5rem;
-  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  margin: 10px;
+  padding: 45px;
+  width: 100%;
+  margin: 120px auto;
+  max-width: 410px;
 }
-@media (min-width: 600px) {
-  .form {
-    margin-left: 150px;
-    padding: 0;
-    width: 60%;
-    margin-bottom: 30px;
+@media (max-width: 800px) {
+  .form-login {
+    margin: 30px;
+    box-sizing: border-box;
+    justify-content: center;
   }
 }
-@media (min-width: 980px) {
-  .form {
-    width: 50%;
-    margin-left: 260px;
-  }
-}
-
-.title_sesion {
+.form-login .title_sesion {
   font-size: 36px;
   margin-bottom: 40px;
   color: #587608;
+  text-transform: uppercase;
 }
-
-.container {
+.form-login .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.input_descripcion {
-  width: 90%;
-  margin-bottom: 10px;
+.form-login .container .input_descripcion {
+  width: 100%;
   border-radius: 5px;
   border: none;
   padding: 10px;
   margin-bottom: 20px;
 }
-@media (min-width: 600px) {
-  .input_descripcion {
-    width: 140%;
-  }
-}
-
-.error {
-  color: red;
+.form-login .container .error {
+  color: #e92b2d;
   margin-top: -15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: left;
 }
-
-.btn {
+.form-login .container .btn.auto {
+  background: #2D607C;
+  border: none;
+  width: 50%;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
   padding: 0.5rem 2rem;
   font-size: 1rem;
+  margin-bottom: 15px;
   font-weight: 500;
-  border-radius: 0.5rem;
-  margin-bottom: 20px;
 }
-
-.btn.auto {
-  background: #2D607C !important;
-  border: none;
-  width: 70%;
-  padding: 10px;
-  border-radius: 7px;
-  color: #FFFFFF;
+.form-login .container p {
+  margin-bottom: 30px;
+}
+.form-login .container p a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #587608;
+}
+.form-login .container p a:hover {
+  color: #2D607C;
 }
 
 .wrapper {
@@ -481,6 +523,8 @@ footer .copy p {
   cursor: pointer;
   align-items: center;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 .navbar .links a {
   text-decoration: none;
@@ -567,6 +611,7 @@ footer .copy p {
     position: relative;
     transition: 0.5s all ease-in-out;
     padding: 0;
+    height: 80px;
   }
   .navbar .logo {
     margin-top: -2%;
@@ -601,6 +646,7 @@ footer .copy p {
     justify-content: center;
     align-items: center;
     opacity: 1;
+    padding: 0;
   }
   .navbar.expanded .links li {
     margin: 15px 0;
@@ -609,6 +655,7 @@ footer .copy p {
   .navbar .logo {
     position: absolute;
     left: 20px;
+    top: 15px;
   }
   .navbar .toggle-icon {
     display: block;
@@ -639,153 +686,245 @@ footer .copy p {
 }
 
 .fruit-detail {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: sans-serif;
-  margin-bottom: 100px;
-  padding: 25px;
+  margin: 120px auto;
+  width: 80%;
 }
-.fruit-detail .fruit-detail__image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-.fruit-detail h2 {
-  margin-top: 0;
-  color: #587608;
-}
-.fruit-detail img {
-  border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+@media (max-width: 767px) {
+  .fruit-detail {
+    margin: 45px auto;
+    width: 90%;
+  }
 }
 .fruit-detail .fruit-card {
-  background-color: rgba(253, 185, 26, 0.3058823529);
-  border: 1px solid #ccc;
-  border-radius: 7px;
   display: flex;
-  padding: 5px;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ECECEC;
+  border: 0.5px solid rgba(224, 218, 214, 0.6980392157);
 }
-@media (min-width: 700px) {
+@media (max-width: 767px) {
   .fruit-detail .fruit-card {
-    flex-direction: row;
-  }
-  .fruit-detail .fruit-card img {
-    max-width: 50%;
-    height: 100%;
-  }
-  .fruit-detail .fruit-card .p-fruits {
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-  }
-  .fruit-detail .fruit-card .p-fruits .text {
-    margin-left: 30px;
-  }
-  .fruit-detail .fruit-card .p-fruits .quantity-container {
-    margin-left: 6%;
-    margin-bottom: 5%;
-  }
-  .fruit-detail .fruit-card .p-fruits .add-trolley {
-    margin-left: 6%;
   }
 }
-.fruit-detail .fruit-detail__origin,
-.fruit-detail .fruit-detail__type,
-.fruit-detail .fruit-detail__price {
+.fruit-detail .fruit-card .fruit-detail__image {
+  width: 100%;
+  max-width: 430px;
+  height: 430px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+}
+@media screen and (max-width: 767px) {
+  .fruit-detail .fruit-card .fruit-detail__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.fruit-detail .fruit-card .p-fruits {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 40px;
+}
+.fruit-detail .fruit-card .p-fruits .text .fruit-detail__origin,
+.fruit-detail .fruit-card .p-fruits .text .fruit-detail__type,
+.fruit-detail .fruit-card .p-fruits .text .fruit-detail__price {
   margin-top: 1rem;
 }
-.fruit-detail .quantity-container {
-  margin-top: 1rem;
+.fruit-detail .fruit-card .p-fruits .text .fruit-detail__title {
+  margin-top: 0;
+  color: #587608;
+  font-size: 24px;
+}
+.fruit-detail .fruit-card .p-fruits .add-trolley {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+.fruit-detail .fruit-card .p-fruits .quantity-container {
+  margin-top: 45px;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-end;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5%;
-  margin-top: 10%;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
 }
-.fruit-detail .quantity-container label {
+@media screen and (max-width: 767px) {
+  .fruit-detail .fruit-card .p-fruits .quantity-container {
+    width: 100%;
+  }
+}
+.fruit-detail .fruit-card .p-fruits .quantity-container .kg {
   display: flex;
   align-items: center;
   margin-right: 10px;
-  padding: 0.5rem;
+  padding: 7px;
   border-radius: 5px;
   background-color: #F09D06;
   cursor: pointer;
   color: #FFFFFF;
   font-weight: 600;
+  min-width: 70px;
+  transition: all 0.3s ease;
 }
-.fruit-detail .quantity-container label:hover {
+.fruit-detail .fruit-card .p-fruits .quantity-container .kg:hover {
   background-color: #2D607C;
 }
-.fruit-detail .quantity-container label input[type=radio] {
+.fruit-detail .fruit-card .p-fruits .quantity-container .kg input[type=radio] {
   margin-right: 0.5rem;
   list-style: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
-.fruit-detail .quantity-container .add-trolley label {
-  background-color: rgba(253, 185, 26, 0);
-  border: none;
+.fruit-detail .fruit-card .p-fruits .quantity-container .add-trolley {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
 }
-.fruit-detail .fruit-detail__quantity-input {
-  margin-top: 2rem;
-}
-.fruit-detail .fruit-detail__quantity-input label {
-  display: block;
-}
-.fruit-detail .fruit-detail__quantity-input .fruit-detail__quantity-input--input {
-  margin-left: 0.5rem;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  width: 4rem;
-}
-.fruit-detail .fruit-detail__quantity-input .fruit-detail__add-to-cart {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  background-color: rgba(253, 185, 26, 0.3058823529);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-.fruit-detail input[type=number] {
+.fruit-detail .fruit-card .p-fruits .quantity-container .add-trolley input[type=number] {
+  width: 80px;
   background-color: #FFFFFF;
   border-radius: 5px;
   padding: 10px;
-  max-width: 40px;
   border: 1px solid #F09D06;
 }
-.fruit-detail button {
+.fruit-detail .fruit-card .p-fruits .quantity-container .add-trolley button {
   background-color: #2D607C;
   color: #FFFFFF;
   padding: 10px;
   border-radius: 5px;
   margin-left: 5px;
   font-weight: 600;
-  font-style: bold;
   border: none;
 }
-.fruit-detail button:hover {
+.fruit-detail .fruit-card .p-fruits .quantity-container .add-trolley button:hover {
   background-color: #587608;
+}
+
+.registerform .container-form {
+  background-image: url(../../images/fondobolsa.jpg);
+  border: none;
+  margin: 100px auto;
+  margin-top: 170px;
+  padding: 45px;
+  width: 45%;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+  .registerform .container-form {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+.registerform .container-form .title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.registerform .container-form .formRegister {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.registerform .container-form .formRegister .form-control {
+  margin-top: 10px;
+  width: 100%;
+}
+.registerform .container-form .formRegister .form-control:nth-child(1), .registerform .container-form .formRegister .form-control:nth-child(2), .registerform .container-form .formRegister .form-control:nth-child(3), .registerform .container-form .formRegister .form-control:nth-child(4) {
+  width: 49%;
+}
+@media (max-width: 768px) {
+  .registerform .container-form .formRegister .form-control:nth-child(1), .registerform .container-form .formRegister .form-control:nth-child(2), .registerform .container-form .formRegister .form-control:nth-child(3), .registerform .container-form .formRegister .form-control:nth-child(4) {
+    width: 100%;
+  }
+}
+.registerform .container-form .formRegister .form-control .form-control-input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  border: none;
+}
+@media (max-width: 767px) {
+  .registerform .container-form .formRegister .form-control .form-control-input {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+.registerform .container-form .formRegister .form-control .errorForm {
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.registerform .container-form .formRegister .checkbox {
+  margin: 15px 0;
+}
+.registerform .container-form .formRegister .checkbox label {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+.registerform .container-form .formRegister .checkbox label #termschkbx {
+  margin-right: 10px;
+}
+.registerform .container-form .formRegister .checkbox label a {
+  text-decoration: none;
+  color: #587608;
+}
+.registerform .container-form .formRegister .checkbox label a:hover {
+  color: #2D607C;
+}
+.registerform .container-form .formRegister .cookies a {
+  text-decoration: none;
+  color: #587608;
+  font-weight: bold;
+}
+.registerform .container-form .formRegister .cookies a:hover {
+  color: #2D607C;
+}
+.registerform .container-form .formRegister .btn {
+  background: #2D607C;
+  border: none;
+  width: 30%;
+  padding: 0.5rem 2rem;
+  color: #FFFFFF;
+  margin-top: 30px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+.registerform .container-form .formRegister .btn:hover {
+  background-color: #587608;
+  border: none;
+}
+.registerform .container-form .formRegister .btn[disabled] {
+  background: grey;
+  cursor: no-drop;
+}
+@media (max-width: 1184px) {
+  .registerform .container-form .formRegister .btn {
+    width: auto;
+    margin-top: 30px;
+  }
 }
 
 .Section {

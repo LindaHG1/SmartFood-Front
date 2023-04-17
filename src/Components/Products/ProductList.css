@@ -75,12 +75,16 @@
 }
 
 .info-product {
-	padding: 15px 30px;
+	padding: 20px;
 	line-height: 1;
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	gap: 6px;
+}
+.info-product a {
+	text-decoration: none;
+	color: initial;
 }
 
 @media screen and (max-width: 768px) {
@@ -95,15 +99,17 @@
 }
 
 .product-name{
-	font-size: 1.30rem;
-	padding-bottom: 20px;
+	font-size: 16px;
+	margin-bottom: 10px;
 	font-weight: 400;
+	text-decoration: none;
 }
 
 .price {
-	font-size: 1.125rem;
+	font-size: 20px;
 	font-weight: 700;
-	margin-bottom: 0;
+	margin-bottom: 10px;
+	text-decoration: none;
 }
 
 .info-product button {
@@ -115,6 +121,7 @@
 	font-weight: 600;
 	padding: 15px 10px;
 	cursor: pointer;
+	transition: all .3s ease;
 }
 
 .info-product button:hover {

@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/sass/components/_footer.scss";
+import logo from '../assets/images/logo.png';
 import { Icon } from '@iconify/react';
 
 
 
 const Footer = () => {
+    const [foot, setFoot] = useState([]);
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/store')
+            .then(response => response.json())
+            .then(foot => setFoot(foot))
+            .then(foot => console.log(foot))
+            .catch(error => console.error(error));
+    }, []);
   return (
     <footer className="footer">
       <div className="top-info">
         <div className="bloq-top">
-          <a href="index.html" className="logo-footer"></a>
+          <a href="/" className="logo-footer">
+          <img className="logo" src={logo} alt="SmartFood" width="120" />
+          </a>
         </div>
         <div className="bloq-top">
           <ul>
@@ -36,34 +47,27 @@ const Footer = () => {
         <div className="bloq-top">
           <div className="rrss">
             <p>Síguenos en:</p>
-            <ul>
-              <li>
-                <a href="#">
-                <Icon icon="mdi:instagram" width="32" height="38" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                {/* <Icon icon="typcn:social-youtube-circular" width="42" height="42" /> */}
-                <Icon icon="tabler:brand-youtube" width="32" height="38" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                <Icon icon="basil:facebook-outline" width="32" height="38"/>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                <Icon icon="icon-park-outline:twitter" width="30" height="34" />
-                </a>
-              </li>
-            </ul>
+            {foot.map((item) => {
+              return (
+                <ul>
+                  {item.social.map((sm) => {
+                    return (
+                      <li key={sm.id}>
+                        <a href={sm.linkicon} target="_blank" rel="noreferrer">
+                          <Icon icon={`mdi:${sm.nameicon}`} width="32" height="38" />
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              );
+            })}
           </div>
         </div>
       </div>
       <div className="copy">
         <hr />
+        <br />
         <p>&copy;SmartFood 2023 - Todos los derechos reservados</p>
       </div>
     </footer>

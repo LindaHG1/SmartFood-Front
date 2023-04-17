@@ -16,7 +16,7 @@ function HomePage() {
         <div className="homepage">
             <div className="banner">
                 <picture>
-                    <source media="(max-width: 745px)" srcset= {banner2}/>
+                    <source media="(max-width: 745px)" srcSet= {banner2}/>
                     <img src={banner} alt="Imagen de la tarjeta" />
                         </picture>
 

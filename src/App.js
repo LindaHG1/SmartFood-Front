@@ -6,6 +6,7 @@ import Contactform from './Components/ContactForm';
 import HomePage from './Components/Header';
 import Navbar from './Components/Navbar';
 import FruitDetail from './Components/ProductDetails';
+import BuscadorComponent from './Components/Search';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Navbar/>
      <HomePage />
      <FruitDetail />
+     <BuscadorComponent />
      <Contactform />
      <LoginForm />
      <SingIn />

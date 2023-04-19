@@ -1,5 +1,7 @@
 import { React, useState } from 'react'
 import Navbar from '../Components/Navbar'
+import ProductList from '../Components/ProductList';
+import Footer from '../Components/Footer';
 
 function Products() {
 
@@ -17,6 +19,8 @@ function Products() {
             countProducts={countProducts}
             setCountProducts={setCountProducts}
             />
+            <ProductList/>
+            <Footer/>
         </div>
     )
 }

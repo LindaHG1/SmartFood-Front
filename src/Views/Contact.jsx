@@ -20,6 +20,7 @@ function Contact() {
             countProducts={countProducts}
             setCountProducts={setCountProducts}
             />
+            <About/>
             <ContactForm/>
             <Footer/>
 

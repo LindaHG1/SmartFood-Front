@@ -3,17 +3,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Contact from '../Views/Contact';
 import Terms from '../Views/Terms';
 import Home from '../Views/Home';
-// import ProductsDetails from './Views/ProductsDetails';
 import PreFre from '../Views/PreFre';
 import Login from '../Views/Login';
 import Products from "../Views/Products";
+import ProductsDetails from "../Views/ProductsDetails";
 import Privacy from "../Views/Privacy";
 import SignIn from "../Views/SignIn";
 import CookiesView from "../Views/CookiesView";
 import Basket from "../Views/Basket";
 import MiProfile from "../Components/Myprofile";
 
-
+// import Register from "../Views/Register";
 
 const Router = () => {
    return (
@@ -22,6 +22,7 @@ const Router = () => {
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products/>} />
+            <Route path="/products/:id" element={<ProductsDetails/>} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/basket" element={<Basket/>} />
             <Route path="/login" element={<Login/>} />
@@ -34,6 +35,9 @@ const Router = () => {
             {/* <Route path="/buscador" element={<BuscadorComponent/>} /> */}
             
             
+            <Route path="/register" element={<SignIn/>} />            
+            {/* <Route path="/register" element={<Register/>} /> */}
+            {/* <Route path="/register" element={<Register/>} /> */}
             
          </Routes>
 

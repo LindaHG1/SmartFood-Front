@@ -21,7 +21,6 @@ function ProductsDetails() {
             />
             <DetailsProduct/>
             <Footer/>
-
         </div>
     )
 }

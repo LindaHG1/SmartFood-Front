@@ -54,6 +54,9 @@ footer {
                 justify-content: center;
                 flex-direction: column;
                 color: $color-blanco;
+                p {
+                    margin-bottom: 10px;
+                }
                 ul {
                     display: flex;
                     align-items: center;

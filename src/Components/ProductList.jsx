@@ -16,6 +16,8 @@ export const ProductList = ({
 	const [products, setProducts] = useState([]);
 	const [categories, setCategories] = useState([]);
 	const [category, setCategory] = useState('');
+	const [searchTerm, setSearchTerm] = useState('');
+
 
 	useEffect(() => {
 		fetch('http://127.0.0.1:8000/api/categories')
@@ -27,13 +29,23 @@ export const ProductList = ({
 	useEffect(() => {
 		let url = 'http://127.0.0.1:8000/api/products';
 		if (category) {
-		url += `/category/${category}`;
+		  url += `/category/${category}`;
 		}
 		fetch(url)
-		.then(response => response.json())
-		.then(data => setProducts(data))
-		.catch(error => console.error(error));
-	}, [category]);
+		  .then(response => response.json())
+		  .then(data => {
+			if (searchTerm) {
+			  setProducts(
+				data.filter(product =>
+				  product.name.toLowerCase().includes(searchTerm.toLowerCase())
+				)
+			  );
+			} else {
+			  setProducts(data);
+			}
+		  })
+		  .catch(error => console.error(error));
+	  }, [category, searchTerm]);
 
 	const onAddProduct = product => {
 		if (allProducts.find(item => item.id === product.id)) {
@@ -52,14 +64,24 @@ export const ProductList = ({
 		setAllProducts([...allProducts, product]);
 	};
 
+	// Filter List
 	const handleCategoryClick = (category) => {
 		setCategory(category);
 	};
-
+	// Select Filter
 	const handleCategoryChange = event => {
 		const newCategory = event.target.value;
 		console.log('Selected category:', newCategory);
 		setCategory(newCategory);
+	};
+
+	// Search input
+	const handleSearchInputChange = event => {
+		setSearchTerm(event.target.value);
+	};
+
+	const handleSearchClear = () => {
+		setSearchTerm('');
 	};
 
 	return (
@@ -87,6 +109,10 @@ export const ProductList = ({
 					</li>
 				))}
 			</ul>
+			<div className='inputSearch'>
+				<input type='text' placeholder='Buscar productos...' value={searchTerm} onChange={handleSearchInputChange} />
+				<button onClick={handleSearchClear}>Limpiar</button>
+			</div>
 			<div className='container-items'>
 				{products.map(product => (
 					<div className='item' key={product.id}>
@@ -99,7 +125,7 @@ export const ProductList = ({
 							<Link to={`/products/${product.id}`} key={product.id}>
 								<div className='name-price'>
 									<h3 className='product-name'>{product.name}</h3>
-									<p className='price'>{product.price} €</p>
+									<p className='price'>{product.price} € <span>/Kilo</span></p>
 								</div>
 							</Link>
 							<button onClick={() => onAddProduct(product)}>

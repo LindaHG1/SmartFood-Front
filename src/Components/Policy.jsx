@@ -24,7 +24,7 @@ function Policy() {
         <div data-aos="zoom-in">
         <div className='terms info-page'>
                 <div className="content">
-                    <h1 className="title-section">Politica de privacidad</h1>
+                    <h1 className="title-section">Política de privacidad</h1>
                     {repo.map(item => {
                         return(
                             <div className="contentPage">

@@ -6,10 +6,14 @@ import AOS from "aos";
 import 'aos/dist/aos.css'; 
 
 
+
 const ContactForm = (props) => {
   useEffect(() => {
     AOS.init({duration:1500}); // inicializa AOS
   }, []);
+
+
+
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -69,7 +73,8 @@ const ContactForm = (props) => {
   };
 
   return (
-    <section id="contactForm" className="contactForm">
+    <section id="form-section" className="contactForm">
+
       <div className="container-form" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <h2 className="title">Contáctanos</h2>
         <form className="mx-autoform formContact">
@@ -87,7 +92,8 @@ const ContactForm = (props) => {
           </div>
           <p className="cookies">Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión. Puede consultar nuestra <a href="/">Politica de cookies </a> para más detalles.</p>
           <button id='btnContact' type="submit" onClick={sendDataCreate} className='btn btnContact' disabled={!isChecked}>Enviar</button>
-        </form>        
+        </form>  
+              
       </div>
     </section>      
   );

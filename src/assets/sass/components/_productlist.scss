@@ -100,6 +100,7 @@
 	margin: 45px auto 0;
 	list-style: none;
 	max-width: 1200px;
+	margin-top: 100px;
 	.item-category {
 		width: 19%;
 		height: 115px;
@@ -107,6 +108,7 @@
 		background: $color-negro;
 		border-radius: 7px;
 		overflow: hidden;
+		
 		cursor: pointer;
 		img {
 			width: 100%;

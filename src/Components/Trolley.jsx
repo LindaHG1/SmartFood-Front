@@ -76,7 +76,7 @@ function Frutas() {
                                             <td>{fruta.foto}</td>
                                             <td>{fruta.precio}€</td>
                                             <td>
-                                                <input type="number" value={fruta.cantidad} onChange={(e) => actualizarCantidad(fruta.id, e.target.value)} />
+                                                <input type="number" value={fruta.cantidad} checked={product.quantity === "2"} onChange={(e) => actualizarCantidad(fruta.id, e.target.value)} />
                                             </td>
                                             <td>€{calcularSubtotal(fruta)}</td>
                                             <td>

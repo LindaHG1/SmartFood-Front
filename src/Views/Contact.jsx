@@ -4,7 +4,13 @@ import ContactForm from '../Components/ContactForm'
 import Footer from '../Components/Footer'
 import About from '../Components/About'
 
+
 function Contact() {
+    const handleScroll = () => {
+        const form = document.getElementById('form-section');
+        window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+    }
+    
     
     const [allProducts, setAllProducts] = useState([]);
     const [countProducts, setCountProducts] = useState(0);
@@ -21,6 +27,8 @@ function Contact() {
             setCountProducts={setCountProducts}
             />
             <About/>
+            <button id="your-opinion" onClick={handleScroll}>Queremos escucharte, tu opinión nos importa mucho. <span>¡Escríbenos!</span></button>
+            
             <ContactForm/>
             <Footer/>
 

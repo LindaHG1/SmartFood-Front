@@ -19,7 +19,7 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
  ## Members  
   
-- [Linda Haeli](https://github.com/LindaHG1) - SCRUM Master
+- [Linda Haeli](https://github.com/LindaHG1) - Scrum Master
 
 - [María de los Ángeles](https://github.com/maperezr14) - Product Owner
 

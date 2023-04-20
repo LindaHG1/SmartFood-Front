@@ -67,8 +67,9 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
 ## Instalar Proyecto
 
-* Clone git 
+* Clone git https://github.com/LindaHG1/smartfood-front
 * npm install
+
 
 ## Tests 
 

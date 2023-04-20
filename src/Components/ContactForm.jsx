@@ -11,11 +11,6 @@ const ContactForm = (props) => {
     AOS.init({duration:1500}); // inicializa AOS
   }, []);
 
-<<<<<<< HEAD
-
-const Formulario = () => {
-    const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
-=======
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -45,7 +40,6 @@ const Formulario = () => {
         setMessage(event.target.value);
     }
   };
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
 
   const sendDataCreate = () => {
     axios.post('http://127.0.0.1:8000/api/contact', {

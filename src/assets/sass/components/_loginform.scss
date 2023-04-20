@@ -1,14 +1,9 @@
 @import '../utilities/variable';
 
 .form-login {
-<<<<<<< HEAD
-  background-image:url(../../images/bolsappel1.png);
-  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
-=======
   background-image:url(../../images/fondobolsa.jpg);
   border-radius: 0.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,64 +24,6 @@
     color:$color-verde;
     text-transform: uppercase;
   }
-<<<<<<< HEAD
-}
-
-.title_sesion {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color:$color-verde;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.input_descripcion {
-  width: 90%;
-  border-radius: 5px;
-  border: none;
-  padding: 10px;
-  margin-bottom: 20px;
-  &:focus{
-    border: 1px solid $color-amarillo;
-    outline: none;
-}
-
-}
-.error {
-  color: $color-error;
-  margin-top:-15px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.btn.auto {
-  background:$color-azul;
-  border: none;
-  width: 50%;
-  border-radius: 0.5rem;
-  color:$color-blanco;
-  padding: 0.5rem 2rem;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-
-p{
-  font-weight: bold;
-  margin-bottom: 30px;
-  
-  a{
-    text-decoration: none;
-    color: $color-verde;
-    &:hover{
-      color: $color-azul;
-=======
   .container {
     display: flex;
     flex-direction: column;
@@ -130,7 +67,6 @@ p{
           color: $color-azul;
         }
       }
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
     }
   }
 }

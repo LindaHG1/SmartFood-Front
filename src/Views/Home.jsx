@@ -1,7 +1,6 @@
 import { React, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import HomePage from '../Components/HomePage'
-import Tips from '../Components/Tips'
 import { ProductList } from '../Components/ProductList'
 import Footer from '../Components/Footer'
 
@@ -24,7 +23,6 @@ function Home() {
             setCountProducts={setCountProducts}
             />
             <HomePage/>
-            <Tips/>
             <ProductList
                 allProducts={allProducts}
                 setAllProducts={setAllProducts}

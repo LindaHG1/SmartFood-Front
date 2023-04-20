@@ -9,11 +9,12 @@ import citricos from '../assets/images/citricos.jpg'
 import temporada from '../assets/images/temporada.jpg'
 import tropicales from '../assets/images/tropicales.jpg'
 import secos from '../assets/images/secos.jpg'
+import Tips from '../Components/Tips'
 
 function HomePage() {
 
     useEffect(() => {
-        AOS.init({ duration: 1000 }); // inicializa AOS
+        AOS.init({ duration: 1000 });
     }, []);
 
     return (
@@ -32,6 +33,8 @@ function HomePage() {
                             </div>
                         </div>
                     </div>
+
+                    <Tips/>
 
                     <div className="card-container">
                         <div className="card">

@@ -1,24 +1,5 @@
 @import '../utilities/variable';
 
-<<<<<<< HEAD
-
-.rounded-3 {
-  background-image:url(../../images/bolsappel1.png);
-  box-shadow: 0 0 20px rgb(134, 125, 109), 0 0 20px rgb(154, 155, 155);
-  margin: 100px auto;
-  padding: 90px;
-  width: 50%;
-  align-items: center;
-  padding-top: 20px;
-  @media(max-width:768px) {
-    width: 90%;
-    margin: 40px auto;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-    h1{
-=======
 .contactForm {
   .container-form {
     background-image: url(../../images/fondobolsa.jpg);
@@ -38,7 +19,6 @@
     }
     .title {
       font-size: 32px;
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
       text-align: center;
       margin-bottom: 25px;
       text-transform: uppercase;
@@ -136,55 +116,5 @@
         }
       }
     }
-<<<<<<< HEAD
-
-}
-
-.form-control {
-  margin-bottom: 1rem;
-  padding: 10px;
-  border: none;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:focus{
-    border: 1px solid $color-amarillo;
-    outline: none;
-}
-}
-
-.error {
-  color: $color-error;
-  font-weight: bold;
-  margin-top: -15px;
-  margin-bottom: 0px;
-  font-size: 12px;
-}
-
-.exito {
-  color: $color-correcto;
-}
-
-.btn {
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  align-items: center;
-  
-}
-.btn-form {
-  background: $color-azul;
-  border: none;
-  width: 30%;
-  padding: 0.5rem 2rem;
-  border-radius: 0.5rem;
-  color:$color-blanco;
-  
-  &:hover {
-    background-color: #57813e;
-    border: none;
-=======
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
   }
 }

@@ -2,14 +2,8 @@ import React, { useState, useEffect} from "react";
 import axios from "axios";
 import InputsRegister from "./InputsRegister/InputsRegister";
 import '../assets/sass/components/_signinform.scss';
-<<<<<<< HEAD
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useState, useEffect } from 'react';
-=======
 import AOS from "aos";
 import 'aos/dist/aos.css'; 
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
 
 
 const RegisterForm = (props) => {
@@ -102,50 +96,6 @@ const RegisterForm = (props) => {
     setIsChecked(!isChecked);
   };
 
-<<<<<<< HEAD
-const RegisterForm = () => {
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 }); // inicializa AOS
-  }, []);
-
-  return (
-    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-    <div className="container-form">
-      <h1 className="title">FORMULARIO DE REGISTRO</h1>
-
-      <Formik
-        initialValues={{
-          name: '',
-          lastName: '',
-          email: '',
-          password: '',
-          confirmPassword: '',
-          address: ''
-        }}
-        validationSchema={Yup.object({
-          name: Yup.string().required('Este campo es obligatorio'),
-          lastName: Yup.string().required('Este campo es obligatorio'),
-          email: Yup.string().email('El email no es válido').required('Este campo es obligatorio'),
-          password: Yup.string().required('Este campo es obligatorio'),
-          confirmPassword: Yup.string()
-            .oneOf([Yup.ref('password'), null], 'Las contraseñas deben coincidir')
-            .required('Este campo es obligatorio')
-        })}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
-      >
-        {({ errors, touched, isSubmitting }) => (
-          <Form className="mx-autoform">
-            <div className="mb-3-input ">
-              
-              <Field type="text" name="name" className="form-control-input  " placeholder="Nombre" />
-              <ErrorMessage name="name" component="div" className="error" />
-=======
   return (
     <section id="registerform" className="registerform">
       <div className="container-form" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -155,35 +105,10 @@ const RegisterForm = () => {
             <div key={field.id} className="mb-3-input form-control">
               <label></label>
               <InputsRegister key={field.id} {...field} handleOnChange={handleFields} />
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
             </div>
           ))}
           <div className='checkbox'>
             <label>
-<<<<<<< HEAD
-            <input type="checkbox" />
-              <strong>Acepto los</strong> <a href="/terms" id="terminos"><strong>Términos y condiciones</strong></a>
-              <p className="p-cookies">
-                Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión.
-                Puede consultar nuestra <a href="/cookies">Politica de cookies </a> para más detalles. 
-
-              </p>
-            </label>
-            </div>
-
-
-
-            <button type="submit" disabled={isSubmitting} className="btn">
-              Registrarse
-            </button>
-            
-
-          </Form>
-        )}
-      </Formik>
-    </div>
-    </div>
-=======
               <input type="checkbox" id='termschkbx' onChange={handleCheckboxChange}/>
               <p>Acepto los <a href="/terms" id="terminos"><strong>Términos y condiciones</strong></a></p>
             </label>
@@ -193,7 +118,6 @@ const RegisterForm = () => {
         </form>        
       </div>
     </section>      
->>>>>>> 00622b1ce2c527dfc811623c3d40b4cfb3fa3350
   );
 };
 

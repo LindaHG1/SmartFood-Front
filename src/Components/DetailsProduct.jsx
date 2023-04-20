@@ -85,6 +85,7 @@ const DetailsProduct = () => {
                                 <button onClick={handleAddToCart}>Agregar al carrito</button>
                             </div>
                         </div>
+                        <p><a className='back-to-shop' href="/products">Seguir comprando</a></p>
                     </div>
                 </div>
             </div>

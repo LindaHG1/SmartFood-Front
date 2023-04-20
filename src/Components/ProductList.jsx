@@ -1,8 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Products/ProductList.css';
 import allcategories from '../assets/images/todas-categorias.jpg'
-
+import '../assets/sass/components/_productlist.scss'
 
 export const ProductList = ({
 	allProducts,
@@ -12,7 +11,7 @@ export const ProductList = ({
 	total,
 	setTotal,
 }) => {
-	
+
 	const [products, setProducts] = useState([]);
 	const [categories, setCategories] = useState([]);
 	const [category, setCategory] = useState('');
@@ -21,42 +20,42 @@ export const ProductList = ({
 
 	useEffect(() => {
 		fetch('http://127.0.0.1:8000/api/categories')
-		.then(response => response.json())
-		.then(data => setCategories(data))
-		.catch(error => console.error(error));
+			.then(response => response.json())
+			.then(data => setCategories(data))
+			.catch(error => console.error(error));
 	}, []);
 
 	useEffect(() => {
 		let url = 'http://127.0.0.1:8000/api/products';
 		if (category) {
-		  url += `/category/${category}`;
+			url += `/category/${category}`;
 		}
 		fetch(url)
-		  .then(response => response.json())
-		  .then(data => {
-			if (searchTerm) {
-			  setProducts(
-				data.filter(product =>
-				  product.name.toLowerCase().includes(searchTerm.toLowerCase())
-				)
-			  );
-			} else {
-			  setProducts(data);
-			}
-		  })
-		  .catch(error => console.error(error));
-	  }, [category, searchTerm]);
+			.then(response => response.json())
+			.then(data => {
+				if (searchTerm) {
+					setProducts(
+						data.filter(product =>
+							product.name.toLowerCase().includes(searchTerm.toLowerCase())
+						)
+					);
+				} else {
+					setProducts(data);
+				}
+			})
+			.catch(error => console.error(error));
+	}, [category, searchTerm]);
 
 	const onAddProduct = product => {
 		if (allProducts.find(item => item.id === product.id)) {
-		const products = allProducts.map(item =>
-			item.id === product.id
-			? { ...item, quantity: item.quantity + 1 }
-			: item
-		);
-		setTotal(total + product.price * product.quantity);
-		setCountProducts(countProducts + product.quantity);
-		return setAllProducts([...products]);
+			const products = allProducts.map(item =>
+				item.id === product.id
+					? { ...item, quantity: item.quantity + 1 }
+					: item
+			);
+			setTotal(total + product.price * product.quantity);
+			setCountProducts(countProducts + product.quantity);
+			return setAllProducts([...products]);
 		}
 
 		setTotal(total + product.price * product.quantity);
@@ -103,15 +102,15 @@ export const ProductList = ({
 					<span>Todas</span>
 				</li>
 				{categories.map(category => (
-					<li key={category.id} onClick={() => handleCategoryClick(category.typecategory)} className='item-category'>						
+					<li key={category.id} onClick={() => handleCategoryClick(category.typecategory)} className='item-category'>
 						<img src={`http://127.0.0.1:8000/uploads/categories/${category.photo}`} alt={category.typecategory} />
 						<span>{category.typecategory}</span>
 					</li>
 				))}
 			</ul>
 			<div className='inputSearch'>
-				<input type='text' placeholder='Buscar productos...' value={searchTerm} onChange={handleSearchInputChange} />
-				<button onClick={handleSearchClear}>Limpiar</button>
+				<input className='search-input' type='text' placeholder='Buscar productos...' value={searchTerm} onChange={handleSearchInputChange} />
+				<button className='search-button' onClick={handleSearchClear}>Limpiar</button>
 			</div>
 			<div className='container-items'>
 				{products.map(product => (

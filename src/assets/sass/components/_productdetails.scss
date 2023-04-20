@@ -61,7 +61,7 @@
                 align-content: flex-start;
                 justify-content: flex-start;
                 align-items: flex-start; 
-                width: 50%;
+                width: 80%;
                 @media screen and (max-width: 767px) {
                     width: 100%;
                 }           
@@ -114,9 +114,16 @@
                     }
                     
                 }
+                
             }
         }
+        .back-to-shop{
+            text-decoration: none;
+            color: $color-verde;
+        }
     }
+
+
 
     
 

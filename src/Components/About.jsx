@@ -20,6 +20,8 @@ function About() {
 
                     </p>
 
+                    {/* <p><a className='p-opinion' href="/contact">Tu opinión nos importa</a></p> */}
+
                 </div>
                 <div className="about__right">
                     <img className="about-img" src={about} />

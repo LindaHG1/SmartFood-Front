@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Components/Products/prueba.css';
+import '../assets/sass/components/_myprofile.scss';
 
 const MiProfile = () => {
     const [ToggleState, setToggleState] = useState(1);

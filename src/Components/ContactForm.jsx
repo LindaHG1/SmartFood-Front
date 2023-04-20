@@ -86,7 +86,7 @@ const ContactForm = (props) => {
             </label>
           </div>
           <p className="cookies">Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión. Puede consultar nuestra <a href="/">Politica de cookies </a> para más detalles.</p>
-          <button id='btnContact' type="submit" onClick={sendDataCreate} className='btn btnContact' disabled={!isChecked}>Registrarme</button>
+          <button id='btnContact' type="submit" onClick={sendDataCreate} className='btn btnContact' disabled={!isChecked}>Enviar</button>
         </form>        
       </div>
     </section>      

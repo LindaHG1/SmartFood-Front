@@ -1,4 +1,4 @@
-*::after,
+/* *::after,
 *::before,
 * {
 	margin: 0;
@@ -208,3 +208,15 @@
 	}
 
 }
+.inputSearch{
+	margin: 30px;
+    display: flex;
+    justify-content: end;
+}
+.search-input{
+	padding: 8px;
+	
+}
+.search-button{
+	padding: 8px;
+} */

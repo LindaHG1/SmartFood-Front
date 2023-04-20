@@ -93,7 +93,10 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
 ## Metodologia
 
-* Agile and SCRUM.
+* Agile and Scrum
+* Pair Programming
+* TDD
+
 
 
 </p>

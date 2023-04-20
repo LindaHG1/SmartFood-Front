@@ -57,7 +57,7 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
 <img src="https://i.postimg.cc/PxjTpKxZ/Whats-App-Image-2023-04-20-at-13-14-25.jpg" width="300px">
  
-  ## Tools
+  ## Herramientas
 
  <a herf="https://www.figma.com/file/j3PmBXAYaB5q9chh5o23tw/Quotes?node-id=0%3A1&t=wIPAO9j1BXSjwg2G-0"><img src= "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></a>
  <a href=""><img src= "https://img.shields.io/badge/Github-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></a>
@@ -65,20 +65,19 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
  <img src= "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"></a>
  <img src= "https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
 
-## To-install-project
+## Instalar Proyecto
 
-* Clone git https://github.com/CarmenGP/tribe-fly.git
+* Clone git 
 * npm install
 
 ## Tests 
 
 * npm test
 
-## Methodology
+## Metodologia
 
 * Agile and SCRUM.
-* Mob programming.
-* Pair programming.
+
 
 </p>
 

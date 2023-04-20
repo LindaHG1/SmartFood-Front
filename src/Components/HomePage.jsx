@@ -23,6 +23,7 @@ function HomePage() {
                 <picture>
                     <source media="(max-width: 745px)" srcSet= {banner2}/>
                     <img src={banner} alt="Imagen de la tarjeta" />
+<<<<<<< HEAD
                         </picture>
 
                         
@@ -58,9 +59,18 @@ function HomePage() {
                             <p>Frutos Secos</p>
                         </div>
 
+=======
+                </picture>                        
+                <div className="slogan">
+                    <div data-aos="fade-left">
+                        <h1>"En Smarfood encontrarás la frescura de la huerta a solo unos pasos de tu hogar"</h1>
+                        <p>Explora lo que ofrecemos</p>
+>>>>>>> ef5f87ebe57a5f6c51ab44731500057a3ff184d5
                     </div>
+                </div>
             </div>
-            );
+        </div>
+    );
 }
 
-            export default HomePage;
+export default HomePage;

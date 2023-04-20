@@ -12,12 +12,12 @@
 7. [Tests](#tests)
 8. [Metodologias](#metodologias)
 9. [Competencias-básicas](#Competencias-básicas)
-## Description  
+## Descripción 
 
 
 Smartfood es un proyecto de comercio electrónico que se dedica a la venta de frutas de alta calidad a través de su plataforma en línea. 
 
- ## Members  
+ ## Equipo 
   
 - [Linda Haeli](https://github.com/LindaHG1) - Scrum Master
 
@@ -81,7 +81,7 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 </p>
 
 
-  ## Instalar-Proyecto
+  ## Instalar Proyecto
 
 * Clone git https://github.com/LindaHG1/smartfood-front
 * npm install

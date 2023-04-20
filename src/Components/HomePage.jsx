@@ -23,52 +23,15 @@ function HomePage() {
                 <picture>
                     <source media="(max-width: 745px)" srcSet= {banner2}/>
                     <img src={banner} alt="Imagen de la tarjeta" />
-<<<<<<< HEAD
-                        </picture>
-
-                        
-                        <div className="slogan">
-                            <div data-aos="fade-left">
-                                <h1>"En Smarfood encontrarás la frescura de la huerta a solo unos pasos de tu hogar"</h1>
-                                <p>Explora lo que ofrecemos</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <Tips/>
-
-                    <div className="card-container">
-                        <div className="card">
-                            <img className='img-category' src={citricos} width={249} alt="Imagen de la tarjeta" />
-
-                            <p>Cítricos</p>
-                        </div>
-                        <div className="card">
-                            <img className='img-category' src={temporada} width={249} alt="Imagen de la tarjeta" />
-
-                            <p>Frutas de temporada</p>
-                        </div>
-                        <div className="card">
-                            <img className='img-category' src={tropicales} width={249} alt="Imagen de la tarjeta" />
-
-                            <p>Tropicales</p>
-                        </div>
-                        <div className="card">
-                            <img className='img-category' src={secos} width={249} alt="Imagen de la tarjeta" />
-
-                            <p>Frutos Secos</p>
-                        </div>
-
-=======
                 </picture>                        
                 <div className="slogan">
                     <div data-aos="fade-left">
                         <h1>"En Smarfood encontrarás la frescura de la huerta a solo unos pasos de tu hogar"</h1>
                         <p>Explora lo que ofrecemos</p>
->>>>>>> ef5f87ebe57a5f6c51ab44731500057a3ff184d5
                     </div>
                 </div>
             </div>
+            <Tips/>
         </div>
     );
 }

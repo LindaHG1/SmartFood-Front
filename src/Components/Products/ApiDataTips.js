@@ -1,7 +1,7 @@
 export const DataTips = [
 	{
 		id: 1,
-		title: ['La magia de Smartfood:','cómo conservar tus frutas y hacerlas durar más tiempo'],
+		title: ['La magia de Smartfood:', ' Cómo conservar tus frutas y hacerlas durar más tiempo'],
 		tip: ['Descubre los secretos de Smartfood para conservar tus frutas en perfecto estado durante más tiempo y disfrutar de su sabor y frescura como nunca antes.'],
 	},
 	{

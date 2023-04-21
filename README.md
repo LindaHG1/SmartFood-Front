@@ -19,7 +19,7 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
  ## Equipo 
   
-- [Linda Haeli](https://github.com/LindaHG1) - Scrum Master
+- [Linda Haeli](https://github.com/LindaHG1) - Scrum Master 
 
 - [María de los Ángeles](https://github.com/maperezr14) - Product Owner
 
@@ -35,7 +35,6 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
 
 
-
 <img src="https://i.postimg.cc/jj7HJTck/Whats-App-Image-2023-04-20-at-13-04-17.jpg" width="300px"><img src="https://i.postimg.cc/76DkTg0G/Whats-App-Image-2023-04-20-at-13-05-47.jpg" width="300px">
 
 <img src="https://i.postimg.cc/yNYVfML6/Whats-App-Image-2023-04-20-at-13-06-39.jpg" width="300px"><img src="https://i.postimg.cc/3R8tVH6R/Whats-App-Image-2023-04-20-at-13-07-16.jpg" width="300px">
@@ -47,7 +46,7 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
 
 <img src="https://i.postimg.cc/PxjTpKxZ/Whats-App-Image-2023-04-20-at-13-14-25.jpg" width="300px">
-
+ 
  ## Tecnologías
 
  <p align="center">

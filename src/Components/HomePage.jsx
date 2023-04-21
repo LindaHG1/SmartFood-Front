@@ -5,12 +5,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import { useEffect } from 'react';
 import banner2 from '../assets/images/banner2.png'
-
+import Tips from '../Components/Tips'
 
 function HomePage() {
 
     useEffect(() => {
-        AOS.init({ duration: 1000 }); // inicializa AOS
+        AOS.init({ duration: 1000 });
     }, []);
 
     return (
@@ -27,6 +27,7 @@ function HomePage() {
                     </div>
                 </div>
             </div>
+            <Tips/>
         </div>
     );
 }

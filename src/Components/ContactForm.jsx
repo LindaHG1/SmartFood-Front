@@ -12,9 +12,6 @@ const ContactForm = (props) => {
     AOS.init({duration:1500}); // inicializa AOS
   }, []);
 
-
-
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");

@@ -2,7 +2,6 @@ import { React, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import HomePage from '../Components/HomePage'
 import { ProductList } from '../Components/ProductList'
-import { Cart } from '../Components/Cart'
 import Footer from '../Components/Footer'
 
 

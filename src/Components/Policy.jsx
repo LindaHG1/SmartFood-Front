@@ -33,11 +33,7 @@ function Policy() {
                     })}
                     <a href="/" className="btn-back">Volver al Inicio</a>
                 </div>
-<<<<<<< HEAD
-        </div>
-=======
             </div>
->>>>>>> c1cfbb14c0df7d53a1071da4b9d9f4ad1b5546ae
         </div>
     )
 }

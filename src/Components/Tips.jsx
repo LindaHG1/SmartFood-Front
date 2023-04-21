@@ -11,7 +11,7 @@ function Tips() {
         if (!paused) {
             setCurrentIndex((currentIndex + 1) % DataTips.length);
         }
-        }, 8000);
+        }, 4000);
 
         return () => clearInterval(interval);
     }, [currentIndex, paused]);

@@ -1,4 +1,24 @@
 @charset "UTF-8";
+#your-opinion {
+  background-color: #FFFFFF;
+  color: #587608;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: larger;
+  text-align: center;
+  margin-left: 90px;
+}
+@media (max-width: 800px) {
+  #your-opinion {
+    margin: auto;
+  }
+}
+#your-opinion span {
+  color: #2D607C;
+  text-decoration: underline;
+}
+
 .contactForm .container-form {
   background-image: url(../../images/fondobolsa.jpg);
   border: none;
@@ -53,6 +73,10 @@
   border-radius: 7px;
   border: none;
 }
+.contactForm .container-form .formContact .form-control .form-control-input:focus {
+  border: 1px solid #FDBA1A;
+  outline: none;
+}
 @media (max-width: 767px) {
   .contactForm .container-form .formContact .form-control .form-control-input {
     margin-bottom: 0;
@@ -96,7 +120,7 @@
 .contactForm .container-form .formContact .btn {
   background: #2D607C;
   border: none;
-  width: 30%;
+  width: 35%;
   padding: 0.5rem 2rem;
   color: #FFFFFF;
   margin-top: 30px;
@@ -117,6 +141,10 @@
     width: auto;
     margin-top: 30px;
   }
+}
+
+#form-section {
+  scroll-margin-top: 100px;
 }
 
 footer {
@@ -456,6 +484,10 @@ footer .copy p {
   padding: 10px;
   margin-bottom: 20px;
 }
+.form-login .container .input_descripcion:focus {
+  border: 1px solid #FDBA1A;
+  outline: none;
+}
 .form-login .container .error {
   color: #e92b2d;
   margin-top: -15px;
@@ -473,6 +505,9 @@ footer .copy p {
   font-size: 1rem;
   margin-bottom: 15px;
   font-weight: 500;
+}
+.form-login .container .btn.auto:hover {
+  background-color: #587608;
 }
 .form-login .container p {
   margin-bottom: 30px;
@@ -519,7 +554,7 @@ footer .copy p {
 .navbar .links {
   list-style: none;
   display: flex;
-  color: #FFF3F4;
+  color: #FFFFFF;
   cursor: pointer;
   align-items: center;
   text-align: center;
@@ -528,7 +563,7 @@ footer .copy p {
 }
 .navbar .links a {
   text-decoration: none;
-  color: #FFF3F4;
+  color: #FFFFFF;
 }
 @media (max-width: 600px) {
   .navbar .links a {
@@ -570,7 +605,7 @@ footer .copy p {
 }
 .navbar .icons-nav {
   list-style: none;
-  color: #FFF3F4;
+  color: #FFFFFF;
   display: flex;
   width: 86%;
   margin: 0 auto;
@@ -579,7 +614,7 @@ footer .copy p {
   color: #FFFFFF;
 }
 .navbar .icons-nav svg.iconify.iconify--teenyicons {
-  color: white;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
   .navbar .icons-nav {
@@ -604,7 +639,7 @@ footer .copy p {
   color: #FFFFFF;
 }
 .navbar .icons-desk .icon-desk svg.iconify.iconify--teenyicons {
-  color: white;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
   .navbar {
@@ -754,7 +789,7 @@ footer .copy p {
   align-content: flex-start;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
+  width: 80%;
 }
 @media screen and (max-width: 767px) {
   .fruit-detail .fruit-card .p-fruits .quantity-container {
@@ -809,6 +844,10 @@ footer .copy p {
 .fruit-detail .fruit-card .p-fruits .quantity-container .add-trolley button:hover {
   background-color: #587608;
 }
+.fruit-detail .fruit-card .back-to-shop {
+  text-decoration: none;
+  color: #587608;
+}
 
 .registerform .container-form {
   background-image: url(../../images/fondobolsa.jpg);
@@ -861,6 +900,10 @@ footer .copy p {
   border-radius: 7px;
   border: none;
 }
+.registerform .container-form .formRegister .form-control .form-control-input:focus {
+  border: 1px solid #FDBA1A;
+  outline: none;
+}
 @media (max-width: 767px) {
   .registerform .container-form .formRegister .form-control .form-control-input {
     margin-bottom: 0;
@@ -868,7 +911,7 @@ footer .copy p {
   }
 }
 .registerform .container-form .formRegister .form-control .errorForm {
-  color: red;
+  color: #e92b2d;
   font-size: 11px;
   font-weight: bold;
   font-style: italic;
@@ -904,7 +947,7 @@ footer .copy p {
 .registerform .container-form .formRegister .btn {
   background: #2D607C;
   border: none;
-  width: 30%;
+  width: 35%;
   padding: 0.5rem 2rem;
   color: #FFFFFF;
   margin-top: 30px;
@@ -925,6 +968,18 @@ footer .copy p {
     width: auto;
     margin-top: 30px;
   }
+}
+.registerform .container-form .formRegister .have-acount {
+  margin-top: 35px;
+  width: 100%;
+}
+.registerform .container-form .formRegister .have-acount a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #587608;
+}
+.registerform .container-form .formRegister .have-acount a:hover {
+  color: #2D607C;
 }
 
 .cart-container {

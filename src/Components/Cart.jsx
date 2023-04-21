@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Icon } from '@iconify/react'
-import './Products/Cart.css'
+import '../assets/sass/cart.css'
 
 export const Cart = ({
 	allProducts,

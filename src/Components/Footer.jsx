@@ -9,7 +9,6 @@ import { Icon } from '@iconify/react';
 
 
 
-
 const Footer = () => {
     const [foot, setFoot] = useState([]);
     useEffect(() => {

@@ -11,9 +11,6 @@ import Privacy from "../Views/Privacy";
 import SignIn from "../Views/SignIn";
 import CookiesView from "../Views/CookiesView";
 import Basket from "../Views/Basket";
-import MiProfile from "../Components/Myprofile";
-
-
 // import Register from "../Views/Register";
 
 const Router = () => {

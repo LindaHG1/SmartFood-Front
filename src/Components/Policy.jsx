@@ -19,10 +19,9 @@ function Policy() {
     }, []);
 
 
-
     return (
         <div data-aos="zoom-in">
-        <div className='terms info-page'>
+            <div className='terms info-page'>
                 <div className="content">
                     <h1 className="title-section">Política de privacidad</h1>
                     {repo.map(item => {
@@ -34,7 +33,11 @@ function Policy() {
                     })}
                     <a href="/" className="btn-back">Volver al Inicio</a>
                 </div>
+<<<<<<< HEAD
         </div>
+=======
+            </div>
+>>>>>>> c1cfbb14c0df7d53a1071da4b9d9f4ad1b5546ae
         </div>
     )
 }

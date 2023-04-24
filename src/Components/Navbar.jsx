@@ -47,11 +47,7 @@ export const Navbar = ({
                         />
                     </li>
                     <li className="float-shadow icon-nav">
-<<<<<<< HEAD
-                        <a href="/login" >
-=======
                         <a href="/login">
->>>>>>> 109db12ae45cf423e9e0330db44cee986731cc68
                             <Icon icon="teenyicons:user-circle-solid" width="28" height="28" />
                         </a>
                     </li>

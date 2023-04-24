@@ -1,24 +1,4 @@
 @charset "UTF-8";
-#your-opinion {
-  background-color: #FFFFFF;
-  color: #587608;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: larger;
-  text-align: center;
-  margin-left: 90px;
-}
-@media (max-width: 800px) {
-  #your-opinion {
-    margin: auto;
-  }
-}
-#your-opinion span {
-  color: #2D607C;
-  text-decoration: underline;
-}
-
 .contactForm .container-form {
   background-image: url(../../images/fondobolsa.jpg);
   border: none;

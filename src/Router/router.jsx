@@ -11,11 +11,7 @@ import Privacy from "../Views/Privacy";
 import SignIn from "../Views/SignIn";
 import CookiesView from "../Views/CookiesView";
 import Basket from "../Views/Basket";
-<<<<<<< HEAD
-import MiProfile from "../Components/Myprofile";
-=======
 import MyProfile from "../Components/Myprofile";
->>>>>>> 109db12ae45cf423e9e0330db44cee986731cc68
 
 
 // import Register from "../Views/Register";

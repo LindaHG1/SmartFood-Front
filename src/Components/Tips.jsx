@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { DataTips } from './Products/ApiDataTips';
-import '../Components/Products/Tips.css';
+import React, { useState, useEffect } from 'react'
+import { DataTips } from './TipsList/ApiDataTips'
+import '../assets/sass/components/_tips.scss'
 
 function Tips() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,7 +35,7 @@ function Tips() {
             <ul>
                 {currentIndex >= 0 &&
                 DataTips[currentIndex].tip.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li className="tips-li" key={item}>{item}</li>
                 ))}
             </ul>
             </div>

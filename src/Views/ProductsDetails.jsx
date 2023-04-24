@@ -19,7 +19,14 @@ function ProductsDetails() {
             countProducts={countProducts}
             setCountProducts={setCountProducts}
             />
-            <DetailsProduct/>
+            <DetailsProduct
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
+            />
             <Footer/>
         </div>
     )

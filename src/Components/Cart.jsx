@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Icon } from '@iconify/react'
-import './Products/Cart.css'
+import '../assets/sass/cart.css'
 
 export const Cart = ({
 	allProducts,
@@ -36,8 +36,6 @@ export const Cart = ({
 						<span>{countProducts}</span>
 					</div>		
 				</div>
-
-				{/* Revisar si dejo el onclick en el overlay */}
 				
 				{active && (
 					<div onClick={() => setActive(!active)} className="overlay overlay-show"></div>

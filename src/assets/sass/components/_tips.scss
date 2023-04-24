@@ -1,3 +1,5 @@
+@import '../utilities/variable';
+
 .tips-section {
     position: relative;
     display: inline-block;
@@ -36,7 +38,7 @@
 
 h2.tips-title-fruit {
     padding: 12px 0 0 30px;
-    color: #fdba1a;
+    color: $color-amarillo;
     font-size: 38px;
     font-weight: 300;
     max-width: 55%;

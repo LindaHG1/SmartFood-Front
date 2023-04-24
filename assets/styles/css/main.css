@@ -307,11 +307,11 @@ footer .copy p {
   transition: 0.4s;
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-title:hover {
-  background-color: #FDBA1A;
+  background-color: #F09D06;
   color: #ECECEC;
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active {
-  background-color: #FDBA1A;
+  background-color: #F09D06;
   color: #ECECEC;
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active:after {

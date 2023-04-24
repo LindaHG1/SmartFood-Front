@@ -1,5 +1,28 @@
 @import '../utilities/variable';
 
+<<<<<<< HEAD
+=======
+#your-opinion{
+  background-color: $color-blanco;
+  color: $color-verde;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: larger;
+  text-align: center;
+  margin-left: 90px;
+  @media(max-width:800px){
+    margin:auto;
+  }
+  span{
+    color: $color-azul;
+    text-decoration: underline;
+  }
+}
+
+
+
+>>>>>>> 50f3440bb09ed41d77ec9283a9fdfddc66d33a05
 .contactForm {
   .container-form {
     background-image: url(../../images/fondobolsa.jpg);

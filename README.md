@@ -79,7 +79,8 @@ Smartfood es un proyecto de comercio electrónico que se dedica a la venta de fr
 
 ## Tests 
 
-* npm test
+* Jest
+* Ejecutar: npm test
 
 ## Metodologia
 

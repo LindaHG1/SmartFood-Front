@@ -70,6 +70,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copy">
+        <p>Calle</p>
         <hr />
         <br />
         <p>&copy;SmartFood 2023 - Todos los derechos reservados</p>

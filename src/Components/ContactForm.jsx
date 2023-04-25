@@ -90,8 +90,10 @@ const ContactForm = (props) => {
           <p className="cookies">Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión. Puede consultar nuestra <a href="/">Politica de cookies </a> para más detalles.</p>
           <button id='btnContact' type="submit" onClick={sendDataCreate} className='btn btnContact' disabled={!isChecked}>Enviar</button>
         </form>  
-              
+            <p>Tambien puedes encontrarnos en CALLE...</p>
+            <p>911111111111</p>
       </div>
+            
     </section>      
   );
 };

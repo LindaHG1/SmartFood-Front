@@ -143,6 +143,29 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+#your-opinion {
+  background-color: #FFFFFF;
+  color: #587608;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: larger;
+  text-align: center;
+  margin-left: 90px;
+}
+@media (max-width: 800px) {
+  #your-opinion {
+    margin: auto;
+  }
+}
+#your-opinion span {
+  color: #2D607C;
+  text-decoration: underline;
+}
+
+>>>>>>> e83215b51c6d7fba46aaabbc9742e09e7ad68e6c
 #form-section {
   scroll-margin-top: 100px;
 }
@@ -307,11 +330,11 @@ footer .copy p {
   transition: 0.4s;
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-title:hover {
-  background-color: #FDBA1A;
+  background-color: #F09D06;
   color: #ECECEC;
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active {
-  background-color: #FDBA1A;
+  background-color: #F09D06;
   color: #ECECEC;
 }
 .section-faqs .faqs .faqs-grid .faqs-item .faqs-title.active:after {
@@ -460,9 +483,10 @@ footer .copy p {
 }
 @media (max-width: 800px) {
   .form-login {
-    margin: 30px;
+    margin: 50px 20px;
     box-sizing: border-box;
     justify-content: center;
+    width: 90%;
   }
 }
 .form-login .title_sesion {
@@ -980,4 +1004,82 @@ footer .copy p {
 }
 .registerform .container-form .formRegister .have-acount a:hover {
   color: #2D607C;
+<<<<<<< HEAD
+=======
+}
+
+.cart-container {
+  margin: 50px 100px;
+}
+
+.delete-btn {
+  width: 50%;
+  background-color: #3e8e41;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.table-cart {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.table-cart table {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.table-cart td {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+.table-cart th {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.table-cart input {
+  width: 50px;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 4px;
+}
+.table-cart input:focus {
+  border: 1px solid #FDBA1A;
+  outline: none;
+}
+
+.emty-cart {
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+}
+
+.btn-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-end .btn-cart {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 10px 0;
+  padding: 8px;
+  width: 200px;
+  border-radius: 7px;
+  justify-self: right;
+}
+.btn-end .btn-cart:hover {
+  background-color: #3e8e41;
+}
+
+.total {
+  margin: 20px auto;
+>>>>>>> e83215b51c6d7fba46aaabbc9742e09e7ad68e6c
 }/*# sourceMappingURL=main.css.map */

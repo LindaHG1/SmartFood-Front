@@ -5,25 +5,21 @@ import { Icon } from '@iconify/react';
 
 
 
-
-
-
-
 const Footer = () => {
-    const [foot, setFoot] = useState([]);
-    useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/store')
-            .then(response => response.json())
-            .then(foot => setFoot(foot))
-            .then(foot => console.log(foot))
-            .catch(error => console.error(error));
-    }, []);
+  const [foot, setFoot] = useState([]);
+  useEffect(() => {
+    fetch('http://127.0.0.1:8000/api/store')
+      .then(response => response.json())
+      .then(foot => setFoot(foot))
+      .then(foot => console.log(foot))
+      .catch(error => console.error(error));
+  }, []);
   return (
     <footer className="footer">
       <div className="top-info">
         <div className="bloq-top">
           <a href="/" className="logo-footer">
-          <img className="logo" src={logo} alt="SmartFood" width="120" />
+            <img className="logo" src={logo} alt="SmartFood" width="120" />
           </a>
         </div>
         <div className="bloq-top">
@@ -70,7 +66,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="copy">
-        <p>Calle</p>
+        {foot.map((item) => {
+          return (
+            <p key={item.id}>{item.address} - {item.phone}</p>
+          );
+        })}
         <hr />
         <br />
         <p>&copy;SmartFood 2023 - Todos los derechos reservados</p>

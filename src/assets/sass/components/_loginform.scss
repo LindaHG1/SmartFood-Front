@@ -1,3 +1,5 @@
+
+
 @import '../utilities/variable';
 
 .form-login {
@@ -13,9 +15,10 @@
   margin: 120px auto;
   max-width: 410px;
   @media(max-width:800px){
-    margin: 30px;
+    margin: 50px 20px;
     box-sizing: border-box;
     justify-content: center;
+    width: 90%;
   }
   
   .title_sesion {
@@ -77,6 +80,3 @@
     }
   }
 }
-
-
-

@@ -64,7 +64,7 @@ export const Navbar = ({
                     <a href="/products">Productos</a>
                 </li>
                 <li className="float-shadow">
-                    <a href="/contact" onClick={window.dataLayer.push({'event': 'menu_products'})}>Contacto</a>
+                    <a href="/contact" onClick={window.dataLayer.push({'event': 'menu_contact'})}>Contacto</a>
                 </li>
             </ul>
             <ul className='icons-desk'>

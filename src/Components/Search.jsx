@@ -13,7 +13,7 @@ function BuscadorComponent() {
   }, []);
 
   const getProducts = () => {
-    fetch("http://127.0.0.1:8000/api/products")
+    fetch("https://prueba.coderf5.es/api/products")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

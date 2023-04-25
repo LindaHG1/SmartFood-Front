@@ -7,7 +7,7 @@ function Accordion({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="faqs-item">
-            <a className={isOpen ? "faqs-title active" : "faqs-title"} onClick={() => setIsOpen(!isOpen)} href="#custom">{title}</a>
+            <a className={isOpen ? "faqs-title active" : "faqs-title"} onClick={() => {setIsOpen(!isOpen); window.dataLayer.push({'event': 'open_question'})}} href="#custom">{title}</a>
             <div className={isOpen ? "faqs-content" : "faqs-content no-height"}>
                 <div className="faqs-content-inside">
                     {children}
@@ -24,7 +24,7 @@ function Faqs(){
         AOS.init({
             duration: 1500,
         });
-        fetch('http://127.0.0.1:8000/api/faqs')
+        fetch('https://prueba.coderf5.es/api/faqs')
             .then(response => response.json())
             .then(faqs => setFaqs(faqs))
             .then(faqs => console.log(faqs))

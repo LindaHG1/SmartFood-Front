@@ -19,14 +19,14 @@ export const ProductList = ({
 
 
 	useEffect(() => {
-		fetch('http://127.0.0.1:8000/api/categories')
+		fetch('https://prueba.coderf5.es/api/categories')
 			.then(response => response.json())
 			.then(data => setCategories(data))
 			.catch(error => console.error(error));
 	}, []);
 
 	useEffect(() => {
-		let url = 'http://127.0.0.1:8000/api/products';
+		let url = 'https://prueba.coderf5.es/api/products';
 		if (category) {
 			url += `/category/${category}`;
 		}
@@ -97,13 +97,13 @@ export const ProductList = ({
 				</select>
 			</div>
 			<ul className='container-categories categories-desktop'>
-				<li className='item-category' onClick={() => handleCategoryClick('')}>
+				<li className='item-category' onClick={() => {handleCategoryClick(''); window.dataLayer.push({'event': 'select_category_all'});}}>
 					<img src={allcategories} alt="" />
 					<span>Todas</span>
 				</li>
 				{categories.map(category => (
-					<li key={category.id} onClick={() => handleCategoryClick(category.typecategory)} className='item-category'>
-						<img src={`http://127.0.0.1:8000/uploads/categories/${category.photo}`} alt={category.typecategory} />
+					<li key={category.id} onClick={() => {handleCategoryClick(category.typecategory); window.dataLayer.push({'event': 'select_category'});}} className='item-category'>
+						<img src={`https://prueba.coderf5.es/uploads/categories/${category.photo}`} alt={category.typecategory} />
 						<span>{category.typecategory}</span>
 					</li>
 				))}
@@ -115,19 +115,19 @@ export const ProductList = ({
 			<div className='container-items'>
 				{products.map(product => (
 					<div className='item' key={product.id}>
-						<Link to={`/products/${product.id}`} key={product.id}>
+						<Link to={`/products/${product.id}`} key={product.id} onClick={window.dataLayer.push({'event': 'detail_product_view'})}>
 							<figure>
-								<img src={`http://127.0.0.1:8000/uploads/products/${product.photo}`} alt={product.name} />
+								<img src={`https://prueba.coderf5.es/uploads/products/${product.photo}`} alt={product.name} />
 							</figure>
 						</Link>
 						<div className='info-product'>
-							<Link to={`/products/${product.id}`} key={product.id}>
+							<Link to={`/products/${product.id}`} key={product.id} onClick={window.dataLayer.push({'event': 'detail_product_view'})}>
 								<div className='name-price'>
 									<h3 className='product-name'>{product.name}</h3>
 									<p className='price'>{product.price} € <span>/Kilo</span></p>
 								</div>
 							</Link>
-							<button onClick={() => onAddProduct(product)}>
+							<button onClick={() => {onAddProduct(product); window.dataLayer.push({'event': 'add_to_cart'});}}>
 								Añadir al carrito
 							</button>
 						</div>

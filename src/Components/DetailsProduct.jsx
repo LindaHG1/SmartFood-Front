@@ -62,7 +62,7 @@ const DetailsProduct = ({
     }, [product.price, weight]);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/products/${id}`)
+        fetch(`https://prueba.coderf5.es/api/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
             .catch(err => console.log(err));
@@ -77,7 +77,7 @@ const DetailsProduct = ({
         <div data-aos="fade-down" key={product.id}>
             <div className="fruit-detail">
                 <div className="fruit-card">
-                    <img src={`http://127.0.0.1:8000/uploads/products/${product.photo}`} alt={product.name} className="fruit-detail__image zoom-image" />
+                    <img src={`https://prueba.coderf5.es/uploads/products/${product.photo}`} alt={product.name} className="fruit-detail__image zoom-image" />
                     <div className="p-fruits">
                         <div className="text">
                             <h2 className="fruit-detail__title">{product.name}</h2>

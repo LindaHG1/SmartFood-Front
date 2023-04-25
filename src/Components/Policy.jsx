@@ -11,7 +11,7 @@ function Policy() {
             duration:1500
         }); // inicializa AOS
 
-        fetch('http://127.0.0.1:8000/api/privacy')
+        fetch('https://prueba.coderf5.es/api/privacy')
             .then(response => response.json())
             .then(repo => setRepo(repo))
             .then(repo => console.log(repo))

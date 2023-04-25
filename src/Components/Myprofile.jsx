@@ -25,7 +25,7 @@ const MiProfile = () => {
         AOS.init({
             duration: 1500,
         });
-        fetch('http://127.0.0.1:8000/api/clients?email=maperezr.14@gmail.com')
+        fetch('https://prueba.coderf5.es/api/clients?email=maperezr.14@gmail.com')
             .then(response => response.json())
             .then(cli => setCli(cli))
             .then(cli => console.log(cli))

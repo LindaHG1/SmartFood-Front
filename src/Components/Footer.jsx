@@ -8,7 +8,7 @@ import { Icon } from '@iconify/react';
 const Footer = () => {
   const [foot, setFoot] = useState([]);
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/store')
+    fetch('https://prueba.coderf5.es/api/store')
       .then(response => response.json())
       .then(foot => setFoot(foot))
       .then(foot => console.log(foot))
@@ -25,20 +25,20 @@ const Footer = () => {
         <div className="bloq-top">
           <ul>
             <li>
-              <a href="/contact">Contacto</a>
+              <a href="/contact" onClick={window.dataLayer.push({'event': 'menu_footer_contact'})}>Contacto</a>
             </li>
             <li>
-              <a href="/faqs">
+              <a href="/faqs" onClick={window.dataLayer.push({'event': 'menu_footer_faqs'})}>
                 Preguntas Frecuentes
               </a>
             </li>
             <li>
-              <a href="/terms">
+              <a href="/terms" onClick={window.dataLayer.push({'event': 'menu_footer_terms'})}>
                 Términos y Condiciones
               </a>
             </li>
             <li>
-              <a href="/privacy">
+              <a href="/privacy" onClick={window.dataLayer.push({'event': 'menu_footer_privacy'})}>
                 Politica de privacidad
               </a>
             </li>

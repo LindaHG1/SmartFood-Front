@@ -30,7 +30,7 @@ export const Cart = ({
 
 	return (
 			<div className='container-icon-cart'>
-				<div onClick={() => setActive(!active)}>
+				<div onClick={() => {setActive(!active); window.dataLayer.push({'event': 'show_cart'});}}>
 					<Icon className='icon-cart' icon="ic:round-shopping-cart" width="28" height="28" />
 					<div className={countProducts === 0 ? 'hidden' : 'counter-products'}>
 						<span>{countProducts}</span>
@@ -59,7 +59,7 @@ export const Cart = ({
 								{allProducts.map(product => (
 									<div className='cart-product' key={product.id}>
 										<figure>
-											<img src={`http://127.0.0.1:8000/uploads/products/${product.photo}`} alt={product.name} />
+											<img src={`https://prueba.coderf5.es/uploads/products/${product.photo}`} alt={product.name} />
 										</figure>
 										<div className='info-cart-product'>
 											<div className='name-quantity'>

@@ -47,7 +47,7 @@ export const Navbar = ({
                         />
                     </li>
                     <li className="float-shadow icon-nav">
-                        <a href="/login">
+                        <a href="/login" onClick={window.dataLayer.push({'event': 'menu_login'})}>
                             <Icon icon="teenyicons:user-circle-solid" width="28" height="28" />
                         </a>
                     </li>
@@ -58,13 +58,13 @@ export const Navbar = ({
             </div>
             <ul className="links">
                 <li className="float-shadow">
-                    <a href="/">Inicio</a>
+                    <a href="/" onClick={window.dataLayer.push({'event': 'menu_home'})}>Inicio</a>
                 </li>
                 <li className="float-shadow">
                     <a href="/products">Productos</a>
                 </li>
                 <li className="float-shadow">
-                    <a href="/contact">Contacto</a>
+                    <a href="/contact" onClick={window.dataLayer.push({'event': 'menu_products'})}>Contacto</a>
                 </li>
             </ul>
             <ul className='icons-desk'>

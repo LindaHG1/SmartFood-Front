@@ -14,7 +14,7 @@ import Basket from "../Views/Basket";
 import MyProfile from "../Components/Myprofile";
 
 
-// import Register from "../Views/Register";
+
 
 const Router = () => {
    return (
@@ -33,13 +33,8 @@ const Router = () => {
             <Route path="/register" element={<SignIn/>} />
             <Route path="/cookies" element={<CookiesView/>} />
             <Route path="/profile" element={<MyProfile/>} />
-            
-            {/* <Route path="/buscador" element={<BuscadorComponent/>} /> */}
-            
-            
             <Route path="/register" element={<SignIn/>} />            
-            {/* <Route path="/register" element={<Register/>} /> */}
-            {/* <Route path="/register" element={<Register/>} /> */}
+            
             
          </Routes>
 

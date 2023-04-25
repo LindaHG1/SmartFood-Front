@@ -1,15 +1,15 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../assets/sass/components/_contactform.scss';
 import InputsRegister from "./InputsRegister/InputsRegister";
 import AOS from "aos";
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 
 
 
 const ContactForm = (props) => {
   useEffect(() => {
-    AOS.init({duration:1500}); // inicializa AOS
+    AOS.init({ duration: 1500 }); // inicializa AOS
   }, []);
 
 
@@ -124,16 +124,18 @@ const ContactForm = (props) => {
           ))}
           <div className='checkbox'>
             <label>
-              <input type="checkbox" id='termschkbx' onChange={handleCheckboxChange}/>
+              <input type="checkbox" id='termschkbx' onChange={handleCheckboxChange} />
               <p>Acepto los <a href="/terms" id="terminos"><strong>Términos y condiciones</strong></a></p>
             </label>
           </div>
-          <p className="cookies">Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión. Puede consultar nuestra <a href="/">Politica de cookies </a> para más detalles.</p>
+          <p className="cookies">Después de acceder con éxito, se utiliza una cookie en su navegador para dar seguimiento a su sesión. Puede consultar nuestra <a href="/cookies">Politica de cookies </a> para más detalles.</p>
           <button id='btnContact' type="submit" onClick={sendDataCreate} className='btn btnContact' disabled={!isChecked}>Enviar</button>
-        </form>  
-              
+        </form>
+
+
       </div>
-    </section>      
+
+    </section>
   );
 };
 

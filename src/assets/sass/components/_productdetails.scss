@@ -64,7 +64,10 @@
                 width: 80%;
                 @media screen and (max-width: 767px) {
                     width: 100%;
-                }           
+                }
+                p.fruit-detail__price {
+                    width: 100%;
+                }                
                 .kg {
                     display: flex;
                     align-items: center;
@@ -80,11 +83,6 @@
                     &:hover{
                         background-color: $color-azul;
                     }
-                    input[type="radio"] {
-                        margin-right: 0.5rem;
-                        list-style: none;
-                        appearance: none;
-                    }        
                 }
                 .add-trolley{
                     display: flex;

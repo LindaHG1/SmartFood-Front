@@ -5,43 +5,61 @@ import AOS from "aos";
 import 'aos/dist/aos.css';
 
 const DetailsProduct = ({
-	allProducts,
-	setAllProducts,
-	countProducts,
-	setCountProducts,
-	total,
-	setTotal,
+    allProducts,
+    setAllProducts,
+    countProducts,
+    setCountProducts,
+    total,
+    setTotal,
 }) => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
+    const [selectedOption, setSelectedOption] = useState('');
+    const [weight, setWeight] = useState(1);
+    const [newPrice, setNewPrice] = useState(null);
 
-    const [quantity, setQuantity] = useState(1);
-    const handleQuantityChange = (event) => {
-        setQuantity(event.target.value);
+    const handleOptionChange = (option, weightValue) => {
+        setSelectedOption(option);
+        setWeight(weightValue);
     };
-    const handleAddToCart = () => {
-        // Aquí podrías enviar la información del producto y la cantidad al carrito de compras.
-        console.log(`Agregado al carrito: ${quantity} kg de ${product.name}`);
+
+    const onAddProduct = (product) => {
+        let productToAdd = {
+        ...product,
+        quantity: 1,
+        weight: selectedOption !== '' ? weight : 1, 
+        price: selectedOption !== '' ? (selectedOption === '1kg' ? product.price : newPrice) : product.price,
+        };
+
+        let productIndex = allProducts.findIndex((item) => item.id === productToAdd.id);
+        if (productIndex !== -1) {
+            const products = [...allProducts];
+            products[productIndex].quantity += productToAdd.quantity;
+            products[productIndex].weight = productToAdd.weight;
+            products[productIndex].price = productToAdd.price;
+            setTotal(total + productToAdd.price);
+            setCountProducts(countProducts + 1);
+            return setAllProducts(products);
+        }
+
+        setTotal(total + productToAdd.price);
+        setCountProducts(countProducts + 1);
+        setAllProducts([...allProducts, productToAdd]);
     };
 
-    // PRUEBA DE CODIGO BOTON AÑADIR AL CARRITO
+    useEffect(() => {
+        const productsTotal = allProducts.reduce((acc, item) => {
+          return acc + item.price * item.quantity;
+        }, 0);
 
-    const onAddProduct = product => {
-		if (allProducts.find(item => item.id === product.id)) {
-			const products = allProducts.map(item =>
-				item.id === product.id
-					? { ...item, quantity: item.quantity + 1 }
-					: item
-			);
-			setTotal(total + product.price * product.quantity);
-			setCountProducts(countProducts + product.quantity);
-			return setAllProducts([...products]);
-		}
+        setTotal(productsTotal);
+    }, [allProducts]);
 
-		setTotal(total + product.price * product.quantity);
-		setCountProducts(countProducts + product.quantity);
-		setAllProducts([...allProducts, product]);
-	};
+    useEffect(() => {
+        if (product.price && weight) {
+          setNewPrice(product.price * weight);
+        }
+    }, [product.price, weight]);
 
     useEffect(() => {
         fetch(`http://127.0.0.1:8000/api/products/${id}`)
@@ -51,10 +69,10 @@ const DetailsProduct = ({
 
         AOS.init({
             duration: 1500
-        }); // inicializa AOS
-
+        });
 
     }, [id]);
+
     return (
         <div data-aos="fade-down" key={product.id}>
             <div className="fruit-detail">
@@ -65,50 +83,40 @@ const DetailsProduct = ({
                             <h2 className="fruit-detail__title">{product.name}</h2>
                             <p className="fruit-detail__origin"><strong>Descripción:</strong> {product.description}</p>
                             <p className="fruit-detail__type"><strong>Categoría: </strong>
-
                                 {product.category && product.category.map(category => (
                                     <span key={category.id}>
                                         {category.typeCategory}
                                     </span>
                                 ))}
-
                             </p>
                             <p className="fruit-detail__price"><strong>Precio por kilo:</strong> {product.price}€</p>
                         </div>
                         <div className="quantity-container">
-                            <label className="kg">
-                                <input
-                                    type="radio"
-                                    name="quantity"
-                                    value="0.5"
-                                    checked={product.quantity === "0.5"}
-                                    onChange={handleQuantityChange}
-                                />
-                                0.5 kg
-                            </label>
-                            <label className="kg">
-                                <input
-                                    type="radio"
-                                    name="quantity"
-                                    value="1"
-                                    checked={product.quantity === "1"}
-                                    onChange={handleQuantityChange}
-                                />
-                                1 kg
-                            </label>
-                            <label className="kg">
-                                <input
-                                    type="radio"
-                                    name="quantity"
-                                    value="2"
-                                    checked={product.quantity === "2"}
-                                    onChange={handleQuantityChange}
-                                />
-                                2 kg
-                            </label>
+                            <button
+                                className={selectedOption === '0.5kg' ? 'active' : ''}
+                                onClick={() => handleOptionChange('0.5kg', 0.5)}
+                                >
+                                0.5kg
+                            </button>
+                            <button
+                                className={selectedOption === '1kg' ? 'active' : ''}
+                                onClick={() => handleOptionChange('1kg', 1)}
+                                >
+                                1kg
+                            </button>
+                            <button
+                                className={selectedOption === '3kg' ? 'active' : ''}
+                                onClick={() => handleOptionChange('3kg', 3)}
+                                >
+                                3kg
+                            </button>
+                            {selectedOption !== '' && (
+                                <p className="fruit-detail__price">
+                                    <strong>Total:</strong> {selectedOption === '1kg' ? `${product.price}€` : `${newPrice}€`}
+                                </p>
+                            )}
                             <div className="add-trolley">
-                                <input type="number" value={product.quantity} onChange={handleQuantityChange} />
-                                <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
+                                <button onClick={() => onAddProduct({...product, price: selectedOption === '1kg' ? product.price : newPrice, quantity: weight})}>Añadir al carrito</button>
                             </div>
                         </div>
                         <p><a className='back-to-shop' href="/products">Seguir comprando</a></p>

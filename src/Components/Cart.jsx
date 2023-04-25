@@ -67,7 +67,7 @@ export const Cart = ({
 													{product.name}
 												</p>
 												<span className='cart-product-quantity'>
-													{product.quantity}
+													Cantidad: {product.quantity}
 												</span>
 											</div>
 											<div className='price-and-close'>

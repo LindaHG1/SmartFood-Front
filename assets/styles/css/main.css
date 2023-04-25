@@ -776,6 +776,9 @@ footer .copy p {
     width: 100%;
   }
 }
+.fruit-detail .fruit-card .p-fruits .quantity-container p.fruit-detail__price {
+  width: 100%;
+}
 .fruit-detail .fruit-card .p-fruits .quantity-container .kg {
   display: flex;
   align-items: center;
@@ -791,13 +794,6 @@ footer .copy p {
 }
 .fruit-detail .fruit-card .p-fruits .quantity-container .kg:hover {
   background-color: #2D607C;
-}
-.fruit-detail .fruit-card .p-fruits .quantity-container .kg input[type=radio] {
-  margin-right: 0.5rem;
-  list-style: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 .fruit-detail .fruit-card .p-fruits .quantity-container .add-trolley {
   display: flex;

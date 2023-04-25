@@ -178,6 +178,7 @@ button.btn-clear-all:hover {
 }
 
 .name-quantity{
+
 	display: flex;
 	flex-direction: column;
 }
@@ -189,8 +190,8 @@ button.btn-clear-all:hover {
 }
 
 .cart-product-quantity {
-	font-weight: 500;
-	font-size: 19px;
+	font-weight: 600;
+	font-size: 15px;
 	color: #587608;
 }
 

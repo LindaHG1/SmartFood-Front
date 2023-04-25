@@ -11,6 +11,7 @@ const RegisterForm = (props) => {
     AOS.init({duration:1500}); // inicializa AOS
   }, []);
 
+  const [errors, setErrors] = useState({});
   const [name, setName] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -46,22 +47,66 @@ const RegisterForm = (props) => {
   const handleFields = (event) => {
     if (event.target.id === "name") {
       setName(event.target.value);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        name: null,
+      }));
     }else if(event.target.id === "lastname"){
       setLastname(event.target.value);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        lastname: null,
+      }));
     }else if(event.target.id === "email"){
       setEmail(event.target.value);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: null,
+      }));
     }else if(event.target.id === "password"){
       setPassword(event.target.value);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: null,
+      }));
     }else{
         setAddress(event.target.value);
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          address: null,
+        }));
     }
   };
 
-  const sendDataCreate = () => {
-    let isValid = true;
-    if (name === "" || lastname === "" || email === "" || password === "" || address === "") {
-      isValid = false;
+  const validateFields = () => {
+    const errors = {};    
+    if (!name) {
+      errors.name = 'El nombre es obligatorio';
     }
+
+    if (!lastname) {
+      errors.lastname = 'El apellido es obligatorio';
+    }
+    
+    if (!email) {
+      errors.email = 'El correo electrónico es obligatorio';
+    }
+
+    if (!password) {
+      errors.password = 'La contraseña es obligatoria';
+    }
+    
+    if (!address) {
+      errors.address = 'La dirección es obligatoria';
+    }
+    
+    setErrors(errors);
+    
+    return Object.keys(errors).length === 0;
+  };
+
+  const sendDataCreate = () => {
+    const isValid = validateFields();
     if (isValid) {
       axios.post('http://127.0.0.1:8000/api/clients', {
         name: name,
@@ -85,8 +130,6 @@ const RegisterForm = (props) => {
         .catch((error) => {
           console.log(error);
         });
-    } else {
-      alert("Por favor complete todos los campos.");
     }   
   };
 
@@ -105,6 +148,7 @@ const RegisterForm = (props) => {
             <div key={field.id} className="mb-3-input form-control">
               <label></label>
               <InputsRegister key={field.id} {...field} handleOnChange={handleFields} />
+              {errors[field.id] && <span className="errorForm">{errors[field.id]}</span>}
             </div>
           ))}
           <div className='checkbox'>

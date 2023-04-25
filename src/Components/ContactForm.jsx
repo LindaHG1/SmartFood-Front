@@ -13,8 +13,7 @@ const ContactForm = (props) => {
   }, []);
 
 
-
-
+  const [errors, setErrors] = useState({});
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -38,33 +37,72 @@ const ContactForm = (props) => {
   const handleFields = (event) => {
     if (event.target.id === "name") {
       setName(event.target.value);
-    }else if(event.target.id === "email"){
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        name: null,
+      }));
+    } else if (event.target.id === "email") {
       setEmail(event.target.value);
-    }else{
-        setMessage(event.target.value);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: null,
+      }));
+    } else {
+      setMessage(event.target.value);
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        message: null,
+      }));
     }
   };
 
-  const sendDataCreate = () => {
-    axios.post('http://127.0.0.1:8000/api/contact', {
-        name: name,
-        email: email,
-        message: message
-        }, {
-          headers: {
-              "Content-Type": "multipart/form-data;"
-          }
-      })
-      .then((response) => {
-        document.getElementById(`name`).value = ""
-        document.getElementById(`email`).value = ""
-        document.getElementById(`message`).value = ""
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+
+  const validateFields = () => {
+    const errors = {};
+    
+    if (!name) {
+      errors.name = 'El nombre es obligatorio';
+    }
+    
+    if (!email) {
+      errors.email = 'El correo electrónico es obligatorio';
+    }
+    
+    if (!message) {
+      errors.message = 'El mensaje es obligatorio';
+    }
+    
+    setErrors(errors);
+    
+    return Object.keys(errors).length === 0;
   };
+
+
+  const sendDataCreate = () => {
+  const isValid = validateFields();
+  
+  if (isValid) {
+    axios.post('http://127.0.0.1:8000/api/contact', {
+      name: name,
+      email: email,
+      message: message
+    }, {
+      headers: {
+        "Content-Type": "multipart/form-data;"
+      }
+    })
+    .then((response) => {
+      document.getElementById(`name`).value = ""
+      document.getElementById(`email`).value = ""
+      document.getElementById(`message`).value = ""
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+};
+
 
   // Enable/Disable button register on click checkbox terms
   const [isChecked, setIsChecked] = useState(false);
@@ -74,7 +112,6 @@ const ContactForm = (props) => {
 
   return (
     <section id="form-section" className="contactForm">
-
       <div className="container-form" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <h2 className="title">Contáctanos</h2>
         <form className="mx-autoform formContact">
@@ -82,6 +119,7 @@ const ContactForm = (props) => {
             <div key={field.id} className="mb-3-input form-control">
               <label></label>
               <InputsRegister key={field.id} {...field} handleOnChange={handleFields} />
+              {errors[field.id] && <span className="errorForm">{errors[field.id]}</span>}
             </div>
           ))}
           <div className='checkbox'>

@@ -22,7 +22,6 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.2",
     "sass": "^1.60.0",
-    "simple-react-footer": "^1.0.2",
     "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4",
     "yup": "^1.0.2"
@@ -52,7 +51,6 @@
     ]
   },
   "devDependencies": {
-    "enzyme-adapter-react-16": "^1.15.7",
     "react-test-renderer": "^18.2.0"
   }
 }

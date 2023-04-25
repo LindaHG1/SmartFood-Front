@@ -1,5 +1,5 @@
 
-=======
+
 # SmartFood-Front
 
 <p align="center"><img src="https://i.postimg.cc/hGqQnJNt/Disen-o-sin-ti-tulo-2-removebg-preview-1.png" width="300" alt="SMARTFOOD"></p>

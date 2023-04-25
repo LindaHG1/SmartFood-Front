@@ -4,7 +4,14 @@ import "../assets/sass/components/_productdetails.scss";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 
-const DetailsProduct = () => {
+const DetailsProduct = ({
+	allProducts,
+	setAllProducts,
+	countProducts,
+	setCountProducts,
+	total,
+	setTotal,
+}) => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
 
@@ -16,6 +23,25 @@ const DetailsProduct = () => {
         // Aquí podrías enviar la información del producto y la cantidad al carrito de compras.
         console.log(`Agregado al carrito: ${quantity} kg de ${product.name}`);
     };
+
+    // PRUEBA DE CODIGO BOTON AÑADIR AL CARRITO
+
+    const onAddProduct = product => {
+		if (allProducts.find(item => item.id === product.id)) {
+			const products = allProducts.map(item =>
+				item.id === product.id
+					? { ...item, quantity: item.quantity + 1 }
+					: item
+			);
+			setTotal(total + product.price * product.quantity);
+			setCountProducts(countProducts + product.quantity);
+			return setAllProducts([...products]);
+		}
+
+		setTotal(total + product.price * product.quantity);
+		setCountProducts(countProducts + product.quantity);
+		setAllProducts([...allProducts, product]);
+	};
 
     useEffect(() => {
         fetch(`http://127.0.0.1:8000/api/products/${id}`)
@@ -82,7 +108,7 @@ const DetailsProduct = () => {
                             </label>
                             <div className="add-trolley">
                                 <input type="number" value={product.quantity} onChange={handleQuantityChange} />
-                                <button onClick={handleAddToCart}>Agregar al carrito</button>
+                                <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
                             </div>
                         </div>
                         <p><a className='back-to-shop' href="/products">Seguir comprando</a></p>

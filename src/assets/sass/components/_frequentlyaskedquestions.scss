@@ -60,11 +60,11 @@
                     outline: none;
                     transition: 0.4s;
                     &:hover {
-                        background-color: $color-amarillo;
+                        background-color: $color-naranja;
                         color: $color-gris-claro;
                     }
                     &.active {
-                        background-color: $color-amarillo;
+                        background-color: $color-naranja;
                         color: $color-gris-claro;
                         &:after {
                             content: "\2212";

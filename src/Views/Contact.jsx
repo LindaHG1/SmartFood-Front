@@ -10,8 +10,8 @@ function Contact() {
         const form = document.getElementById('form-section');
         window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
     }
-    
-    
+
+
     const [allProducts, setAllProducts] = useState([]);
     const [countProducts, setCountProducts] = useState(0);
     const [total, setTotal] = useState(0);
@@ -19,18 +19,18 @@ function Contact() {
     return (
         <div>
             <Navbar
-            allProducts={allProducts}
-            setAllProducts={setAllProducts}
-            total={total}
-            setTotal={setTotal}
-            countProducts={countProducts}
-            setCountProducts={setCountProducts}
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
             />
-            <About/>
+            <About />
             <button id="your-opinion" onClick={handleScroll}>Queremos escucharte, tu opinión nos importa mucho. <span>¡Escríbenos!</span></button>
-            
-            <ContactForm/>
-            <Footer/>
+
+            <ContactForm />
+            <Footer />
 
         </div>
     )

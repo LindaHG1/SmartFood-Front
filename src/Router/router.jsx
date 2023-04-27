@@ -11,7 +11,7 @@ import Privacy from "../Views/Privacy";
 import SignIn from "../Views/SignIn";
 import CookiesView from "../Views/CookiesView";
 import Basket from "../Views/Basket";
-import MiProfile from "../Components/Myprofile";
+import Myprofile from "../Components/Myprofile";
 
 
 // import Register from "../Views/Register";
@@ -32,7 +32,7 @@ const Router = () => {
             <Route path="/privacy" element={<Privacy/>} />
             <Route path="/register" element={<SignIn/>} />
             <Route path="/cookies" element={<CookiesView/>} />
-            <Route path="/profile" element={<MyProfile/>} />
+            <Route path="/profile" element={<Myprofile/>} />
             
             {/* <Route path="/buscador" element={<BuscadorComponent/>} /> */}
             
